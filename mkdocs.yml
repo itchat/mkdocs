@@ -1,0 +1,124 @@
+# Copyright (c) 2021-2023 Ted WU <wulited@outlook.com>
+
+site_name: Ronin's Notes
+site_url: https://execution.icu
+site_author: ronin
+site_description: >-
+  Your attitude, not your aptitude, will determine your altitude.
+
+# copyright: Copyright &copy; 2018-2023 Ronin
+
+nav:
+  - Home: index.md
+  - Python:
+    - Flask:
+      - 1.0 入门: python/flask/1.0.md
+  - DevOps: 
+    - GFW: devops/gfw.md
+    - FFMPEG: devops/ffmpeg.md
+    - LLM Prompts: devops/prompts.md
+  - CTF:
+    - Network Attack: ctf/networkattack.md
+  - Handbook:
+    - Telegram: handbook/telegram.md
+    - Computer Science: handbook/csplan.md
+  - About: about.md
+
+
+
+theme:
+  name: material
+  # custom_dir: overrides
+  favicon: assets/icon.svg
+  logo: assets/logo.svg
+
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+  font: 
+    code: Fira Code
+
+  language: zh
+  features:
+    # - navigation.instant //affect layout of custom css
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer # display prev/next links
+
+  
+  palette:
+    - scheme: default
+      primary: blue grey
+      
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: blue grey
+      
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+
+
+markdown_extensions:
+  
+  - admonition
+  - attr_list
+  - footnotes
+  # - meta
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - tables
+
+plugins:
+  - tags
+  - search
+
+
+# extra:
+#   homepage: https://herointene.github.io
+#   social:
+#     - icon: fontawesome/brands/github
+#       link: https://github.com/herointene
+#       name: Github
+#     - icon: fontawesome/brands/twitter
+#       link: https://twitter.com/wyndkatbcis
+#       name: Twitter
+#     - icon: fontawesome/brands/instagram
+#       link: https://www.instagram.com/tedilitarianism/
+#       name: Instagram
+#     - icon: fontawesome/brands/soundcloud
+#       link: https://soundcloud.com/wulited
+#       name: SoundCloud
+#     - icon: fontawesome/solid/paper-plane
+#       link: mailto:<ted@ewig.dev>
+#       name: Email me
+#   analytics:
+#     provider: google
+#     property: G-XXXXXX
+extra_css:
+  - stylesheets/extra.css
+# extra_javascript:
+#   - javascripts/extra.js
