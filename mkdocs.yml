@@ -31,11 +31,6 @@ theme:
   # custom_dir: overrides
   favicon: assets/icon.svg
   logo: assets/logo.svg
-
-  features:
-    - content.code.copy
-    - content.code.select
-    - content.code.annotate
   font: 
     code: Fira Code
 
@@ -48,7 +43,8 @@ theme:
     - navigation.expand
     - navigation.top
     - navigation.footer # display prev/next links
-
+    - content.code.annotate
+    - content.code.copy
   
   palette:
     - scheme: default
