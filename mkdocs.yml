@@ -115,6 +115,7 @@ plugins:
 #     provider: google
 #     property: G-XXXXXX
 extra_css:
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.min.css
   - stylesheets/extra.css
 # extra_javascript:
 #   - javascripts/extra.js
