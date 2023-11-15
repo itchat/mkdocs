@@ -6,11 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://execution.icu/about/</loc>
-         <lastmod>2023-11-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://execution.icu/ctf/networkattack/</loc>
          <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
