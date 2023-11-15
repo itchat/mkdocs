@@ -22,8 +22,6 @@ nav:
   - Handbook:
     - Telegram: handbook/telegram.md
     - Computer Science: handbook/csplan.md
-  - About: about.md
-
 
 
 theme:
@@ -64,7 +62,7 @@ theme:
 
 
 markdown_extensions:
-  
+
   - admonition
   - attr_list
   - footnotes
@@ -91,6 +89,8 @@ markdown_extensions:
 plugins:
   - tags
   - search
+
+search_index_only: false
 
 
 # extra:
