@@ -19,25 +19,37 @@ Google `site:telemetr.io 资源搜索关键词`
 
 ## Bots
 
-@icbcbot
+@myidbot
 
 @scihubot
 
-@tkdashen
-
 @CatdlBot
+
+@VmomoVBot
+
+@QuotLyBot
+
+@getletbot
+
+@Music163bot
 
 @bingdict_bot
 
 @zlibrary2bot
 
+@burn_hair_bot
+
+@web2album_bot
+
+@yihong0618_bot
+
 @yellow_gif_bot
 
 @PolarisseekBot
 
-@chatgpttgbot_bot
-
 @sgk2023_03_30bot
+
+@CopilotOfficialBot
 
 @ayaka_insights_bot
 
@@ -68,15 +80,15 @@ Google `site:telemetr.io 资源搜索关键词`
 
 Social Science Ph.D. - 社会矛盾论文解读，实验数据分享
 
-- [Europäische Geistesgeschichte](https://t.me/geistesgeschichte)
-
-德国教授：他的[静态资源博客](https://geistlib.xyz/)，提供了宗教史、哲学、物理与数学学习指南
-
 ### Entertainment
 
 - [小红书一瞥](https://t.me/xhsyp)
 
+### AI
 
+- [AI Copilot Channel](https://t.me/AI_Copilot_Channel)
+
+  
 
 
 [^1]: [Immanuel Kant 对于自由的定义](https://zh.wikiquote.org/zh-hans/%E4%BC%8A%E6%9B%BC%E5%8A%AA%E5%B0%94%C2%B7%E5%BA%B7%E5%BE%B7)

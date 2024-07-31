@@ -12,13 +12,13 @@
         <meta name="author" content="ronin">
       
       
-        <link rel="canonical" href="https://execution.icu/handbook/telegram/">
+        <link rel="canonical" href="https://execution.icu/webdev/html_syntax/">
       
       
-        <link rel="prev" href="../../system/c_syntax/">
+        <link rel="prev" href="../../devops/prompts/">
       
       
-        <link rel="next" href="../csplan/">
+        <link rel="next" href="../../ctf/networkattack/">
       
       
       <link rel="icon" href="../../assets/icon.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Telegram - Ronin's Notes</title>
+        <title>HTML Basic Syntax - Ronin's Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#telegram-guide" class="md-skip">
+        <a href="#html-basic-syntax" class="md-skip">
           跳转至
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Telegram
+              HTML Basic Syntax
             
           </span>
         </div>
@@ -270,11 +270,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../webdev/html_syntax/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   Web Dev
@@ -324,13 +326,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../handbook/telegram/" class="md-tabs__link">
           
   
   Handbook
@@ -629,27 +629,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -660,7 +663,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Web Dev
@@ -671,10 +674,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../webdev/html_syntax/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    HTML Basic Syntax
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -683,6 +706,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shortcut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortcut
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paragraphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paragraphs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paragraphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Void Element
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -839,30 +924,27 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -873,7 +955,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Handbook
@@ -884,30 +966,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Telegram
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../handbook/telegram/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -916,95 +978,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#seo" class="md-nav__link">
-    <span class="md-ellipsis">
-      SEO
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bots" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bots
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bots">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tech" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tech
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#runology" class="md-nav__link">
-    <span class="md-ellipsis">
-      Runology
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sociology" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sociology
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#entertainment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entertainment
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      AI
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1017,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../csplan/" class="md-nav__link">
+      <a href="../../handbook/csplan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1065,64 +1038,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#seo" class="md-nav__link">
+  <a href="#shortcut" class="md-nav__link">
     <span class="md-ellipsis">
-      SEO
+      Shortcut
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bots" class="md-nav__link">
+  <a href="#headers" class="md-nav__link">
     <span class="md-ellipsis">
-      Bots
+      Headers
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Bots">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paragraphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paragraphs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paragraphs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tech" class="md-nav__link">
+  <a href="#void-element" class="md-nav__link">
     <span class="md-ellipsis">
-      Tech
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#runology" class="md-nav__link">
-    <span class="md-ellipsis">
-      Runology
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sociology" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sociology
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#entertainment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entertainment
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      AI
+      Void Element
     </span>
   </a>
   
@@ -1148,82 +1094,31 @@
                   
 
 
-<h1 id="telegram-guide">Telegram Guide</h1>
-<blockquote>
-<p><strong><em>Immanuel Kant</em></strong><br />
-Freedom is not letting you do whatever you wanna but teaching you not to do the things you don't wanna do.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-</blockquote>
-<h2 id="seo">SEO</h2>
+<h1 id="html-basic-syntax">HTML Basic Syntax</h1>
+<h2 id="shortcut">Shortcut</h2>
 <ul>
-<li><a href="https://tgscan.xyz/">TGSCAN</a></li>
+<li>! 加 return 快速得到 html 前缀</li>
+<li>shift + 上下左右可以选择文本</li>
+<li>shift + option + 下，向下粘贴</li>
 </ul>
-<p>全 Telegram 频道机器人群聊搜索</p>
+<h2 id="headers">Headers</h2>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>hello world<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></code></pre></div>
 <ul>
-<li>Telemetr.io</li>
+<li>这样的整体叫 element, <code>&lt;h1&gt;</code> 和 <code>&lt;/h1&gt;</code> 分别为 opening 和 closing tag</li>
+<li>header 只有 <code>&lt;h1&gt;</code> -  <code>&lt;h6&gt;</code></li>
 </ul>
-<p>Google <code>site:telemetr.io 资源搜索关键词</code></p>
-<ul>
-<li>最强<a href="http://www.sssoou.com//">资源搜索引擎</a></li>
-</ul>
-<p>几个最大的电子书、教程、破解软件分享频道组成的搜索引擎</p>
-<h2 id="bots">Bots</h2>
-<p>@myidbot</p>
-<p>@scihubot</p>
-<p>@CatdlBot</p>
-<p>@VmomoVBot</p>
-<p>@QuotLyBot</p>
-<p>@getletbot</p>
-<p>@Music163bot</p>
-<p>@bingdict_bot</p>
-<p>@zlibrary2bot</p>
-<p>@burn_hair_bot</p>
-<p>@web2album_bot</p>
-<p>@yihong0618_bot</p>
-<p>@yellow_gif_bot</p>
-<p>@PolarisseekBot</p>
-<p>@sgk2023_03_30bot</p>
-<p>@CopilotOfficialBot</p>
-<p>@ayaka_insights_bot</p>
-<p>@reverse_image_search_bot</p>
-<h3 id="tech">Tech</h3>
-<ul>
-<li><a href="http://t.me/shengxj11">花果山大圣远程工作</a></li>
-<li><a href="https://t.me/PagerMaid_Modify">PagerMaid-Modify Update</a></li>
-</ul>
-<h3 id="runology">Runology</h3>
-<ul>
-<li>流浪防区</li>
-</ul>
-<p><a href="https://www.reddit.com/r/China_irl/">Reddit</a> 论坛分支讨论社区 @china_irl</p>
-<ul>
-<li><a href="https://t.me/RunOutForLife">Runology Group</a></li>
-</ul>
-<p>主攻润学分享，群里很多润学理论家可以咨询</p>
-<h3 id="sociology">Sociology</h3>
-<ul>
-<li><a href="https://t.me/iyouport">Iyouport</a></li>
-</ul>
-<p>自由港新闻帮，社会学观察与解构</p>
-<ul>
-<li><a href="https://t.me/tombenor">TomBen’s Web Excursions</a></li>
-</ul>
-<p>Social Science Ph.D. - 社会矛盾论文解读，实验数据分享</p>
-<h3 id="entertainment">Entertainment</h3>
-<ul>
-<li><a href="https://t.me/xhsyp">小红书一瞥</a></li>
-</ul>
-<h3 id="ai">AI</h3>
-<ul>
-<li><a href="https://t.me/AI_Copilot_Channel">AI Copilot Channel</a></li>
-</ul>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p><a href="https://zh.wikiquote.org/zh-hans/%E4%BC%8A%E6%9B%BC%E5%8A%AA%E5%B0%94%C2%B7%E5%BA%B7%E5%BE%B7">Immanuel Kant 对于自由的定义</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<h2 id="paragraphs">Paragraphs</h2>
+<p>Lorem Ipsum 是一种用于排版和设计的假文，通常被用作占位符文本。其目的是在设计样本中提供一个文本填充，以便在没有实际内容的情况下模拟文本的外观和布局。这对于检查字体、排版和整体设计效果非常有用。</p>
+<p>Lorem Ipsum 的来源可以追溯到古罗马时期的拉丁文学，特别是公元前45年左右西塞罗（Cicero）的著作《善与恶的终极理论》（"De finibus bonorum et malorum"）。虽然它是拉丁文，但 Lorem Ipsum 并没有实际意义，仅仅是一种模拟文本的工具。</p>
+<p>现代设计和开发工具中，Lorem Ipsum 经常被用来填充文本框、文章和段落，帮助设计师和开发者专注于布局和功能，而不是内容。</p>
+<p><a href="http://www.lipsum.co">www.lipsum.co</a> 或者自己 Google Funny Lorem Ipsum</p>
+<h3 id="void-element">Void Element</h3>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">hr</span> <span class="p">/&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span> 
+</span></code></pre></div>
+<p>以上两种 tag 分别叫 horizontal rule 和 break element，现代网页开发中 HTML 自动忽略空格和 / 符号，直接使用 <code>&lt;hr&gt;</code> 和 <code>&lt;br&gt;</code> 即可，但前者更为标准。</p>
+<p>在 paragraph 中空行最好使用多个 <code>&lt;p&gt;</code> tag, 中间穿插 <code>&lt;br&gt;</code> 会导致盲人阅读困难</p>
 
 
 
@@ -1259,7 +1154,7 @@ Freedom is not letting you do whatever you wanna but teaching you not to do the 
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../system/c_syntax/" class="md-footer__link md-footer__link--prev" aria-label="上一页: C Basic Syntax">
+          <a href="../../devops/prompts/" class="md-footer__link md-footer__link--prev" aria-label="上一页: LLM Prompts">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1269,20 +1164,20 @@ Freedom is not letting you do whatever you wanna but teaching you not to do the 
                 上一页
               </span>
               <div class="md-ellipsis">
-                C Basic Syntax
+                LLM Prompts
               </div>
             </div>
           </a>
         
         
           
-          <a href="../csplan/" class="md-footer__link md-footer__link--next" aria-label="下一页: Computer Science">
+          <a href="../../ctf/networkattack/" class="md-footer__link md-footer__link--next" aria-label="下一页: Network Attack">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Computer Science
+                Network Attack
               </div>
             </div>
             <div class="md-footer__button md-icon">

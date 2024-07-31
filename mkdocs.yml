@@ -17,8 +17,12 @@ nav:
     - GFW: devops/gfw.md
     - FFMPEG: devops/ffmpeg.md
     - LLM Prompts: devops/prompts.md
+  - Web Dev:
+    - HTML Basic Syntax: webdev/html_syntax.md
   - CTF:
     - Network Attack: ctf/networkattack.md
+  - System Programming:
+    - C Basic Syntax: system/c_syntax.md
   - Handbook:
     - Telegram: handbook/telegram.md
     - Computer Science: handbook/csplan.md
