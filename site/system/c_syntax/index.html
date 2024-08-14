@@ -18,7 +18,7 @@
         <link rel="prev" href="../../ctf/networkattack/">
       
       
-        <link rel="next" href="../../handbook/telegram/">
+        <link rel="next" href="../c_functions/">
       
       
       <link rel="icon" href="../../assets/icon.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>C Basic Syntax - Ronin's Notes</title>
+        <title>2.1 C Basic Syntax - Ronin's Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-c-basic-syntax" class="md-skip">
+        <a href="#21-c-basic-syntax" class="md-skip">
           跳转至
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              C Basic Syntax
+              2.1 C Basic Syntax
             
           </span>
         </div>
@@ -830,7 +830,7 @@
           
   
   <span class="md-ellipsis">
-    C Basic Syntax
+    2.1 C Basic Syntax
   </span>
   
 
@@ -841,7 +841,7 @@
         
   
   <span class="md-ellipsis">
-    C Basic Syntax
+    2.1 C Basic Syntax
   </span>
   
 
@@ -863,9 +863,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lecture-02" class="md-nav__link">
+  <a href="#mon-lecture" class="md-nav__link">
     <span class="md-ellipsis">
-      LECTURE 02
+      Mon Lecture
     </span>
   </a>
   
@@ -1019,11 +1019,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#one-more-thing" class="md-nav__link">
+  <a href="#data-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      One More Thing
+      Data Structure
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Data Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1040,6 +1055,69 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 C Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../labsheet_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Linux Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workshop_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 MyCal
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1170,9 +1248,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lecture-02" class="md-nav__link">
+  <a href="#mon-lecture" class="md-nav__link">
     <span class="md-ellipsis">
-      LECTURE 02
+      Mon Lecture
     </span>
   </a>
   
@@ -1326,11 +1404,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#one-more-thing" class="md-nav__link">
+  <a href="#data-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      One More Thing
+      Data Structure
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Data Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1358,8 +1451,8 @@
                   
 
 
-<h1 id="10-c-basic-syntax">1.0 C Basic Syntax</h1>
-<h2 id="lecture-02">LECTURE 02</h2>
+<h1 id="21-c-basic-syntax">2.1 C Basic Syntax</h1>
+<h2 id="mon-lecture">Mon Lecture</h2>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
@@ -1684,7 +1777,40 @@
 </span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span><span class="p">.....</span>
 </span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">}</span>
 </span></code></pre></div>
-<h2 id="one-more-thing">One More Thing</h2>
+<h2 id="data-structure">Data Structure</h2>
+<h3 id="array">Array</h3>
+<p>C 语言中并不支持 Java 那样的 ArraryList 和 Python 中 list 那样的动态列表，并且支持很多的功能，其只支持 Array 这种数组，大量功能自己想办法实现。实现方法为以下几种：</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="c1">// 声明一个包含五个整数元素的数组</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="c1">// 初始化一个大小为五的整数数组</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="kt">char</span><span class="w"> </span><span class="n">str</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="c1">// 初始化一个大小为 6 的字符数组，包含字符串 &quot;Hello&quot; 和结尾的空字符 \0</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="c1">// 数组大小自动推导为 3</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="c1">// 剩余的元素将被初始化为 0</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="kt">int</span><span class="w"> </span><span class="n">matrix</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">];</span><span class="w"> </span><span class="c1">// 声明一个3x4的二维整数数组</span>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="kt">int</span><span class="w"> </span><span class="n">matrix</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">    </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">},</span>
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">    </span><span class="p">{</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">}</span>
+</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="p">};</span><span class="w"> </span><span class="c1">// 初始化一个3x4的二维数组</span>
+</span></code></pre></div>
+<p>最后一个二维数组有一些规定，初始值提供时，最低维度必须提供</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">}</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="p">};</span><span class="w"> </span><span class="c1">// 数组大小推断为2x3</span>
+</span></code></pre></div>
+<p>当不提供初始值时所有维度的大小必须被指定</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span><span class="w"> </span><span class="c1">// 所有维度的大小都必须明确指定</span>
+</span></code></pre></div>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
 <li>相比于 Python, C 语言和 Java 一样不在乎 indent</li>
@@ -1743,13 +1869,13 @@
         
         
           
-          <a href="../../handbook/telegram/" class="md-footer__link md-footer__link--next" aria-label="下一页: Telegram">
+          <a href="../c_functions/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2.2 C Functions">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Telegram
+                2.2 C Functions
               </div>
             </div>
             <div class="md-footer__button md-icon">
