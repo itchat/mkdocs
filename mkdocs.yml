@@ -22,7 +22,10 @@ nav:
   - CTF:
     - Network Attack: ctf/networkattack.md
   - System Programming:
-    - C Basic Syntax: system/c_syntax.md
+    - system/c_syntax.md
+    - system/c_functions.md
+    - system/labsheet_1.md
+    - system/workshop_2.md
   - Handbook:
     - Telegram: handbook/telegram.md
     - Computer Science: handbook/csplan.md

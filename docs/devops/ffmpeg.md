@@ -41,3 +41,56 @@ ffmpeg -i input.mp4 -i input.mp3 -c copy -map 0:v:0 -map 1:a:0 output.mp4
 ```bash
 ffmpeg -i input.mp4 -vf subtitles=subtitles.srt output.mp4
 ```
+
+### 有损压缩
+
+```bash
+ffmpeg -i input.mp4 -c:v libx264 -tag:v avc1 -movflags faststart -crf 30 -preset superfast output.mp4
+```
+
+`-c:v libx264` 主流、高效的 H.264 压缩编码。
+
+`-movflags faststart` 元数据前置，视频还未完全下载时，就可以开始播放。
+
+`-crf 30` 动态码律，大幅压缩的关键。
+
+`-preset superfast` 提升压缩速度。
+
+#### Automater
+
+建立优化工作流，多文件选中即可压缩，该方案可用于所有脚本:
+
+```bash
+#!/bin/zsh
+for f in "$@"
+do
+  /opt/homebrew/bin/ffmpeg -i "$f" -c:v libx264 -crf 30 -r 24 -movflags faststart -c:a aac -b:a 128k -preset superfast "${f%.*}_compressed.mp4"
+done
+```
+
+### MacOS M 系列芯片推理加速
+
+- H.264
+
+```bash
+-c:v h264_videotoolbox
+```
+
+- HEVC/H.265 
+
+```bash
+-c:v hevc_videotoolbox
+```
+
+```bash
+ffmpeg -i input.mov -c:v h264_videotoolbox output.mp4
+```
+
+关于其解码器其他选项：
+
+```bash
+ffmpeg -h encoder=h264_videotoolbox 
+ffmpeg -h encoder=hevc_videotoolbox
+```
+
+缺点为该类解码器并不支持 crf 选项，只能使用 `-b:v` 去设置码率：`-b:v 6000k.`
