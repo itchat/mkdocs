@@ -12,15 +12,15 @@ nav:
   - Home: index.md
   - Python:
     - Flask:
-      - 1.0 入门: python/flask/1.0.md
+      - python/flask/1.0.md
   - DevOps: 
-    - GFW: devops/gfw.md
-    - FFMPEG: devops/ffmpeg.md
-    - LLM Prompts: devops/prompts.md
+    - devops/gfw.md
+    - devops/ffmpeg.md
+    - devops/prompts.md
   - Web Dev:
-    - HTML Basic Syntax: webdev/html_syntax.md
+    - webdev/html_syntax.md
   - CTF:
-    - Network Attack: ctf/networkattack.md
+    - ctf/networkattack.md
   - System Programming:
     - system/2.1.md
     - system/2.2.md
@@ -34,11 +34,12 @@ nav:
     - system/5.1.md
     - system/5.2.md
     - system/5.3.md
-
   - Handbook:
-    - Telegram: handbook/telegram.md
-    - Computer Science: handbook/csplan.md
-
+    - handbook/telegram.md
+    - handbook/csplan.md
+    - devops/wine.md
+  - Arts:
+    - arts/wukong.md
 
 theme:
   name: material
