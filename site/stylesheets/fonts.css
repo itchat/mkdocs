@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'LXGW WenKai';
+    font-weight: normal;
+    src: url('./LXGWWenKaiLite-Regular.ttf') format('truetype');
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'LXGW WenKai';
+    font-weight: 500;
+    src: url('./LXGWWenKaiLite-Medium.ttf') format('truetype');
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'LXGW WenKai';
+    font-weight: 300;
+    src: url('./LXGWWenKaiLite-Light.ttf') format('truetype');
+    font-display: block;
+}

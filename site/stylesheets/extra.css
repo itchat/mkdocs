@@ -1,3 +1,5 @@
+@import url('./fonts.css');
+
 :root>* {
   --md-accent-fg-color: #90A4AE;
   --md-typeset-a-color: #6A91A6;
@@ -139,5 +141,4 @@
 
 body {
   font-family: "LXGW WenKai", sans-serif;
-  
 }

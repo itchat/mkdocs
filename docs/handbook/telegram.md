@@ -5,39 +5,23 @@ Freedom is not letting you do whatever you wanna but teaching you not to do the 
 
 ## SEO
 
-- [TGSCAN](https://tgscan.xyz/)
-
-全 Telegram 频道机器人群聊搜索
-
 - Telemetr.io
 
 Google `site:telemetr.io 资源搜索关键词`
 
-- 最强[资源搜索引擎](http://www.sssoou.com//)
-
-几个最大的电子书、教程、破解软件分享频道组成的搜索引擎
-
 ## Bots
+
+@gpt4bot
 
 @myidbot
 
 @scihubot
 
-@CatdlBot
-
-@VmomoVBot
-
-@QuotLyBot
-
-@getletbot
+@soundcloud_youtube_music_bot
 
 @Music163bot
 
 @bingdict_bot
-
-@zlibrary2bot
-
-@burn_hair_bot
 
 @web2album_bot
 
@@ -45,20 +29,28 @@ Google `site:telemetr.io 资源搜索关键词`
 
 @yellow_gif_bot
 
+@DogeSGK_bot
+
 @PolarisseekBot
 
 @sgk2023_03_30bot
 
 @CopilotOfficialBot
 
-@ayaka_insights_bot
-
 @reverse_image_search_bot
+
+@zh_secretary_bot
+
+@GLBetabot
+
+@PyrogramBot
 
 ### Tech
 
-- [花果山大圣远程工作](http://t.me/shengxj11)
+- [花果山大圣远程工作](https://t.me/shengxj11)
 - [PagerMaid-Modify Update](https://t.me/PagerMaid_Modify)
+- [iOS 破解自签软件包](https://t.me/ddgksf2023)
+- [妙妙小工具发布频道](https://t.me/mio_room/)
 
 ### Runology
 
@@ -78,11 +70,18 @@ Google `site:telemetr.io 资源搜索关键词`
 
 - [TomBen’s Web Excursions](https://t.me/tombenor)
 
-Social Science Ph.D. - 社会矛盾论文解读，实验数据分享
+Social Science Ph.D. - 社会矛盾论文解读，实验数据分享，已停更
+
+- 微信搬运工 - @wxbyg
+- JUST A PEEK - @justapeek
+- 中英文付费期刊分发 - @Qikan2023
+- 法拉盛美籍流浪汉 - @youyaodaofanlexdm
 
 ### Entertainment
 
 - [小红书一瞥](https://t.me/xhsyp)
+- 复制粘贴 - @fuzhizhantie6324
+- 浪人新闻 导演剪辑版 - @RoninShinbun
 
 ### AI
 

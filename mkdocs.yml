@@ -10,36 +10,46 @@ site_description: >-
 
 nav:
   - Home: index.md
-  - Python:
-    - Flask:
-      - python/flask/1.0.md
-  - DevOps: 
-    - devops/gfw.md
-    - devops/ffmpeg.md
-    - devops/prompts.md
-  - Web Dev:
-    - webdev/html_syntax.md
-  - CTF:
-    - ctf/networkattack.md
-  - System Programming:
-    - system/2.1.md
-    - system/2.2.md
-    - system/2.3.md
-    - system/3.1.md
-    - system/3.2.md
-    - system/3.3.md
-    - system/4.1.md
-    - system/4.2.md
-    - system/4.3.md
-    - system/5.1.md
-    - system/5.2.md
-    - system/5.3.md
-  - Handbook:
-    - handbook/telegram.md
-    - handbook/csplan.md
-    - devops/wine.md
+
   - Arts:
-    - arts/wukong.md
+    - Wukong:
+      - arts/wukong.md
+
+  - Tools:
+      - tools/gfw.md
+      - tools/prompts.md
+      - tools/ffmpeg.md
+      - tools/wine.md
+
+  - Computer Science:
+    - Python:
+      - Flask:
+        - cs/python/flask/1.0.md
+    - MERN:
+      - HTML: 
+        - cs/mern/html/html_syntax.md
+    - Operating Systems:
+      - C System Programming:
+        - cs/c/2.1.md
+        - cs/c/2.2.md
+        - cs/c/2.3.md
+        - cs/c/3.1.md
+        - cs/c/3.2.md
+        - cs/c/3.3.md
+        - cs/c/4.1.md
+        - cs/c/4.2.md
+        - cs/c/4.3.md
+        - cs/c/5.1.md
+        - cs/c/5.2.md
+
+  - Handbooks:
+    - Telegram:
+      - handbook/telegram.md
+    - Computer Science Plan:
+      - handbook/csplan.md
+      
+  - Cybersecurity:
+    - cyber/networkattack.md
 
 theme:
   name: material
@@ -47,7 +57,7 @@ theme:
   favicon: assets/icon.svg
   logo: assets/logo.svg
   font: 
-    code: Fira Code
+    code: JetBrains Mono
 
   language: zh
   features:
@@ -132,7 +142,6 @@ search_index_only: false
 #     provider: google
 #     property: G-XXXXXX
 extra_css:
-  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.min.css
   - stylesheets/extra.css
 # extra_javascript:
 #   - javascripts/extra.js
