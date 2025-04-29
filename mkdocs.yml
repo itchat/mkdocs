@@ -17,9 +17,9 @@ nav:
 
   - Tools:
       - tools/gfw.md
-      - tools/prompts.md
       - tools/ffmpeg.md
       - tools/wine.md
+      - tools/searxng.md
 
   - Computer Science:
     - Python:
