@@ -2,94 +2,106 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://execution.icu/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/arts/wukong/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/c/2.1/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/c/2.2/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/c/2.3/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/c/2.4/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/c/3.1/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/c/3.2/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/c/3.3/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/c/4.1/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/c/4.2/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/c/4.3/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/c/5.1/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/c/5.2/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://execution.icu/cs/java/basics/w4/</loc>
+         <lastmod>2025-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://execution.icu/cs/java/basics/w5/</loc>
+         <lastmod>2025-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://execution.icu/cs/java/basics/w6/</loc>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/mern/html/html_syntax/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cs/python/flask/1.0/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/cyber/networkattack/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/handbook/csplan/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/handbook/telegram/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/tools/ffmpeg/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/tools/gfw/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/tools/searxng/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
     <url>
          <loc>https://execution.icu/tools/wine/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-05-02</lastmod>
     </url>
 </urlset>

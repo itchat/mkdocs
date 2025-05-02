@@ -25,6 +25,12 @@ nav:
     - Python:
       - Flask:
         - cs/python/flask/1.0.md
+    - Java:
+      - Basics:
+        - cs/java/basics/w4.md
+        - cs/java/basics/w5.md
+        - cs/java/basics/w6.md
+
     - MERN:
       - HTML: 
         - cs/mern/html/html_syntax.md
