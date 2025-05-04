@@ -26,7 +26,7 @@
     
     
       
-        <title>Enums - Ronin's Notes</title>
+        <title>Enums, Generic, SOLID - Ronin's Notes</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#enums" class="md-skip">
+        <a href="#enums-generic-solid" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Enums
+              Enums, Generic, SOLID
             
           </span>
         </div>
@@ -982,7 +982,7 @@
   
   
   <span class="md-ellipsis">
-    Loop
+    4.0 Loop
     
   </span>
   
@@ -1005,7 +1005,7 @@
   
   
   <span class="md-ellipsis">
-    Class
+    5.0 Class
     
   </span>
   
@@ -1028,7 +1028,7 @@
   
   
   <span class="md-ellipsis">
-    Inheritance
+    6.0 Inheritance, Method Overriding
     
   </span>
   
@@ -1051,7 +1051,7 @@
   
   
   <span class="md-ellipsis">
-    More inheritance
+    7.0 More inheritance, Packages
     
   </span>
   
@@ -1074,7 +1074,7 @@
   
   
   <span class="md-ellipsis">
-    Exceptions
+    8.0 Exceptions, Interfaces
     
   </span>
   
@@ -1106,7 +1106,7 @@
   
   
   <span class="md-ellipsis">
-    Enums
+    Enums, Generic, SOLID
     
   </span>
   
@@ -1119,7 +1119,7 @@
   
   
   <span class="md-ellipsis">
-    Enums
+    Enums, Generic, SOLID
     
   </span>
   
@@ -1142,6 +1142,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enums
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enums">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#concepts" class="md-nav__link">
     <span class="md-ellipsis">
       Concepts
@@ -1149,13 +1159,195 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     <span class="md-ellipsis">
       Functions
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autoboxing-and-unboxing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autoboxing and Unboxing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autoboxing and Unboxing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrapper-class-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wrapper Class Utilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-generics-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Generics Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bounded-type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bounded Type Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generic-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generic Interfaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generic Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-bounded-type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      With bounded type parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generic-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generic Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-erasure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Erasure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solid" class="md-nav__link">
+    <span class="md-ellipsis">
+      SOLID
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SOLID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-responsibility-principle-srp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Responsibility Principle - SRP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-closed-principle-ocp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open-Closed Principle - OCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liskov-substitution-principle-lsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liskov Substitution Principle - LSP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface-segregation-principle-isp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interface Segregation Principle - ISP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-inversion-principle-dip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Inversion Principle - DIP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1991,6 +2183,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enums
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enums">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#concepts" class="md-nav__link">
     <span class="md-ellipsis">
       Concepts
@@ -1998,13 +2200,195 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     <span class="md-ellipsis">
       Functions
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autoboxing-and-unboxing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autoboxing and Unboxing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autoboxing and Unboxing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrapper-class-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wrapper Class Utilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-generics-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Generics Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bounded-type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bounded Type Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generic-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generic Interfaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generic Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-bounded-type-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      With bounded type parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generic-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generic Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-erasure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Erasure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solid" class="md-nav__link">
+    <span class="md-ellipsis">
+      SOLID
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SOLID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-responsibility-principle-srp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Responsibility Principle - SRP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-closed-principle-ocp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open-Closed Principle - OCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liskov-substitution-principle-lsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liskov Substitution Principle - LSP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface-segregation-principle-isp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interface Segregation Principle - ISP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-inversion-principle-dip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Inversion Principle - DIP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2024,8 +2408,9 @@
 
 
 
-<h1 id="enums">Enums</h1>
-<h2 id="concepts">Concepts</h2>
+<h1 id="enums-generic-solid">Enums, Generic, SOLID</h1>
+<h2 id="enums">Enums</h2>
+<h3 id="concepts">Concepts</h3>
 <p>编程当中固定以及有限的值直接用整数表示有缺点，比如 1 到底是周一还是周日：类型不安全、含义不明确、维护困难，因此可以使用枚举</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// 定义一个表示星期的枚举类型</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">enum</span><span class="w"> </span><span class="n">DayOfWeek</span><span class="w"> </span><span class="p">{</span>
@@ -2078,7 +2463,7 @@
 </span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">typicalSpeed</span><span class="p">(</span><span class="n">Transport</span><span class="p">.</span><span class="na">TRAIN</span><span class="p">));</span>
 </span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="p">}</span>
 </span></code></pre></div>
-<h2 id="functions">Functions</h2>
+<h3 id="functions">Functions</h3>
 <ul>
 <li><code>values()</code></li>
 </ul>
@@ -2112,7 +2497,7 @@
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="c1">// 使用: Transport.BUS.getTypicalSpeed() 返回 50</span>
 </span></code></pre></div>
 <p>可以通过这种方式直接在内部写好值就不用写 <code>switch</code> 语句</p>
-<h1 id="autoboxing-and-unboxing">Autoboxing and Unboxing</h1>
+<h2 id="autoboxing-and-unboxing">Autoboxing and Unboxing</h2>
 <p>Java 为每个<strong>基本数据类型</strong> (primitive type: <code>int</code>, <code>double</code>, <code>boolean</code>, <code>char</code> 等) 都提供了一个对应的<strong>包装类</strong> (wrapper class: <code>Integer</code>, <code>Double</code>, <code>Boolean</code>, <code>Character</code> 等)。这些包装类是对象。</p>
 <ul>
 <li><strong>自动装箱 (Autoboxing):</strong> </li>
@@ -2122,7 +2507,7 @@
 <li><strong>自动拆箱 (Unboxing):</strong> </li>
 </ul>
 <p>Java 编译器自动地将包装类对象转换为对应的基本数据类型的值。</p>
-<h2 id="usage">Usage</h2>
+<h3 id="usage">Usage</h3>
 <ul>
 <li>赋值</li>
 </ul>
@@ -2156,7 +2541,7 @@
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">Integer</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">Integer</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// a, b 拆箱成 int，相加后结果 3 再装箱成 Integer 赋给 c</span>
 </span></code></pre></div>
-<h2 id="problems">Problems</h2>
+<h3 id="problems">Problems</h3>
 <ul>
 <li><strong>reference</strong></li>
 </ul>
@@ -2185,7 +2570,7 @@
 <li>当需要调用需要对象参数的方法时。</li>
 <li>当需要使用包装类提供的静态工具方法或常量时。</li>
 </ul>
-<h2 id="wrapper-class-utilities">Wrapper Class Utilities</h2>
+<h3 id="wrapper-class-utilities">Wrapper Class Utilities</h3>
 <p>包装类提供了静态方法与常量</p>
 <p><strong>数值类型 (<code>Integer</code>, <code>Long</code>, <code>Double</code>, <code>Float</code> 等):</strong></p>
 <ul>
@@ -2198,7 +2583,7 @@
 <li><strong>字符判断:</strong> <code>Character.isDigit('1')</code>, <code>Character.isLetter('a')</code>, <code>Character.isUpperCase('A')</code>, <code>Character.isWhitespace(' ')</code> 等。</li>
 <li><strong>大小写转换:</strong> <code>Character.toUpperCase('a')</code>, <code>Character.toLowerCase('Z')</code>。</li>
 </ul>
-<h1 id="generics">Generics</h1>
+<h2 id="generics">Generics</h2>
 <p>想象一下，我们想创建一个栈（Stack）数据结构。如果我们为 <code>String</code> 类型写一个 <code>StringStack</code> ，那么当我们想存 <code>int</code> 或者其他类型时，就需要重写整个类 。这非常低效。</p>
 <ul>
 <li>
@@ -2227,7 +2612,7 @@
 <li>无需强制转换</li>
 </ul>
 <p>类型参数必须是类类型，不能是原始类型（如 int）。但由于自动装箱/拆箱，使用原始类型通常没有障碍 。   </p>
-<h2 id="multiple-generics-parameters">Multiple Generics Parameters</h2>
+<h3 id="multiple-generics-parameters">Multiple Generics Parameters</h3>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GenericPair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">first</span><span class="p">;</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="n">second</span><span class="p">;</span>
@@ -2250,7 +2635,7 @@
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">GenericPair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">studentList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">GenericPair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="p">();</span>
 </span></code></pre></div>
 <p>用 <code>var</code>替代后编译器可以自动从右边推断出左边减少冗余，只能用于局部变量</p>
-<h2 id="bounded-type-parameters">Bounded Type Parameters</h2>
+<h3 id="bounded-type-parameters">Bounded Type Parameters</h3>
 <p>有时我们希望限制可以用作类型参数的类型范围。使用 <code>extends</code> 关键字，例如 <code>&lt;T extends SuperClass&gt;</code>。这表示 <code>T</code> 必须是 <code>SuperClass</code> 本身或者是它的子类 。<code>SuperClass</code> 就是这个类型参数的<strong>上界 (Upper Bound)</strong> 。 </p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bird</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kd">class</span> <span class="nc">Emu</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Bird</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
@@ -2268,9 +2653,9 @@
 </span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1">// var badPair = new BirdPair&lt;String&gt;(&quot;Hello&quot;, &quot;World&quot;); // 编译时错误！String 不是 Bird 的子类</span>
 </span></code></pre></div>
 <p><code>&lt;T&gt;</code> 实际上等价于 <code>&lt;T extends Object&gt;</code>，因为所有类都继承自 <code>Object</code> </p>
-<h2 id="generic-interfaces">Generic Interfaces</h2>
+<h3 id="generic-interfaces">Generic Interfaces</h3>
 <p>接口也可以是泛型的，拥有类型参数，类型参数可以用在接口的方法签名中。<code>Comparable&lt;T&gt;</code>就是一个泛型接口，它要求实现 <code>compareTo(To)</code> 方法，用于比较当前对象和另一个 <code>T</code> 类型的对象</p>
-<h3 id="with-bounded-type-parameters">With bounded type parameters</h3>
+<h4 id="with-bounded-type-parameters">With bounded type parameters</h4>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RunningMaximum</span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Comparable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// T 必须实现 Comparable&lt;T&gt;</span>
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">currentMax</span><span class="p">;</span>
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">RunningMaximum</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">initial</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">currentMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">initial</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
@@ -2298,7 +2683,7 @@
 <p><code>Java 7</code> 之后允许直接右侧写 <code>&lt;&gt;</code> 减少冗余从左侧推断出范型参数，结合 <code>Java 10</code> 最终简写成</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">var</span><span class="w"> </span><span class="n">runningMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RunningMaximum</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 </span></code></pre></div>
-<h2 id="generic-methods">Generic Methods</h2>
+<h3 id="generic-methods">Generic Methods</h3>
 <p>方法也可以独立于类定义自己的类型参数</p>
 <p>类型参数列表放在修饰符（如 <code>public static</code>）之后，返回类型之前。</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GenericMax</span><span class="w"> </span><span class="p">{</span>
@@ -2313,7 +2698,7 @@
 </span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="p">}</span>
 </span></code></pre></div>
 <p><code>T</code> 的具体含义是跟<strong>对象</strong>绑定的，而静态方法属于<strong>类</strong>，不属于任何特定的对象。因为静态方法不与任何特定对象关联，所以它无法知道当前上下文中 <code>T</code> 应该代表哪个具体类型。因此当你需要在静态方法中使用泛型时，你不能使用<strong>类</strong>定义的类型参数（如 <code>T</code>）。相反，你需要定义一个<strong>泛型静态方法</strong>，它有自己独立的类型参数。</p>
-<h2 id="type-erasure">Type Erasure</h2>
+<h3 id="type-erasure">Type Erasure</h3>
 <p>Java 中的泛型主要是<strong>编译时</strong>的特性。在编译代码时，编译器会检查泛型的类型安全性，编译完成后，所有的泛型类型信息都会被<strong>擦除 (erased)</strong> 。类型参数（如 <code>T</code>）在字节码中会被替换成它们的边界。编译器会在需要的地方自动插入强制类型转换，以保证运行时逻辑的正确性 。类型擦除是 Java 泛型实现的一种方式，但它会导致一些限制和“陷阱” (sharp edges)。</p>
 <ul>
 <li>
@@ -2342,11 +2727,8 @@
 </span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>擦除后都变成了 <code>process(Objec data)</code> 编译阶段就会报错</p>
-<h1 id="oop-principles">OOP Principles</h1>
-<ul>
-<li><strong>“Clean Code” by Robert Martin</strong></li>
-</ul>
 <h2 id="solid">SOLID</h2>
+<p><strong>“Clean Code” by Robert Martin</strong></p>
 <p>Robert Martin 给 OOP 代码规范提出了原则，主要是为了让代码容易理解、灵活、可重用、易于维护，让你感觉像是个“真正的”工程师</p>
 <h3 id="single-responsibility-principle-srp">Single Responsibility Principle - SRP</h3>
 <ul>
@@ -2578,7 +2960,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../w8/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Exceptions">
+          <a href="../w8/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 8.0 Exceptions, Interfaces">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2588,7 +2970,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Exceptions
+                8.0 Exceptions, Interfaces
               </div>
             </div>
           </a>
