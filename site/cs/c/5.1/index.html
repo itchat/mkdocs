@@ -977,6 +977,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../../java/basics/t1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 T1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/t2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 T2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../java/basics/w4/" class="md-nav__link">
         
   
@@ -1028,7 +1074,7 @@
   
   
   <span class="md-ellipsis">
-    6.0 Inheritance, Method Overriding
+    6.0 Inheritance
     
   </span>
   
@@ -1051,7 +1097,7 @@
   
   
   <span class="md-ellipsis">
-    7.0 More inheritance, Packages
+    7.0 More, Packages
     
   </span>
   
@@ -1120,7 +1166,7 @@
   
   
   <span class="md-ellipsis">
-    10.0 Concurrency, Anonymous Classes, Lambdas, and Javadoc
+    10.0 Thread, Lambda
     
   </span>
   
@@ -1225,7 +1271,7 @@
   
   
   <span class="md-ellipsis">
-    HTML
+    3403
     
   </span>
   
@@ -1236,7 +1282,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3_1">
             <span class="md-nav__icon md-icon"></span>
-            HTML
+            3403
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1247,12 +1293,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mern/html/html_syntax/" class="md-nav__link">
+      <a href="../../mern/3403/w4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    HTML Basic Syntax
+    4.0 Core JavaScript
     
   </span>
   
@@ -2213,12 +2259,10 @@
 <p>two possible process states that a process may be in at any one time: <strong>Running</strong> and <strong>Ready</strong>.</p>
 <p><strong>分页机制</strong>：</p>
 <ul>
-<li>
-<p><strong>分页（Paging）</strong> 是一种内存管理方案，将进程的虚拟地址空间划分为页面，将物理内存划分为相同大小的页框。</p>
-</li>
-<li>
-<p>当进程需要访问内存时，操作系统会将虚拟地址转换为物理地址。这个过程涉及页表，页表记录了虚拟页面与物理页框之间的映射关系。</p>
-</li>
+<li><strong>分页（Paging）</strong> 是一种内存管理方案，将进程的虚拟地址空间划分为页面，将物理内存划分为相同大小的页框。</li>
+</ul>
+<ul>
+<li>当进程需要访问内存时，操作系统会将虚拟地址转换为物理地址。这个过程涉及页表，页表记录了虚拟页面与物理页框之间的映射关系。</li>
 </ul>
 <h2 id="transition">Transition</h2>
 <p>操作系统具有<em>调度员</em>的角色 - 根据某些定义的策略为处理器分派工作 解决公平性、优先级、明显的“互动性”等问题。</p>
@@ -2233,23 +2277,33 @@
 <p><strong>The 5-State Model of Process Execution</strong> 是操作系统中用于管理进程状态转换的经典模型。它定义了进程在执行期间可能处于的五种状态，以及它们之间的转换关系。以下是这五个状态及其解释：</p>
 <h3 id="1-new">1. <strong>New（新建）</strong></h3>
 <ul>
-<li><strong>描述</strong>：</li>
+<li><strong>描述</strong>：<ul>
 <li>当一个进程刚被创建时，它处于 <strong>New</strong> 状态。此时，操作系统已经分配了必要的资源，并为进程建立了相关的数据结构，但进程还没有准备好运行。</li>
-<li><strong>转换条件</strong>：</li>
+</ul>
+</li>
+<li><strong>转换条件</strong>：<ul>
 <li>当操作系统完成对新进程的初始化后，它会进入 <strong>Ready</strong> 状态，准备被调度器调度。</li>
+</ul>
+</li>
 </ul>
 <h3 id="2-ready">2. <strong>Ready（就绪）</strong></h3>
 <ul>
-<li><strong>描述</strong>：</li>
+<li><strong>描述</strong>：<ul>
 <li>处于 <strong>Ready</strong> 状态的进程已经分配了所需的资源，并且准备好运行。它正在等待 CPU 资源。</li>
-<li><strong>转换条件</strong>：</li>
+</ul>
+</li>
+<li><strong>转换条件</strong>：<ul>
 <li>当调度器决定将 CPU 分配给该进程时，它会从 <strong>Ready</strong> 状态转移到 <strong>Running</strong> 状态。</li>
+</ul>
+</li>
 </ul>
 <h3 id="3-running">3. <strong>Running（运行）</strong></h3>
 <ul>
-<li><strong>描述</strong>：</li>
+<li><strong>描述</strong>：<ul>
 <li>进程被分配到 CPU 并正在执行时，处于 <strong>Running</strong> 状态。此时，进程实际占用 CPU 并执行指令。</li>
-<li><strong>转换条件</strong>：</li>
+</ul>
+</li>
+<li><strong>转换条件</strong>：<ul>
 <li>进程可能从 <strong>Running</strong> 状态转移到以下几种状态：<ul>
 <li><strong>Blocked</strong>：如果进程需要等待某种资源（如 I/O 操作），它会进入 <strong>Blocked</strong> 状态。</li>
 <li><strong>Ready</strong>：如果进程时间片用完，但还没有完成，它会回到 <strong>Ready</strong> 状态，等待下一次调度。</li>
@@ -2257,19 +2311,29 @@
 </ul>
 </li>
 </ul>
+</li>
+</ul>
 <h3 id="4-blocked">4. <strong>Blocked（阻塞）</strong></h3>
 <ul>
-<li><strong>描述</strong>：</li>
+<li><strong>描述</strong>：<ul>
 <li>当进程等待某个事件（如 I/O 完成、获取资源等）时，它进入 <strong>Blocked</strong> 状态。在这个状态下，进程不能运行，甚至不能被调度，直到事件发生。</li>
-<li><strong>转换条件</strong>：</li>
+</ul>
+</li>
+<li><strong>转换条件</strong>：<ul>
 <li>一旦等待的事件发生，进程会从 <strong>Blocked</strong> 状态转移到 <strong>Ready</strong> 状态，等待 CPU 分配。</li>
+</ul>
+</li>
 </ul>
 <h3 id="5-terminated">5. <strong>Terminated（终止）</strong></h3>
 <ul>
-<li><strong>描述</strong>：</li>
+<li><strong>描述</strong>：<ul>
 <li>当进程完成执行或被操作系统终止时，它进入 <strong>Terminated</strong> 状态。此时进程的执行结束，所有的资源都将被释放。</li>
-<li><strong>转换条件</strong>：</li>
+</ul>
+</li>
+<li><strong>转换条件</strong>：<ul>
 <li>在进程终止之后，操作系统会清理进程所使用的资源，包括内存、文件描述符等。</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="_1">状态转换图</h3>

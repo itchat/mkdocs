@@ -26,7 +26,7 @@
     
     
       
-        <title>7.0 More inheritance, Packages - Ronin's Notes</title>
+        <title>7.0 More, Packages - Ronin's Notes</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#70-more-inheritance-packages" class="md-skip">
+        <a href="#70-more-packages" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7.0 More inheritance, Packages
+              7.0 More, Packages
             
           </span>
         </div>
@@ -977,6 +977,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../t1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 T1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../t2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 T2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../w4/" class="md-nav__link">
         
   
@@ -1028,7 +1074,7 @@
   
   
   <span class="md-ellipsis">
-    6.0 Inheritance, Method Overriding
+    6.0 Inheritance
     
   </span>
   
@@ -1060,7 +1106,7 @@
   
   
   <span class="md-ellipsis">
-    7.0 More inheritance, Packages
+    7.0 More, Packages
     
   </span>
   
@@ -1073,7 +1119,7 @@
   
   
   <span class="md-ellipsis">
-    7.0 More inheritance, Packages
+    7.0 More, Packages
     
   </span>
   
@@ -1381,7 +1427,7 @@
   
   
   <span class="md-ellipsis">
-    10.0 Concurrency, Anonymous Classes, Lambdas, and Javadoc
+    10.0 Thread, Lambda
     
   </span>
   
@@ -1486,7 +1532,7 @@
   
   
   <span class="md-ellipsis">
-    HTML
+    3403
     
   </span>
   
@@ -1497,7 +1543,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3_1">
             <span class="md-nav__icon md-icon"></span>
-            HTML
+            3403
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1508,12 +1554,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mern/html/html_syntax/" class="md-nav__link">
+      <a href="../../../mern/3403/w4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    HTML Basic Syntax
+    4.0 Core JavaScript
     
   </span>
   
@@ -2449,7 +2495,7 @@
 
 
 
-<h1 id="70-more-inheritance-packages">7.0 More inheritance, Packages</h1>
+<h1 id="70-more-packages">7.0 More, Packages</h1>
 <h2 id="more-inheritance">More inheritance</h2>
 <h3 id="abstract">abstract</h3>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
@@ -2489,8 +2535,10 @@
 <li><code>new Animal()</code> leads to an error, 抽象类无法被初始化</li>
 <li>任何有抽象方法的类都需要被声明为抽象类</li>
 <li>抽象方法 need no nody</li>
-<li>Abstract methods must be overridden by subclasses</li>
+<li>Abstract methods must be overridden by subclasses<ul>
 <li>unless the subclass is abstract too</li>
+</ul>
+</li>
 </ul>
 <h4 id="mistakes">Mistakes</h4>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
@@ -2795,12 +2843,10 @@
 </span></code></pre></div>
 <p>把代码放到 <code>pkgc</code> 目录里并不会改变 <code>import</code> 文件</p>
 <ul>
-<li>
-<p><code>import</code> 后面写的包名是<strong>相对于整个项目环境的“绝对”名称</strong>，<strong>不是</strong>相对于你当前所在的包<code>pkgc</code> 的“相对”位置。不能写成 <code>import ../vehicles.*;</code></p>
-</li>
-<li>
-<p><code>import</code> 语句告诉 Java 编译器和运行时（JVM）：“我需要用到名为 <code>vehicles</code> 的这个包。至于这个名为 <code>vehicles</code> 的包<strong>具体在磁盘上的哪个位置</strong>，是由你<strong>启动程序的方式和类路径（Classpath）设置</strong>来决定的。</p>
-</li>
+<li><code>import</code> 后面写的包名是<strong>相对于整个项目环境的“绝对”名称</strong>，<strong>不是</strong>相对于你当前所在的包<code>pkgc</code> 的“相对”位置。不能写成 <code>import ../vehicles.*;</code></li>
+</ul>
+<ul>
+<li><code>import</code> 语句告诉 Java 编译器和运行时（JVM）：“我需要用到名为 <code>vehicles</code> 的这个包。至于这个名为 <code>vehicles</code> 的包<strong>具体在磁盘上的哪个位置</strong>，是由你<strong>启动程序的方式和类路径（Classpath）设置</strong>来决定的。</li>
 <li>你应该站在你项目的<strong>最顶层目录</strong>来执行 <code>java</code> 命令。Java 默认会从你执行 <code>java</code> 命令的那个目录开始，根据你提供的“包名.类名”（如 <code>pkgc.VehicleExample</code>）来查找对应的 <code>.class</code> 文件（查找 <code>pkgc</code> 文件夹下的 <code>VehicleExample.class</code>），它不会自动往上层目录查找</li>
 </ul>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>.
@@ -2940,7 +2986,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../w6/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 6.0 Inheritance, Method Overriding">
+          <a href="../w6/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 6.0 Inheritance">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2950,7 +2996,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                6.0 Inheritance, Method Overriding
+                6.0 Inheritance
               </div>
             </div>
           </a>

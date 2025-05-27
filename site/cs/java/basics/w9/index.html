@@ -977,6 +977,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../t1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 T1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../t2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 T2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../w4/" class="md-nav__link">
         
   
@@ -1028,7 +1074,7 @@
   
   
   <span class="md-ellipsis">
-    6.0 Inheritance, Method Overriding
+    6.0 Inheritance
     
   </span>
   
@@ -1051,7 +1097,7 @@
   
   
   <span class="md-ellipsis">
-    7.0 More inheritance, Packages
+    7.0 More, Packages
     
   </span>
   
@@ -1381,7 +1427,7 @@
   
   
   <span class="md-ellipsis">
-    10.0 Concurrency, Anonymous Classes, Lambdas, and Javadoc
+    10.0 Thread, Lambda
     
   </span>
   
@@ -1486,7 +1532,7 @@
   
   
   <span class="md-ellipsis">
-    HTML
+    3403
     
   </span>
   
@@ -1497,7 +1543,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3_1">
             <span class="md-nav__icon md-icon"></span>
-            HTML
+            3403
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1508,12 +1554,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mern/html/html_syntax/" class="md-nav__link">
+      <a href="../../../mern/3403/w4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    HTML Basic Syntax
+    4.0 Core JavaScript
     
   </span>
   
@@ -2514,12 +2560,10 @@
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
 </span></code></pre></div>
 <ul>
-<li>
-<p><code>ordinal()</code>: 返回枚举常量在声明时的<strong>序号</strong>（从 0 开始）。例如 <code>DayOfWeek.MONDAY.ordinal()</code> 返回 0</p>
-</li>
-<li>
-<p><code>valueOf(String name)</code>: <strong>静态方法</strong>，根据给定的名称字符串返回对应的枚举常量</p>
-</li>
+<li><code>ordinal()</code>: 返回枚举常量在声明时的<strong>序号</strong>（从 0 开始）。例如 <code>DayOfWeek.MONDAY.ordinal()</code> 返回 0</li>
+</ul>
+<ul>
+<li><code>valueOf(String name)</code>: <strong>静态方法</strong>，根据给定的名称字符串返回对应的枚举常量</li>
 </ul>
 <p>枚举类可以添加自己的方法，也可以添加自己的构造函数以及字段，构造器默认必须 <code>private</code> 可以不写，不能使用 <code>new</code>，<code>JVM</code> 会在创建枚举常量实例时自动调用。</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">enum</span><span class="w"> </span><span class="n">Transport</span><span class="w"> </span><span class="p">{</span>
@@ -2541,13 +2585,17 @@
 <h2 id="autoboxing-and-unboxing">Autoboxing and Unboxing</h2>
 <p>Java 为每个<strong>基本数据类型</strong> (primitive type: <code>int</code>, <code>double</code>, <code>boolean</code>, <code>char</code> 等) 都提供了一个对应的<strong>包装类</strong> (wrapper class: <code>Integer</code>, <code>Double</code>, <code>Boolean</code>, <code>Character</code> 等)。这些包装类是对象。</p>
 <ul>
-<li><strong>自动装箱 (Autoboxing):</strong> </li>
-</ul>
+<li>
+<p><strong>自动装箱 (Autoboxing):</strong> </p>
 <p>Java 编译器自动地将基本数据类型的值转换为对应的包装类对象。</p>
-<ul>
-<li><strong>自动拆箱 (Unboxing):</strong> </li>
+</li>
 </ul>
+<ul>
+<li>
+<p><strong>自动拆箱 (Unboxing):</strong> </p>
 <p>Java 编译器自动地将包装类对象转换为对应的基本数据类型的值。</p>
+</li>
+</ul>
 <h3 id="usage">Usage</h3>
 <ul>
 <li>赋值</li>
@@ -2584,8 +2632,8 @@
 </span></code></pre></div>
 <h3 id="problems">Problems</h3>
 <ul>
-<li><strong>reference</strong></li>
-</ul>
+<li>
+<p><strong>reference</strong></p>
 <p>自动装箱/拆箱创建的是不同的对象（或从缓存获取）。它不能用来像对象引用那样共享对原始基本类型值的修改。</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">Integer</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">Integer</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// b 指向和 a 相同的 Integer 对象 (对于小数值，通常是缓存的)</span>
@@ -2593,17 +2641,23 @@
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3</span>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1 (b 仍然指向原来的 Integer(1) 对象)</span>
 </span></code></pre></div>
-<ul>
-<li><strong>performance</strong></li>
+</li>
 </ul>
+<ul>
+<li>
+<p><strong>performance</strong></p>
 <p>设计到对象的创建和转换，相比直接使用基本数据类型会有一定数据开销：时间与空间</p>
-<ul>
-<li><strong><code>NullPointerException</code>：</strong> </li>
+</li>
 </ul>
+<ul>
+<li>
+<p><strong><code>NullPointerException</code>：</strong> </p>
 <p>如果一个包装类变量的值是 <code>null</code>，在自动拆箱时会抛出 <code>NullPointerException</code>。</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">Integer</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">// 尝试拆箱 null，会抛出 NullPointerException</span>
 </span></code></pre></div>
+</li>
+</ul>
 <p>使用包装类/自动装箱</p>
 <ul>
 <li>当需要将基本类型值存入只能存储对象的集合类时（如 <code>ArrayList&lt;Integer&gt;</code>）。</li>
@@ -2627,12 +2681,10 @@
 <h2 id="generics">Generics</h2>
 <p>想象一下，我们想创建一个栈（Stack）数据结构。如果我们为 <code>String</code> 类型写一个 <code>StringStack</code> ，那么当我们想存 <code>int</code> 或者其他类型时，就需要重写整个类 。这非常低效。</p>
 <ul>
-<li>
-<p>一个方法是使用 <code>Object</code> 类来创建 <code>ObjectStack</code>结合 Autoboxing 以及 Unboxing 特性，甚至可以储存原始类型，但是取出数据的时候需要强制类型转换：<code>int three = (Integer) ss.pop();</code></p>
-</li>
-<li>
-<p>如果在 <code>pop</code> 时转换的类型与存入时的类型不匹配，程序不会在编译时报错，而是在运行时抛出 <code>ClassCastException</code> 错误 。这相当于丢失了 Java 强大的类型检查功能 。  </p>
-</li>
+<li>一个方法是使用 <code>Object</code> 类来创建 <code>ObjectStack</code>结合 Autoboxing 以及 Unboxing 特性，甚至可以储存原始类型，但是取出数据的时候需要强制类型转换：<code>int three = (Integer) ss.pop();</code></li>
+</ul>
+<ul>
+<li>如果在 <code>pop</code> 时转换的类型与存入时的类型不匹配，程序不会在编译时报错，而是在运行时抛出 <code>ClassCastException</code> 错误 。这相当于丢失了 Java 强大的类型检查功能 。  </li>
 </ul>
 <p>而泛型可以更好地解决这个问题：在类名后面加上 <code>&lt;T&gt;</code> 这里的 T 就是类型参数 Type Parameter，他是一个占位符代表某种具体的类型，因此可以用任何合法标识代替 T</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GenericStack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
@@ -2721,7 +2773,8 @@
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="c1">// ^^^^^^^^^^^^^^^^^^^             ^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 </span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="c1">// (类型声明)                        (构造函数调用时指定类型)</span>
 </span></code></pre></div>
-<p><code>Java 7</code> 之后允许直接右侧写 <code>&lt;&gt;</code> 减少冗余从左侧推断出范型参数，结合 <code>Java 10</code> 最终简写成</p>
+<p><strong>Java 7 及之后</strong>: 引入了菱形运算符 <code>&lt;&gt;</code>。如果你在左侧显式声明了类型 <code>RunningMaximum&lt;Integer&gt; runningMax</code>，编译器就可以从左侧推断出右侧的泛型类型，所以你可以写成 <code>RunningMaximum&lt;Integer&gt; runningMax = new RunningMaximum&lt;&gt;(1);</code>，右侧 <code>&lt;&gt;</code> 中无需重复类型。</p>
+<p><strong>Java 10 及之后</strong>: 引入了 <code>var</code>。如果你在右侧的初始化表达式中提供了足够的信息让编译器推断出类型例如 <code>new RunningMaximum&lt;&gt;(1)</code>，其中 <code>1</code> 是 <code>Integer</code>，<strong>如果构造函数接受 T 类型参数，编译器就能推断出 T 是 Integer</strong>，你就可以结合 <code>var</code> 和菱形运算符写成：</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">var</span><span class="w"> </span><span class="n">runningMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RunningMaximum</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 </span></code></pre></div>
 <h3 id="generic-methods">Generic Methods</h3>
@@ -2742,19 +2795,17 @@
 <h3 id="type-erasure">Type Erasure</h3>
 <p>Java 中的泛型主要是<strong>编译时</strong>的特性。在编译代码时，编译器会检查泛型的类型安全性，编译完成后，所有的泛型类型信息都会被<strong>擦除 (erased)</strong> 。类型参数（如 <code>T</code>）在字节码中会被替换成它们的边界。编译器会在需要的地方自动插入强制类型转换，以保证运行时逻辑的正确性 。类型擦除是 Java 泛型实现的一种方式，但它会导致一些限制和“陷阱” (sharp edges)。</p>
 <ul>
-<li>
-<p>不能创建类型参数的实例 (如 <code>new T()</code></p>
-</li>
-<li>
-<p>不能创建泛型数组 (如 <code>new T[100]</code>)</p>
-</li>
-<li>
-<p>不能对带有参数化类型的对象使用 <code>instanceof</code> 检查 (如 <code>obj instanceof ArrayList&lt;String&gt;</code>)</p>
-</li>
+<li>不能创建类型参数的实例 如 <code>new T()</code></li>
+</ul>
+<ul>
+<li>不能创建泛型数组 (如 <code>new T[100]</code>)</li>
+</ul>
+<ul>
+<li>不能对带有参数化类型的对象使用 <code>instanceof</code> 检查 (如 <code>obj instanceof ArrayList&lt;String&gt;</code>)</li>
+</ul>
+<ul>
 <li>
 <p>擦除后方法签名相同会造成歧义</p>
-</li>
-</ul>
 <p><strong>Method Signature</strong>：在 Java 中，一个方法的签名主要由它的<strong>方法名</strong>和<strong>参数类型列表</strong>组成。</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyGenericClass</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
@@ -2768,6 +2819,8 @@
 </span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>擦除后都变成了 <code>process(Objec data)</code> 编译阶段就会报错</p>
+</li>
+</ul>
 <h2 id="solid">SOLID</h2>
 <p><strong>“Clean Code” by Robert Martin</strong></p>
 <p>Robert Martin 给 OOP 代码规范提出了原则，主要是为了让代码容易理解、灵活、可重用、易于维护，让你感觉像是个“真正的”工程师</p>
@@ -2828,12 +2881,10 @@
 <h3 id="liskov-substitution-principle-lsp">Liskov Substitution Principle - LSP</h3>
 <p>里氏替换原则：一个子类应该能装作自己是它的父类，而不会弄坏什么东西。</p>
 <ul>
-<li>
-<p>这鼓励了正确的继承和多态性。</p>
-</li>
-<li>
-<p>确保新的派生类不会带来意外的行为。</p>
-</li>
+<li>这鼓励了正确的继承和多态性。</li>
+</ul>
+<ul>
+<li>确保新的派生类不会带来意外的行为。</li>
 </ul>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">class</span> <span class="nc">Bird</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">fly</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -3582,13 +3633,13 @@
         
         
           
-          <a href="../w10/" class="md-footer__link md-footer__link--next" aria-label="下一页: 10.0 Concurrency, Anonymous Classes, Lambdas, and Javadoc">
+          <a href="../w10/" class="md-footer__link md-footer__link--next" aria-label="下一页: 10.0 Thread, Lambda">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                10.0 Concurrency, Anonymous Classes, Lambdas, and Javadoc
+                10.0 Thread, Lambda
               </div>
             </div>
             <div class="md-footer__button md-icon">

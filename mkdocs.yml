@@ -27,6 +27,8 @@ nav:
         - cs/python/flask/1.0.md
     - Java:
       - Basics:
+        - cs/java/basics/t1.md
+        - cs/java/basics/t2.md
         - cs/java/basics/w4.md
         - cs/java/basics/w5.md
         - cs/java/basics/w6.md
@@ -36,8 +38,11 @@ nav:
         - cs/java/basics/w10.md
 
     - MERN:
-      - HTML: 
-        - cs/mern/html/html_syntax.md
+      # - HTML: 
+        # - cs/mern/html/html_syntax.md
+      - 3403:
+        - cs/mern/3403/w4.md
+
     - Operating Systems:
       - C System Programming:
         - cs/c/2.1.md
@@ -122,6 +127,8 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
   - tables
+  - toc
+  - mdx_truly_sane_lists
 
 plugins:
   - tags

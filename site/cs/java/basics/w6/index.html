@@ -26,7 +26,7 @@
     
     
       
-        <title>6.0 Inheritance, Method Overriding - Ronin's Notes</title>
+        <title>6.0 Inheritance - Ronin's Notes</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#60-inheritance-method-overriding" class="md-skip">
+        <a href="#60-inheritance" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6.0 Inheritance, Method Overriding
+              6.0 Inheritance
             
           </span>
         </div>
@@ -977,6 +977,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../t1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 T1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../t2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 T2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../w4/" class="md-nav__link">
         
   
@@ -1037,7 +1083,7 @@
   
   
   <span class="md-ellipsis">
-    6.0 Inheritance, Method Overriding
+    6.0 Inheritance
     
   </span>
   
@@ -1050,7 +1096,7 @@
   
   
   <span class="md-ellipsis">
-    6.0 Inheritance, Method Overriding
+    6.0 Inheritance
     
   </span>
   
@@ -1282,7 +1328,7 @@
   
   
   <span class="md-ellipsis">
-    7.0 More inheritance, Packages
+    7.0 More, Packages
     
   </span>
   
@@ -1351,7 +1397,7 @@
   
   
   <span class="md-ellipsis">
-    10.0 Concurrency, Anonymous Classes, Lambdas, and Javadoc
+    10.0 Thread, Lambda
     
   </span>
   
@@ -1456,7 +1502,7 @@
   
   
   <span class="md-ellipsis">
-    HTML
+    3403
     
   </span>
   
@@ -1467,7 +1513,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3_1">
             <span class="md-nav__icon md-icon"></span>
-            HTML
+            3403
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1478,12 +1524,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mern/html/html_syntax/" class="md-nav__link">
+      <a href="../../../mern/3403/w4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    HTML Basic Syntax
+    4.0 Core JavaScript
     
   </span>
   
@@ -2389,7 +2435,7 @@
 
 
 
-<h1 id="60-inheritance-method-overriding">6.0 Inheritance, Method Overriding</h1>
+<h1 id="60-inheritance">6.0 Inheritance</h1>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li>code reuse and abstraction</li>
@@ -2491,15 +2537,19 @@
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
 </span></code></pre></div>
 <ul>
-<li><code>this(0);</code> 特殊用法，就是去调用同一个类 <code>BasicSafeArray</code> 中那个需要一个整数（这里是0）作为参数的构造函数。这是一种常见的技巧，用一个构造函数去调用另一个，避免代码重复。</li>
+<li><code>this(0);</code> 特殊用法，就是去调用同一个类 <code>BasicSafeArray</code> 中那个需要一个整数（这里是0）作为参数的构造函数。这是一种常见的技巧，用一个构造函数去调用另一个，避免代码重复。<ul>
 <li>如果你在一个构造函数里想用 <code>this(...)</code>（调用自己类的其他构造函数）或者 <code>super(...)</code>（调用父类的构造函数），那么这句调用<em>必须</em>写在这个构造函数的第一行！不能在它前面写任何其他的代码</li>
+</ul>
+</li>
 </ul>
 <h4 id="hiding-memebrs">Hiding Memebrs</h4>
 <ul>
-<li>super 来访问超类的构造函数、成员变量或方法</li>
+<li>super 来访问超类的构造函数、成员变量或方法<ul>
 <li>在你想覆盖子类中隐藏的字段或方法时很有用</li>
 <li>如果我们子类中重新声明了一个字段或方法，它会隐藏从父类继承的成员</li>
 <li>一般来说，我不建议对字段这么做，这通常意味着你的类设计得不好</li>
+</ul>
+</li>
 </ul>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HiddenThing</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Thing</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// Hides super.x</span>
@@ -2728,7 +2778,17 @@
 </span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>重载的问题就在于如果一不小心打错字那么编译器不会帮我们识别，因此加一个 <strong>annotation</strong> 后编译器会直接返回错误，这种方法更为严谨符合软件工程</p>
+<p><strong>Method overriding 常常成为问题来源：- @Test2</strong></p>
+<ul>
+<li>The method must have exactly the same signature (<strong>name and parameter list</strong>), otherwise<ul>
+<li><strong>It will just be a method overload</strong> 过载和覆写是两个东西，把父类的相同函数重写一遍叫 <code>override</code></li>
+</ul>
+</li>
+<li>If we make a typo, the compiler will not help us - 打错字那么编译器不会帮我们识别<ul>
+<li>加一个 <strong>annotation</strong> 后编译器会直接返回错误，这种方法更为严谨</li>
+</ul>
+</li>
+</ul>
 <h3 id="sdlc">SDLC</h3>
 <p><img src="../assets/image-20250502101533697.png" alt="image-20250502101533697" style="zoom:50%;" /></p>
 <p>这就是软件开发生命周期，讲述了软件开发是怎么样进行的，循环的本质反映了开发软件通常是迭代的。Java 和类很适合 SDLC 的开发流程：</p>
@@ -2790,13 +2850,13 @@
         
         
           
-          <a href="../w7/" class="md-footer__link md-footer__link--next" aria-label="下一页: 7.0 More inheritance, Packages">
+          <a href="../w7/" class="md-footer__link md-footer__link--next" aria-label="下一页: 7.0 More, Packages">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                7.0 More inheritance, Packages
+                7.0 More, Packages
               </div>
             </div>
             <div class="md-footer__button md-icon">

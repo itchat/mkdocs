@@ -18,7 +18,7 @@
         <link rel="prev" href="../w9/">
       
       
-        <link rel="next" href="../../../mern/html/html_syntax/">
+        <link rel="next" href="../../../mern/3403/w4/">
       
       
       <link rel="icon" href="../../../../assets/icon.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>10.0 Concurrency, Anonymous Classes, Lambdas, and Javadoc - Ronin's Notes</title>
+        <title>10.0 Thread, Lambda - Ronin's Notes</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#100-concurrency-anonymous-classes-lambdas-and-javadoc" class="md-skip">
+        <a href="#100-thread-lambda" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10.0 Concurrency, Anonymous Classes, Lambdas, and Javadoc
+              10.0 Thread, Lambda
             
           </span>
         </div>
@@ -977,6 +977,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../t1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 T1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../t2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 T2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../w4/" class="md-nav__link">
         
   
@@ -1028,7 +1074,7 @@
   
   
   <span class="md-ellipsis">
-    6.0 Inheritance, Method Overriding
+    6.0 Inheritance
     
   </span>
   
@@ -1051,7 +1097,7 @@
   
   
   <span class="md-ellipsis">
-    7.0 More inheritance, Packages
+    7.0 More, Packages
     
   </span>
   
@@ -1129,7 +1175,7 @@
   
   
   <span class="md-ellipsis">
-    10.0 Concurrency, Anonymous Classes, Lambdas, and Javadoc
+    10.0 Thread, Lambda
     
   </span>
   
@@ -1142,7 +1188,7 @@
   
   
   <span class="md-ellipsis">
-    10.0 Concurrency, Anonymous Classes, Lambdas, and Javadoc
+    10.0 Thread, Lambda
     
   </span>
   
@@ -1459,7 +1505,7 @@
   
   
   <span class="md-ellipsis">
-    HTML
+    3403
     
   </span>
   
@@ -1470,7 +1516,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3_1">
             <span class="md-nav__icon md-icon"></span>
-            HTML
+            3403
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1481,12 +1527,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mern/html/html_syntax/" class="md-nav__link">
+      <a href="../../../mern/3403/w4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    HTML Basic Syntax
+    4.0 Core JavaScript
     
   </span>
   
@@ -2395,29 +2441,31 @@
 
 
 
-<h1 id="100-concurrency-anonymous-classes-lambdas-and-javadoc">10.0 Concurrency, Anonymous Classes, Lambdas, and Javadoc</h1>
+<h1 id="100-thread-lambda">10.0 Thread, Lambda</h1>
 <h2 id="multi-processing">Multi Processing</h2>
 <p><strong>多进程</strong>是操作系统的一个核心特性，它允许你同时运行多个程序 。</p>
 <ul>
-<li>
-<p>如果你的计算机只有一个<strong>核心 (single core)</strong>，操作系统会调度进程，使它们看起来像是并发执行的 </p>
-</li>
-<li>
-<p>如果计算机有<strong>多个核心 (multiple cores)</strong>，操作系统会将这些进程分配到不同的核心上执行 。</p>
-</li>
+<li>如果你的计算机只有一个<strong>核心 (single core)</strong>，操作系统会调度进程，使它们看起来像是并发执行的 </li>
+</ul>
+<ul>
+<li>如果计算机有<strong>多个核心 (multiple cores)</strong>，操作系统会将这些进程分配到不同的核心上执行 。</li>
 </ul>
 <p>实现的简单方法可能是同时运行几个 Java 程序，但是这种方法有限制，进程之间无法通信</p>
 <h2 id="multi-threading">Multi Threading</h2>
 <p>并发：一个单独的进程也可以拥有多个<strong>执行线程</strong>，用处如下：</p>
 <ul>
-<li><strong>Responsiveness</strong></li>
-</ul>
+<li>
+<p><strong>Responsiveness</strong></p>
 <p>我们正在编写读取大文件的代码。如果为了等待文件加载而不得不暂停整个程序，那将是很糟糕的。相反，我们可以让一个线程读取文件，而另一个线程更新图形用户界面（GUI）或执行其他操作。</p>
-<ul>
-<li><strong>Efficiency</strong></li>
+</li>
 </ul>
+<ul>
+<li>
+<p><strong>Efficiency</strong></p>
 <p>现代计算机通常有很多核心，我们将希望编写能够利用所有这些核心的代码，以最大限度地提高效率。<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/
-  Thread.html">Java支持多线程代码</a> 。这是通过 <code>Thread</code> 类实现的 。每个 <code>Thread</code> 类的实例代表一个新的执行线程 。如果我们创建多个线程，我们就可以让代码的多个部分同时执行 。通常，我们会想要扩展这个类并重写其 <code>run()</code> 方法 。</p>
+Thread.html">Java支持多线程代码</a> 。这是通过 <code>Thread</code> 类实现的 。每个 <code>Thread</code> 类的实例代表一个新的执行线程 。如果我们创建多个线程，我们就可以让代码的多个部分同时执行 。通常，我们会想要扩展这个类并重写其 <code>run()</code> 方法 。</p>
+</li>
+</ul>
 <h3 id="create-a-tread">Create a Tread</h3>
 <h4 id="ex1">Ex1</h4>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">class</span> <span class="nc">MyThread</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Thread</span><span class="w"> </span><span class="p">{</span>
@@ -2470,8 +2518,8 @@
 <h3 id="join">Join</h3>
 <p>一旦我们启动了一个线程，有时需要等待它执行完毕才能继续主程序的后续步骤，特别是当后续步骤依赖于该线程的执行结果时 。例如，如果你创建了两个线程分别从两个不同的数据库读取数据，你可能需要等待两个线程都返回结果后才能继续程序的下一步操作 。</p>
 <ul>
-<li>Java 提供了 <code>join()</code> 方法：一个线程完成了 <code>run()</code> 方法执行后调用 <code>join()</code> 就会使当前线程等待直到线程执行完毕</li>
-</ul>
+<li>
+<p>Java 提供了 <code>join()</code> 方法：一个线程完成了 <code>run()</code> 方法执行后调用 <code>join()</code> 就会使当前线程等待直到线程执行完毕</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">JoinExample</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="n">Thread</span><span class="o">[]</span><span class="w"> </span><span class="n">threads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Thread</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
@@ -2490,6 +2538,8 @@
 </span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>十个线程全部执行完毕后才会被打印出来。<code>join()</code> 方法会抛出一个 <code>InterruptedException</code> (检查型异常) 。这种情况会在一个线程的执行以非预期的方式结束时发生 </p>
+</li>
+</ul>
 <h3 id="race-condition">Race condition</h3>
 <p><strong>Race Condition</strong>: 当两个或多个线程试图同时对共享数据进行操作，并且操作的执行顺序会影响最终结果时，就发生了竞态条件。每次运行程序结果都不同因此一不小心就变成了 bug。</p>
 <h4 id="ex1_1">Ex1</h4>
@@ -2543,12 +2593,10 @@
 </span></code></pre></div>
 <p>这个程序会导致大量的竞态条件 。如果你运行这个程序，会发现输出结果通常不是2,000,000 。这是因为 <code>specialInt.increment()</code> 操作（即 <code>value++</code>）不是原子性的。它实际上包含三个步骤：读取 <code>value</code> 的当前值，将该值加1，然后将新值写回 <code>value</code>。多个线程的这三个步骤可能会交错执行，导致某些增加操作丢失。</p>
 <ul>
-<li>
-<p>Good: Thread A reads 0, A writes 1, B reads 1, B writes 2</p>
-</li>
-<li>
-<p><strong>Bad: Thread A reads 0, B reads 0, A writes 1, B writes 1</strong></p>
-</li>
+<li>Good: Thread A reads 0, A writes 1, B reads 1, B writes 2</li>
+</ul>
+<ul>
+<li><strong>Bad: Thread A reads 0, B reads 0, A writes 1, B writes 1</strong></li>
 </ul>
 <h3 id="synchronized">Synchronized</h3>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">synchronized</span><span class="w"> </span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2838,13 +2886,13 @@
         
         
           
-          <a href="../../../mern/html/html_syntax/" class="md-footer__link md-footer__link--next" aria-label="下一页: HTML Basic Syntax">
+          <a href="../../../mern/3403/w4/" class="md-footer__link md-footer__link--next" aria-label="下一页: 4.0 Core JavaScript">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                HTML Basic Syntax
+                4.0 Core JavaScript
               </div>
             </div>
             <div class="md-footer__button md-icon">
