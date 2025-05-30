@@ -41,7 +41,9 @@ nav:
       # - HTML: 
         # - cs/mern/html/html_syntax.md
       - 3403:
-        - cs/mern/3403/w4.md
+        - cs/mern/3403/w5.md
+        - cs/mern/3403/w5_exam.md
+        - cs/mern/3403/w6.md
 
     - Operating Systems:
       - C System Programming:
