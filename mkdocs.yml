@@ -27,6 +27,8 @@ nav:
         - cs/python/flask/1.0.md
     - Java:
       - Basics:
+        - cs/java/basics/concept.md
+        - cs/java/basics/2024.s1.md
         - cs/java/basics/t1.md
         - cs/java/basics/t2.md
         - cs/java/basics/w4.md
@@ -38,18 +40,23 @@ nav:
         - cs/java/basics/w10.md
 
     - MERN:
-      # - HTML: 
-        # - cs/mern/html/html_syntax.md
+      - HTML:
+        - cs/mern/html/html_syntax.md
       - 3403:
-        - cs/mern/3403/w5.md
-        - cs/mern/3403/w5_exam.md
-        - cs/mern/3403/w6.md
+        - cs/mern/3403/l5.md
+        - cs/mern/3403/l5_ex.md
+        - cs/mern/3403/l6.md
+        - cs/mern/3403/l6_ex.md
+        - cs/mern/3403/l7.md
+        - cs/mern/3403/l8.md
+        - cs/mern/3403/l9.md
 
     - Operating Systems:
       - C System Programming:
         - cs/c/2.1.md
         - cs/c/2.2.md
         - cs/c/2.3.md
+        - cs/c/2.4.md
         - cs/c/3.1.md
         - cs/c/3.2.md
         - cs/c/3.3.md
@@ -82,7 +89,7 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.sections
-    - navigation.expand
+    # - navigation.expand
     - navigation.top
     - navigation.footer # display prev/next links
     - content.code.annotate
@@ -130,13 +137,14 @@ markdown_extensions:
       pygments_lang_class: true
   - tables
   - toc
-  - mdx_truly_sane_lists
+  - mdx_truly_sane_lists:
+      nested_indent: 4
 
 plugins:
   - tags
   - search
 
-search_index_only: false
+# search_index_only: false
 
 
 # extra:

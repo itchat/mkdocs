@@ -8,7 +8,7 @@ To provide a way for scripts to dynamically access and update the content, struc
 
 文档对象模型是平台和语言中立的接口，它将允许程序和脚本动态访问和更新文档的内容，结构和样式。可以进一步处理该文档，并且该处理的结果可以回到呈现的页面中。`getElementsbytagname`这种，`documents.pet.catNam`访问，并且通过这些方法在页面加载后改变页面
 
-![image-20250529182108719](../assets/image-20250529182108719.png)
+![image-20250529182108719](assets/image-20250529182108719.png)
 
 ## Q2
 
