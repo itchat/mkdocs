@@ -39,7 +39,7 @@ nav:
         - cs/java/basics/w9.md
         - cs/java/basics/w10.md
     - Networks:
-      - 3002
+      - 3002:
         - cs/network/w1.md
         - cs/network/w2.md
         - cs/network/w3.md
