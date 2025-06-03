@@ -39,17 +39,18 @@ nav:
         - cs/java/basics/w9.md
         - cs/java/basics/w10.md
     - Networks:
-      - cs/network/w1.md
-      - cs/network/w2.md
-      - cs/network/w3.md
-      - cs/network/w4.md
-      - cs/network/w5.md
-      - cs/network/w6.md
-      - cs/network/w7.md
-      - cs/network/w8.md
-      - cs/network/w9.md
-      - cs/network/w10.md
-      - cs/network/w11.md
+      - 3002
+        - cs/network/w1.md
+        - cs/network/w2.md
+        - cs/network/w3.md
+        - cs/network/w4.md
+        - cs/network/w5.md
+        - cs/network/w6.md
+        - cs/network/w7.md
+        - cs/network/w8.md
+        - cs/network/w9.md
+        - cs/network/w10.md
+        - cs/network/w11.md
 
     - MERN:
       - HTML:
