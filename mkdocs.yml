@@ -38,11 +38,27 @@ nav:
         - cs/java/basics/w8.md
         - cs/java/basics/w9.md
         - cs/java/basics/w10.md
+    - Networks:
+      - cs/network/w1.md
+      - cs/network/w2.md
+      - cs/network/w3.md
+      - cs/network/w4.md
+      - cs/network/w5.md
+      - cs/network/w6.md
+      - cs/network/w7.md
+      - cs/network/w8.md
+      - cs/network/w9.md
+      - cs/network/w10.md
+      - cs/network/w11.md
 
     - MERN:
       - HTML:
         - cs/mern/html/html_syntax.md
       - 3403:
+        - cs/mern/3403/l1.md
+        - cs/mern/3403/l2.md
+        - cs/mern/3403/l3.md
+        - cs/mern/3403/l4.md
         - cs/mern/3403/l5.md
         - cs/mern/3403/l5_ex.md
         - cs/mern/3403/l6.md
@@ -79,7 +95,7 @@ nav:
       - handbook/csplan.md
       
   - Cybersecurity:
-    - cyber/networkattack.md
+    - cyber/cs/networkattack.md
 
 theme:
   name: material
