@@ -49,8 +49,8 @@ nav:
         - cs/network/w7.md
         - cs/network/w8.md
         - cs/network/w9.md
-        - cs/network/w10.md
-        - cs/network/w11.md
+        # - cs/network/w10.md
+        # - cs/network/w11.md
 
     - MERN:
       - HTML:
