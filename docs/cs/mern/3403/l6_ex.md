@@ -6,7 +6,7 @@
 
 To provide a way for scripts to dynamically access and update the content, structure, and style of web documents. This aligns with the DOM's role as an API for HTML documents, allowing programmatic manipulation.
 
-文档对象模型是平台和语言中立的接口，它将允许程序和脚本动态访问和更新文档的内容，结构和样式。可以进一步处理该文档，并且该处理的结果可以回到呈现的页面中。`getElementsbytagname`这种，`documents.pet.catNam`访问，并且通过这些方法在页面加载后改变页面
+文档对象模型是平台和语言中立的接口，它将允许程序和脚本动态访问和更新文档的内容，结构和样式。可以进一步处理该文档，并且该处理的结果可以回到呈现的页面中。 `getElementsbytagname` 这种， `documents.pet.catNam` 访问，并且通过这些方法在页面加载后改变页面
 
 ![image-20250529182108719](assets/image-20250529182108719.png)
 
@@ -16,9 +16,9 @@ To provide a way for scripts to dynamically access and update the content, struc
 
 DOM 是 BOM 的其中一个分支，包含浏览器执行环境等特点
 
-<img src="../assets/image-20250529190010615.png" alt="image-20250529190010615" style="zoom:40%;" />
+<img src="../assets/image-20250529190010615.png" alt="image-20250529190010615" style="zoom:40%; " />
 
-<img src="../assets/image-20250529195620267.png" alt="image-20250529195620267" style="zoom:50%;" />
+<img src="../assets/image-20250529195620267.png" alt="image-20250529195620267" style="zoom:50%; " />
 
 The BOM allows interaction with the browser window and environment, which is distinct from the document's content.
 
@@ -45,7 +45,7 @@ cookie是一个包含键值对的字符串，最大4KB文本文件可通过 docu
 
 The program's flow is primarily determined by the occurrence of events, such as user actions or messages from other programs.
 
-<img src="./assets/image-20250529203056710.png" alt="image-20250529203056710" style="zoom:50%;" />
+<img src="assets/image-20250529203056710.png" alt="image-20250529203056710" style="zoom:50%; " />
 
 ---
 
@@ -57,7 +57,7 @@ The program's flow is primarily determined by the occurrence of events, such as 
 
 1. `<button onclick="...">`这样的是一种早期方法；关注点无法分离与 HTML 混在一起难以维护阅读
 
-灵活性差，一个事件属性只能 `assign `一个函数，添加多个不方便
+灵活性差，一个事件属性只能 `assign ` 一个函数，添加多个不方便
 
 2. `element.onclick = myFunction;`
 
@@ -71,11 +71,11 @@ The program's flow is primarily determined by the occurrence of events, such as 
 
 在HTML DOM中，当一个事件（比如点击）发生在一个元素上时，它并不仅仅只影响该元素。事件会经历一个称为“事件流”的过程，事件冒泡描述的是当一个事件在DOM树中的某个元素（目标节点）上被触发后，该事件会接着向上传播，依次触发其所有父元素（祖先节点），一直到文档的根节点。在大多数浏览器中，事件处理的默认行为是在冒泡阶段进行 。
 
-A.The event triggers handlers on sibling elements simultaneously.
+A. The event triggers handlers on sibling elements simultaneously.
 
-这个选项描述的是 `event capturing` 
+这个选项描述的是 `event capturing`
 
-B.The event is first handled by the outermost ancestor (document root) and then propagates down to the target element.
+B. The event is first handled by the outermost ancestor (document root) and then propagates down to the target element.
 
 说反了
 
@@ -83,7 +83,7 @@ C. Only the target element that directly received the event can handle it.
 
 不对，有事件捕获和事件冒泡这样的事件流机制，才允许多个元素（目标元素及其祖先元素）响应同一个事件 
 
-D.The event is handled by the target element first, and then propagates up through its ancestors towards the document root.
+D. The event is handled by the target element first, and then propagates up through its ancestors towards the document root.
 
 ---
 
@@ -93,10 +93,10 @@ D.The event is handled by the target element first, and then propagates up throu
 
 `load` 事件目的是告诉你的 Js 整个页面以及其所有依赖的所有资源都已经全部加载完毕，资源包括：
 
-- CSS
-- JS
-- images
-- iframes
+* CSS
+* JS
+* images
+* iframes
 
 ***It fires when the entire page has finished loading, including all dependent resources like images and scripts.***
 
@@ -108,7 +108,7 @@ D.The event is handled by the target element first, and then propagates up throu
 
 To provide a more concise and easier way to **manipulate the DOM and handle events compared to early verbose native JavaScript.**
 
-可以用 CDN 访问，语法是 `$（selector）.Action（）` 
+可以用 CDN 访问，语法是 `$（selector）.Action（）`
 
 ---
 

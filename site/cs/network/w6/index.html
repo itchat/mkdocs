@@ -18,7 +18,7 @@
         <link rel="prev" href="../w5/">
       
       
-        <link rel="next" href="../../mern/html/html_syntax/">
+        <link rel="next" href="../w7/">
       
       
       <link rel="icon" href="../../../assets/icon.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Network Layer Practice Questions - Ronin's Notes</title>
+        <title>6.0 Transport Layer - Ronin's Notes</title>
       
     
     
@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#network-layer-practice-questions" class="md-skip">
+        <a href="#60-transport-layer" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Network Layer Practice Questions
+              6.0 Transport Layer
             
           </span>
         </div>
@@ -359,7 +361,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../cyber/cs/networkattack.md" class="md-tabs__link">
+        <a href="../../../cyber/networkattack/" class="md-tabs__link">
           
   
   
@@ -1325,12 +1327,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w1.md" class="md-nav__link">
+      <a href="../w1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    1.0 OSI and TCP/IP
     
   </span>
   
@@ -1348,12 +1350,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w2.md" class="md-nav__link">
+      <a href="../w2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    2.0 Physical Layer
     
   </span>
   
@@ -1371,12 +1373,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w3.md" class="md-nav__link">
+      <a href="../w3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    3.0 Data Link Layer
     
   </span>
   
@@ -1394,12 +1396,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w4.md" class="md-nav__link">
+      <a href="../w4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    4.0 Wireless Networking
     
   </span>
   
@@ -1422,7 +1424,7 @@
   
   
   <span class="md-ellipsis">
-    5.0 Wireless Network
+    5.0 Network Layer
     
   </span>
   
@@ -1454,7 +1456,7 @@
   
   
   <span class="md-ellipsis">
-    Network Layer Practice Questions
+    6.0 Transport Layer
     
   </span>
   
@@ -1467,7 +1469,7 @@
   
   
   <span class="md-ellipsis">
-    Network Layer Practice Questions
+    6.0 Transport Layer
     
   </span>
   
@@ -1490,56 +1492,356 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#question-1-ip-packet-header" class="md-nav__link">
+  <a href="#1-role-of-the-transport-layer" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 1: IP Packet Header
+      1. Role of the Transport Layer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Role of the Transport Layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layer-responsibility-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layer Responsibility Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Ports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Ports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-number-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port Number Ranges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoint-address-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint Address Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-transport-protocol-comparison-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Transport Protocol Comparison Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#question-2-ipv4-fragmentation" class="md-nav__link">
+  <a href="#4-user-datagram-protocol-udp" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 2: IPv4 Fragmentation
+      4. User Datagram Protocol (UDP)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. User Datagram Protocol (UDP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#udp-properties-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      UDP Properties &amp; Characteristics
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#question-3-ip-addressing-and-subnetting" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#udp-header-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 3: IP Addressing and Subnetting
+      UDP Header Structure
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#question-4-ip-forwarding" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#udp-checksum-mechanism" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 4: IP Forwarding
+      UDP Checksum Mechanism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UDP Checksum Mechanism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checksum-calculation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checksum Calculation Example
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#question-5-dhcp" class="md-nav__link">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#udp-limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 5: DHCP
+      UDP Limitations
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#question-6-general-network-layer-concepts" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#udp-communication-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 6: General Network Layer Concepts
+      UDP Communication Flow
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-transmission-control-protocol-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Transmission Control Protocol (TCP)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Transmission Control Protocol (TCP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp-properties-guarantees" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Properties &amp; Guarantees
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-header-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Header Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-flags-and-their-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Flags and Their Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Segmentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP Segmentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#segmentation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segmentation Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-sequence-and-acknowledgment-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Sequence and Acknowledgment Numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP Sequence and Acknowledgment Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sequence-number-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Number Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-connection-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Connection Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP Connection Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-way-handshake" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-way Handshake
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-termination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection Termination
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-reliability-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Reliability Mechanisms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP Reliability Mechanisms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retransmission-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retransmission Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-practical-application-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Practical Application Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Practical Application Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-udp-vs-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use UDP vs TCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Trade-offs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-key-calculations-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Key Calculations and Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Key Calculations and Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checksum-calculation-concept-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checksum Calculation (Concept Example)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequence-number-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Number Tracking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1559,12 +1861,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w7.md" class="md-nav__link">
+      <a href="../w7/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    7.0 Presentation Layers
     
   </span>
   
@@ -1582,12 +1884,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w8.md" class="md-nav__link">
+      <a href="../w8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    8.0 Client and Server
     
   </span>
   
@@ -1605,12 +1907,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w9.md" class="md-nav__link">
+      <a href="../w9/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    9.0 Internet Measurement
     
   </span>
   
@@ -1628,12 +1930,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w10.md" class="md-nav__link">
+      <a href="../w10/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    10.0 Exam Samples
     
   </span>
   
@@ -1651,12 +1953,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w11.md" class="md-nav__link">
+      <a href="../w11/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    11.0 Past Exam Questions
     
   </span>
   
@@ -2912,12 +3214,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cyber/cs/networkattack.md" class="md-nav__link">
+      <a href="../../../cyber/networkattack/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    Network Attacks
     
   </span>
   
@@ -2962,56 +3264,356 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#question-1-ip-packet-header" class="md-nav__link">
+  <a href="#1-role-of-the-transport-layer" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 1: IP Packet Header
+      1. Role of the Transport Layer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Role of the Transport Layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layer-responsibility-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layer Responsibility Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Ports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Ports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-number-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port Number Ranges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoint-address-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint Address Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-transport-protocol-comparison-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Transport Protocol Comparison Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#question-2-ipv4-fragmentation" class="md-nav__link">
+  <a href="#4-user-datagram-protocol-udp" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 2: IPv4 Fragmentation
+      4. User Datagram Protocol (UDP)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. User Datagram Protocol (UDP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#udp-properties-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      UDP Properties &amp; Characteristics
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#question-3-ip-addressing-and-subnetting" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#udp-header-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 3: IP Addressing and Subnetting
+      UDP Header Structure
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#question-4-ip-forwarding" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#udp-checksum-mechanism" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 4: IP Forwarding
+      UDP Checksum Mechanism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UDP Checksum Mechanism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checksum-calculation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checksum Calculation Example
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#question-5-dhcp" class="md-nav__link">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#udp-limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 5: DHCP
+      UDP Limitations
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#question-6-general-network-layer-concepts" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#udp-communication-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 6: General Network Layer Concepts
+      UDP Communication Flow
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-transmission-control-protocol-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Transmission Control Protocol (TCP)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Transmission Control Protocol (TCP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp-properties-guarantees" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Properties &amp; Guarantees
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-header-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Header Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-flags-and-their-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Flags and Their Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Segmentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP Segmentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#segmentation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segmentation Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-sequence-and-acknowledgment-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Sequence and Acknowledgment Numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP Sequence and Acknowledgment Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sequence-number-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Number Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-connection-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Connection Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP Connection Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-way-handshake" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-way Handshake
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-termination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection Termination
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-reliability-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Reliability Mechanisms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP Reliability Mechanisms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retransmission-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retransmission Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-practical-application-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Practical Application Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Practical Application Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-udp-vs-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use UDP vs TCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Trade-offs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-key-calculations-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Key Calculations and Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Key Calculations and Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checksum-calculation-concept-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checksum Calculation (Concept Example)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequence-number-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Number Tracking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3031,518 +3633,515 @@
 
 
 
-<h1 id="network-layer-practice-questions">Network Layer Practice Questions</h1>
-<h2 id="question-1-ip-packet-header">Question 1: IP Packet Header</h2>
-<p>A host computer (Host A) sends an email to another host (Host B). The email application uses TCP as its transport protocol.</p>
-<p>a)  When an IP packet carrying a segment of this email data is created on Host A, what value would typically be found in the "Protocol" field of the IPv4 header? Explain why.</p>
+<h1 id="60-transport-layer">6.0 Transport Layer</h1>
+<p>Open book notes for the Transport Layer section, focusing on potentially examinable material and strictly excluding Sockets, Flow Control, and Congestion Control, based on the provided sources and our conversation history.</p>
+<h2 id="1-role-of-the-transport-layer">1. Role of the Transport Layer</h2>
 <ul>
-<li><strong>Answer</strong>: The "Protocol" field would typically contain the value <code>6</code>. This is because the value <code>6</code> is the standard protocol number assigned to TCP (Transmission Control Protocol). The IP layer uses this field to know which upper-layer protocol (in this case, TCP) should receive the payload of the IP datagram once it reaches the destination host.</li>
-<li><strong>Knowledge Point</strong>: IPv4 Header - Protocol field; Role of Protocol field in demultiplexing to upper layers (TCP, UDP, ICMP, etc.).</li>
+<li>The Transport Layer is responsible for providing <strong>host-to-host</strong> (or <strong>process-to-process</strong>) communication services for applications.</li>
+<li>It sits above the Network Layer.</li>
+<li>It manages delivery of a message from <strong>one process to another</strong>, whereas the Network layer oversees source to destination delivery.</li>
+<li>The Transport Layer is the lowest OSI layer that has to deal with <strong>end-to-end transmission</strong>. Layers above it are also concerned with end-to-end transmission.</li>
 </ul>
-<p>b)  Explain the purpose of the "Time To Live (TTL)" field in the IPv4 header of this packet. What is a likely consequence if the TTL value decrements to zero before the packet reaches Host B?</p>
-<ul>
-<li><strong>Answer</strong>: The "Time To Live (TTL)" field is an 8-bit field that indicates the maximum number of hops (routers) an IP datagram is allowed to traverse in the network. Each router that forwards the packet decrements the TTL value by at least one.
-If the TTL value decrements to zero before the packet reaches Host B, the router that decremented it to zero will discard the packet. This router typically sends an ICMP "Time Exceeded" message back to the source (Host A). The primary purpose of TTL is to prevent packets from circulating endlessly in the network in case of routing loops.</li>
-<li><strong>Knowledge Point</strong>: IPv4 Header - TTL field; Purpose of TTL (preventing indefinite packet circulation, loop prevention); ICMP Time Exceeded message.</li>
-</ul>
-<p>c)  If the total IP datagram size is 1000 bytes and the IP header is 20 bytes long, what value would be in the "Total Length" field of the IPv4 header?</p>
-<ul>
-<li><strong>Answer</strong>: The "Total Length" field would contain the value <code>1000</code>. This field specifies the total length of the IP datagram in bytes, including both the header and the data.</li>
-<li><strong>Knowledge Point</strong>: IPv4 Header - Total Length field; Includes header and data.</li>
-</ul>
-<hr />
-<h2 id="question-2-ipv4-fragmentation">Question 2: IPv4 Fragmentation</h2>
-<p>An IP datagram has a total size of 4500 bytes (this includes a standard 20-byte IPv4 header, so the payload is 4480 bytes). This datagram needs to be transmitted from a source host to a destination host across a network path. One of the links in this path has a Maximum Transmission Unit (MTU) of 1500 bytes.</p>
-<p>a)  Is fragmentation necessary for this datagram to traverse the link with an MTU of 1500 bytes? Explain your reasoning.</p>
-<ul>
-<li><strong>Answer</strong>: Yes, fragmentation is necessary. The datagram size (4500 bytes) is larger than the MTU of the link (1500 bytes). An IP datagram cannot be larger than the MTU of the underlying network link it needs to traverse.</li>
-<li><strong>Knowledge Point</strong>: MTU (Maximum Transmission Unit); Condition for fragmentation (Datagram Size &gt; MTU).</li>
-</ul>
-<p>b)  If fragmentation is necessary, describe how the original datagram would be fragmented. For each fragment, specify the values for the following IPv4 header fields:</p>
-<ul>
-<li>Total Length</li>
-<li>Identification</li>
-<li>More Fragments (MF) flag</li>
-<li>Fragment Offset
-(Assume the original datagram has an Identification value of 777. The IP header size is 20 bytes.)</li>
-</ul>
-<ul>
-<li>
-<p><strong>Answer</strong>:
-    The maximum data payload per fragment over the 1500-byte MTU link is <code>1500 - 20</code> (IP header) <code>= 1480</code> bytes. The fragment offsets are measured in 8-byte blocks.</p>
-<ul>
-<li><strong>Fragment 1</strong>:<ul>
-<li>Total Length: <code>1500</code> bytes (1480 bytes data + 20 bytes header)</li>
-<li>Identification: <code>777</code> (same for all fragments of the original datagram)</li>
-<li>More Fragments (MF) flag: <code>1</code> (indicates this is not the last fragment)</li>
-<li>Fragment Offset: <code>0</code> (this fragment contains the first part of the data, offset <code>0 * 8 = 0</code> bytes)</li>
-<li>Data: Bytes 0-1479 of the original payload.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong>Fragment 2</strong>:<ul>
-<li>Total Length: <code>1500</code> bytes (1480 bytes data + 20 bytes header)</li>
-<li>Identification: <code>777</code></li>
-<li>More Fragments (MF) flag: <code>1</code></li>
-<li>Fragment Offset: <code>185</code> (since <code>1480 bytes / 8 bytes per unit = 185</code>. This fragment starts after the first 1480 bytes of data)</li>
-<li>Data: Bytes 1480-2959 of the original payload.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong>Fragment 3</strong>:<ul>
-<li>Remaining data: <code>4480</code> (original payload) - <code>1480</code> (Frag 1) - <code>1480</code> (Frag 2) = <code>1520</code> bytes. This is still too large.</li>
-<li>Total Length: <code>1500</code> bytes (1480 bytes data + 20 bytes header)</li>
-<li>Identification: <code>777</code></li>
-<li>More Fragments (MF) flag: <code>1</code></li>
-<li>Fragment Offset: <code>370</code> (185 + 185, or <code>2960 / 8</code>)</li>
-<li>Data: Bytes 2960-4439 of the original payload.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong>Fragment 4</strong>:<ul>
-<li>Remaining data: <code>1520</code> (from previous step) - <code>1480</code> (Frag 3) = <code>40</code> bytes.</li>
-<li>Total Length: <code>40</code> (data) + <code>20</code> (header) = <code>60</code> bytes</li>
-<li>Identification: <code>777</code></li>
-<li>More Fragments (MF) flag: <code>0</code> (this is the last fragment)</li>
-<li>Fragment Offset: <code>555</code> (370 + 185, or <code>4440 / 8</code>)</li>
-<li>Data: Bytes 4440-4479 of the original payload.</li>
-</ul>
-</li>
-</ul>
-<p><em>(Correction in calculation for Fragment 3 &amp; 4 based on original payload of 4480 bytes)</em>
-Original payload = 4480 bytes.
-Fragment 1 data: 1480 bytes (bytes 0-1479). Offset 0. MF=1. Total Length = 1500.
-Fragment 2 data: 1480 bytes (bytes 1480-2959). Offset 1480/8 = 185. MF=1. Total Length = 1500.
-Remaining payload = 4480 - 1480 - 1480 = 1520 bytes.
-Fragment 3 data: 1480 bytes (bytes 2960-4439). Offset 2960/8 = 370. MF=1. Total Length = 1500.
-Remaining payload = 1520 - 1480 = 40 bytes.
-Fragment 4 data: 40 bytes (bytes 4440-4479). Offset 4440/8 = 555. MF=0. Total Length = 60.</p>
-</li>
-</ul>
-<ul>
-<li><strong>Knowledge Point:</strong> IPv4 Fragmentation process; IPv4 Header fields: Total Length, Identification, Flags (DF, MF), Fragment Offset; MTU constraints; Calculation of fragment sizes and offsets. Reassembly at the destination.</li>
-</ul>
-<hr />
-<h2 id="question-3-ip-addressing-and-subnetting">Question 3: IP Addressing and Subnetting</h2>
-<p>A small company has been assigned the Class C network address <code>203.0.113.0</code>.</p>
-<p>a)  What is the default subnet mask for this Class C network?</p>
-<ul>
-<li><strong>Answer</strong>: The default subnet mask for a Class C network is <code>255.255.255.0</code>.</li>
-<li><strong>Knowledge Point</strong>: Classful IP addressing (Class C); Default subnet masks.</li>
-</ul>
-<p>b)  How many unique host IP addresses can be assigned to devices within this network using the default subnet mask? Explain your calculation.</p>
-<ul>
-<li><strong>Answer</strong>: A Class C network address with a default subnet mask of <code>255.255.255.0</code> uses the first 24 bits for the network portion and the last 8 bits for the host portion.
-Number of bits for hosts = 8 bits.
-Total possible addresses in the host portion = $2^8 =256$.
-However, two addresses are reserved:
-1.  The address with all host bits as 0 (e.g., <code>203.0.113.0</code>) is the network address itself.
-2.  The address with all host bits as 1 (e.g., <code>203.0.113.255</code>) is the broadcast address for that network.
-Therefore, the number of unique (usable) host IP addresses is $2^8 −2=256−2=254$.</li>
-<li><strong>Knowledge Point</strong>: Calculating usable host addresses in a network ($2^n −2$, where n is the number of host bits); Reserved addresses (network address, broadcast address).</li>
-</ul>
-<p>c)  The company decides it needs to create at least 3 separate subnets for different departments. Suggest a suitable subnet mask that would allow for this. How many usable host IP addresses would be available per subnet with your suggested mask?</p>
-<ul>
-<li>
-<p><strong>Answer</strong>: To create at least 3 subnets, we need to borrow bits from the host portion of the Class C address.
-If we borrow 1 bit, we get $2^1 =2$ subnets (not enough).
-If we borrow 2 bits, we get $2^2 =4$ subnets (this is sufficient).
-Original host bits = 8. Borrowing 2 bits leaves <code>8−2=6</code> bits for hosts per subnet.
-The new subnet mask would have 2 additional bits set to 1 in the last octet compared to the default.
-Default mask (binary last octet): <code>00000000</code>
-New mask (binary last octet, borrowing 2 bits): <code>11000000</code>
-This corresponds to <code>128+64=192</code> in decimal.
-So, the new subnet mask is <code>255.255.255.192</code>.</p>
-<p>Number of usable host IP addresses per subnet:
-Host bits per subnet = 6.
-Total addresses per subnet = $2^6 = 64$.
-Usable host addresses per subnet = $2^6 - 2 = 64 - 2 = \textbf{62}$.</p>
-</li>
-</ul>
-<ul>
-<li><strong>Knowledge Point</strong>: Subnetting; Borrowing host bits for subnetting; Calculating the number of subnets ($2^s$, where s is borrowed bits); Calculating new subnet mask; Calculating usable hosts per subnet.</li>
-</ul>
-<hr />
-<h2 id="question-4-ip-forwarding">Question 4: IP Forwarding</h2>
-<p>A router, R1, has the following entries (simplified) in its forwarding table:</p>
+<h3 id="layer-responsibility-comparison">Layer Responsibility Comparison</h3>
 <table>
 <thead>
 <tr>
-<th>Destination Network</th>
-<th>Next Hop</th>
-<th>Interface</th>
+<th>Layer</th>
+<th>Primary Focus</th>
+<th>Addressing Unit</th>
+<th>Key Responsibility</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>192.168.1.0/24</td>
-<td>-</td>
-<td>Eth0</td>
+<td>Network Layer</td>
+<td>Host-to-Host</td>
+<td>IP Address</td>
+<td>Routing packets between hosts</td>
 </tr>
 <tr>
-<td>192.168.2.0/24</td>
-<td>10.0.0.2</td>
-<td>Eth1</td>
+<td>Transport Layer</td>
+<td>Process-to-Process</td>
+<td>Port Number</td>
+<td>End-to-end delivery between applications</td>
 </tr>
 <tr>
-<td>0.0.0.0/0</td>
-<td>203.0.113.1</td>
-<td>Eth2</td>
+<td>Application Layer</td>
+<td>Service-to-Service</td>
+<td>Application Protocol</td>
+<td>Specific application services</td>
 </tr>
 </tbody>
 </table>
-<p>R1 receives an IP packet destined for <code>192.168.2.15</code>.</p>
-<p>a)  Explain the process R1 uses to decide where to send this packet. Which entry in the table will be matched, and what will R1 do with the packet?</p>
+<h2 id="2-ports">2. Ports</h2>
 <ul>
-<li>
-<p><strong>Answer</strong>: R1 will compare the destination IP address (<code>192.168.2.15</code>) with the "Destination Network" entries in its forwarding table using a longest prefix match.
-1.  Check <code>192.168.1.0/24</code>: <code>192.168.2.15</code> does not fall within the <code>192.168.1.0</code> network. No match.
-2.  Check <code>192.168.2.0/24</code>: <code>192.168.2.15</code> does fall within the <code>192.168.2.0</code> network (addresses from <code>192.168.2.0</code> to <code>192.168.2.255</code>). This is a match.
-3.  The <code>0.0.0.0/0</code> is a default route and would only be used if no more specific match is found. Since <code>192.168.2.0/24</code> is more specific, it takes precedence.</p>
-<p>The entry <strong>192.168.2.0/24</strong> will be matched. R1 will send the packet to the "Next Hop" address <strong>10.0.0.2</strong> out of its <strong>Eth1</strong> interface.
-- <strong>Knowledge Point</strong>: IP Forwarding process; Forwarding tables (routing tables); Longest prefix match rule; Next hop; Interface.</p>
-</li>
+<li>When delivering packets, Network Layer IP addresses alone are not enough as they only address hosts, and not individual operating system processes on those hosts.</li>
+<li>Transport protocols identify software endpoints (applications) on a host using a <strong>16-bit positive port number</strong>.</li>
+<li>An <strong>endpoint</strong> is a combination of an IP address and a port number.</li>
+<li>Port numbers are needed because multiple applications may be running on a host and communicating over the network simultaneously. The transport layer uses port numbers to direct incoming packets to the correct application process.</li>
+<li>There are <strong>predefined port numbers</strong> for common applications (e.g., FTP, SSH, Telnet, SMTP, HTTP). Many of these common application protocols use TCP.</li>
 </ul>
-<p>b)  What is the significance of the 0.0.0.0/0 entry in a forwarding table?</p>
-<ul>
-<li><strong>Answer</strong>: The <code>0.0.0.0/0</code> entry represents the default route. It is used when an IP packet's destination address does not match any other more specific network entries in the forwarding table. Essentially, if the router doesn't have a specific route for a destination, it sends the packet to the next-hop router specified by the default route, hoping that router will know how to get it closer to its destination or also has a default route. It is crucial for enabling communication with networks not explicitly listed in the router's table (e.g., the broader internet).</li>
-<li><strong>Knowledge Point</strong>: Default route (<code>0.0.0.0/0</code>); Purpose in forwarding.</li>
-</ul>
-<hr />
-<h2 id="question-5-dhcp">Question 5: DHCP</h2>
-<p>A student brings their new laptop to the university library and connects it to the wired Ethernet network.</p>
-<p>a)  Briefly describe the four main steps (the DORA process) the laptop will typically use to automatically obtain an IP address via DHCP.</p>
-<ul>
-<li><strong>Answer</strong>: The four main steps are:
-1.  <strong>Discover</strong>: The laptop (DHCP client) broadcasts a "DHCP Discover" message on the local network to find any available DHCP servers.
-2.  <strong>Offer</strong>: DHCP server(s) that receive the discover message may respond by broadcasting a "DHCP Offer" message, offering an IP address and other configuration parameters (e.g., lease time).
-3.  <strong>Request</strong>: The laptop selects one of the offers (usually the first one it receives) and broadcasts a "DHCP Request" message, requesting the offered IP address from the chosen server. This message also implicitly declines offers from other servers.
-4.  <strong>Acknowledge (Ack)</strong>: The selected DHCP server responds with a "DHCP Acknowledge" message, confirming the IP address lease and providing other configuration details (like subnet mask, default gateway, DNS server). The client can now use the assigned IP address.</li>
-<li><strong>Knowledge Point</strong>: DHCP (Dynamic Host Configuration Protocol); DORA process (Discover, Offer, Request, Acknowledge); Client-server interaction in DHCP.</li>
-</ul>
-<p>b)  Besides an IP address, list two other essential pieces of network configuration information that the DHCP server is likely to provide to the laptop.</p>
-<ul>
-<li><strong>Answer</strong>: Two other essential pieces of network configuration information are:
-1.  <strong>Subnet Mask</strong>: To define the local network range.
-2.  <strong>Default Gateway (Router) IP Address</strong>: To allow the laptop to communicate with devices outside its local subnet.
-(Another common one is DNS Server IP Address)</li>
-<li><strong>Knowledge Point</strong>: Information provided by DHCP (IP address, subnet mask, default gateway, DNS server, lease time).</li>
-</ul>
-<hr />
-<h2 id="question-6-general-network-layer-concepts">Question 6: General Network Layer Concepts</h2>
-<p>a)  The Internet Protocol (IP) is described as offering a "best-effort" delivery service. Explain what this means.</p>
-<ul>
-<li><strong>Answer</strong>: "Best-effort" delivery means that IP does not provide any guarantees that data will actually be delivered to the destination. It will make an "effort" to deliver packets, but:</li>
-<li>Packets may be lost (e.g., due to network congestion or errors).</li>
-<li>Packets may arrive out of order.</li>
-<li>Packets may be duplicated.</li>
-<li>Packets may be delayed by an arbitrary amount of time.
-IP does not include mechanisms for error recovery (e.g., retransmitting lost packets) or flow control. These reliability functions are typically handled by higher-layer protocols like TCP.</li>
-<li><strong>Knowledge Point</strong>: IP service model (connectionless, unreliable, best-effort); Implications of best-effort service.</li>
-</ul>
-<p>b)  What is the primary difference in responsibility between the Network Layer and the Data Link Layer regarding packet delivery?</p>
-<ul>
-<li><strong>Answer</strong>:</li>
-<li><strong>Data Link Layer</strong>: Responsible for transferring frames of data between two directly connected nodes (i.e., across a single link or hop in the network). It deals with issues like physical addressing (MAC addresses), framing, error detection on that specific link, and media access control.</li>
-<li><strong>Network Layer</strong>: Responsible for end-to-end delivery of packets from the original source host to the final destination host, potentially across multiple interconnected networks (hops). It deals with logical addressing (IP addresses), determining paths (forwarding decisions based on routing information, though detailed routing algorithms are out of scope for this exam), and fragmentation if necessary.
-In essence, the Data Link Layer handles hop-to-hop delivery, while the Network Layer handles source-to-destination delivery.</li>
-<li><strong>Knowledge Point</strong>: OSI model layer responsibilities; Network Layer (end-to-end, logical addressing, multi-hop) vs. Data Link Layer (hop-to-hop, physical addressing, single link).</li>
-</ul>
-<hr />
-<h1 id="network-layer-open-book-notes">Network Layer Open Book Notes</h1>
-<h2 id="1-network-layer-introduction-responsibilities">1. Network Layer Introduction &amp; Responsibilities</h2>
-<p><strong>Primary Role</strong>: Responsible for getting packets from the source host to the destination host, possibly across multiple networks (hops). This is end-to-end transmission at the lowest OSI layer that deals with it.</p>
-<p><strong>Key Functions (Examinable Focus)</strong>:</p>
-<ul>
-<li><strong>Logical Addressing (IP Addressing)</strong>: Assigning unique IP addresses to devices for identification on the network.</li>
-<li><strong>Forwarding</strong>: The local action by a router of moving a packet from an input link to the appropriate output link. This involves consulting a forwarding table.</li>
-<li><strong>Fragmentation &amp; Reassembly</strong>: If a packet is larger than the Maximum Transmission Unit (MTU) of a network link, the Network Layer fragments it into smaller pieces. These are reassembled at the destination.</li>
-</ul>
-<p><strong>Service Model of IP</strong>:</p>
-<ul>
-<li><strong>Connectionless</strong>: No connection is established before sending data. Each packet is handled independently. Like sending a letter.</li>
-<li><strong>Best-Effort Delivery</strong>: IP makes its best effort to deliver packets, but there are no guarantees.<ul>
-<li>Packets may be lost.</li>
-<li>Packets may arrive out of order.</li>
-<li>Packets may be duplicated.</li>
-<li>Packets may be delayed.</li>
-</ul>
-</li>
-<li><strong>Unreliable</strong>: IP itself does not perform error recovery (e.g., retransmission of lost packets) or flow control. These are typically handled by upper-layer protocols (e.g., TCP).</li>
-</ul>
-<hr />
-<h2 id="2-internet-protocol-ip-general">2. Internet Protocol (IP) - General</h2>
-<ul>
-<li>The main network layer protocol in the TCP/IP suite.</li>
-<li>Handles addressing and forwarding.</li>
-<li>IPv4 is the version primarily focused on for examinable topics (excluding IPv6).</li>
-</ul>
-<hr />
-<h2 id="3-ipv4-packet-header">3. IPv4 Packet Header</h2>
-<p>The IPv4 header contains information for delivering the packet. Standard header is 20 bytes long (without options).</p>
+<h3 id="port-number-ranges">Port Number Ranges</h3>
 <table>
 <thead>
 <tr>
-<th>Field Name</th>
-<th>Size (bits)</th>
-<th>Description</th>
+<th>Range</th>
+<th>Type</th>
+<th>Usage</th>
+<th>Examples</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Version</td>
-<td>4</td>
-<td>Indicates the IP version (e.g., 4 for IPv4).</td>
+<td>0-1023</td>
+<td>Well-known Ports</td>
+<td>System/Reserved</td>
+<td>HTTP(80), HTTPS(443), FTP(21), SSH(22)</td>
 </tr>
 <tr>
-<td>Header Length (IHL)</td>
-<td>4</td>
-<td>Length of the IP header in 32-bit words. Minimum value is 5 (for a 20-byte header). If options are present, this value will be greater than 5.</td>
+<td>1024-49151</td>
+<td>Registered Ports</td>
+<td>User applications</td>
+<td>Custom services</td>
 </tr>
 <tr>
-<td>Type of Service (TOS)</td>
-<td>8</td>
-<td>(Generally not a deep focus in exams based on provided material, but good to know it exists for QoS hints).</td>
-</tr>
-<tr>
-<td>Total Length</td>
-<td>16</td>
-<td>Total length of the IP datagram (header + data) in bytes. Max size 65,535 bytes.</td>
-</tr>
-<tr>
-<td>Identification</td>
-<td>16</td>
-<td>Unique ID for a group of fragments belonging to a single original IP datagram. Used in reassembly.</td>
-</tr>
-<tr>
-<td>Flags</td>
-<td>3</td>
-<td>- Bit 0: Reserved (must be 0).<br>- Bit 1: DF (Don't Fragment): If 1, packet cannot be fragmented. If fragmentation is needed but DF=1, packet is dropped, and an ICMP error is sent.<br>- Bit 2: MF (More Fragments): If 1, this is not the last fragment. If 0, this is the last fragment or the only fragment.</td>
-</tr>
-<tr>
-<td>Fragment Offset</td>
-<td>13</td>
-<td>Specifies the offset of this fragment's data relative to the start of the original datagram's data, measured in 8-byte units. Used in reassembly.</td>
-</tr>
-<tr>
-<td>Time To Live (TTL)</td>
-<td>8</td>
-<td>Decremented by each router that forwards the packet. If TTL reaches 0, the packet is discarded (prevents indefinite loops). Originally seconds, now effectively hop count.</td>
-</tr>
-<tr>
-<td>Protocol</td>
-<td>8</td>
-<td>Indicates the protocol of the data payload being carried (e.g., TCP=6, UDP=17, ICMP=1). Used for demultiplexing at the destination.</td>
-</tr>
-<tr>
-<td>Header Checksum</td>
-<td>16</td>
-<td>An error-checking checksum calculated only over the IP header. Recalculated by each router because the TTL field (and potentially options) changes.</td>
-</tr>
-<tr>
-<td>Source IP Address</td>
-<td>32</td>
-<td>The IPv4 address of the original sender.</td>
-</tr>
-<tr>
-<td>Destination IP Address</td>
-<td>32</td>
-<td>The IPv4 address of the final recipient.</td>
-</tr>
-<tr>
-<td>Options</td>
-<td>variable</td>
-<td>Used for various control functions like source routing, record route, timestamping. (Not a deep focus, but know they can exist and affect header length).</td>
-</tr>
-<tr>
-<td>Padding</td>
-<td>variable</td>
-<td>Used to ensure the IP header ends on a 32-bit boundary if options are present and don't fill it.</td>
+<td>49152-65535</td>
+<td>Dynamic/Private</td>
+<td>Temporary/Client</td>
+<td>Ephemeral connections</td>
 </tr>
 </tbody>
 </table>
-<p><strong>IPv4 Header 主要字段</strong>：</p>
-<p><strong>字段说明</strong>：
-- <strong>Version</strong>：4 位，IP 版本号（如 IPv4 为 4）
-- <strong>IHL</strong>：4 位，首部长度（以 32 位字为单位）
-- <strong>TOS</strong>：8 位，服务类型
-- <strong>Total Length</strong>：16 位，报文总长度（字节）
-- <strong>Identification</strong>：16 位，分片标识
-- <strong>Flags</strong>：3 位，分片标志（DF/MF）
-- <strong>Fragment Offset</strong>：13 位，分片偏移
-- <strong>TTL</strong>：8 位，生存时间
-- <strong>Protocol</strong>：8 位，上层协议号（如 TCP=6, UDP=17, ICMP=1）
-- <strong>Header Checksum</strong>：16 位，首部校验和
-- <strong>Source IP Address</strong>：32 位，源 IP 地址
-- <strong>Destination IP Address</strong>：32 位，目的 IP 地址
-- <strong>Options + Padding</strong>：可选字段和填充</p>
-<hr />
-<h2 id="4-ip-fragmentation">4. IP Fragmentation</h2>
+<h3 id="endpoint-address-structure">Endpoint Address Structure</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Complete Endpoint = IP Address + Port Number
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Example: 192.168.1.100:8080
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>         ├─────────────┴─ IP Address (Host identification)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>         └─────────────── Port Number (Process identification)
+</span></code></pre></div>
+<h2 id="3-transport-protocol-comparison-overview">3. Transport Protocol Comparison Overview</h2>
+<p>Before diving into specific protocols, here's a fundamental comparison:</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>UDP</th>
+<th>TCP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Connection Type</strong></td>
+<td>Connectionless</td>
+<td>Connection-oriented</td>
+</tr>
+<tr>
+<td><strong>Reliability</strong></td>
+<td>Unreliable (Best-effort)</td>
+<td>Reliable</td>
+</tr>
+<tr>
+<td><strong>Ordering</strong></td>
+<td>No ordering guarantee</td>
+<td>Ordered delivery</td>
+</tr>
+<tr>
+<td><strong>Header Size</strong></td>
+<td>8 bytes</td>
+<td>20+ bytes</td>
+</tr>
+<tr>
+<td><strong>Speed</strong></td>
+<td>Faster</td>
+<td>Slower (due to overhead)</td>
+</tr>
+<tr>
+<td><strong>Use Cases</strong></td>
+<td>Streaming, DNS, Gaming</td>
+<td>Web browsing, Email, File transfer</td>
+</tr>
+<tr>
+<td><strong>Error Detection</strong></td>
+<td>Basic checksum</td>
+<td>Comprehensive error handling</td>
+</tr>
+<tr>
+<td><strong>Flow Control</strong></td>
+<td>None</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Congestion Control</strong></td>
+<td>None</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-user-datagram-protocol-udp">4. User Datagram Protocol (UDP)</h2>
+<h3 id="udp-properties-characteristics">UDP Properties &amp; Characteristics</h3>
 <ul>
-<li><strong>MTU (Maximum Transmission Unit)</strong>: The largest packet size (in bytes) that a particular link-layer technology can carry in a single frame.</li>
-</ul>
-<ul>
-<li><strong>When Fragmentation Occurs</strong>: If an IP datagram is larger than the MTU of an outgoing link, the router must fragment the datagram.</li>
-</ul>
-<ul>
-<li><strong>Process</strong>:<ul>
-<li>The original datagram is split into multiple smaller IP datagrams (fragments).</li>
-<li>Each fragment gets its own IP header, largely copied from the original.</li>
-<li><strong>Identification field</strong>: Copied from the original datagram to all fragments, so the destination knows they belong together.</li>
-<li><strong>Total Length field</strong>: Set to the size of the individual fragment.</li>
-<li><strong>MF (More Fragments) flag</strong>: Set to <code>1</code> for all fragments except the last one (which has MF=0).</li>
-<li><strong>Fragment Offset field</strong>: Indicates where in the original datagram's data this fragment belongs. Calculated in 8-byte blocks. The first fragment has an offset of 0.</li>
+<li><strong>Properties</strong>:<ul>
+<li><strong>Unreliable</strong>, unordered datagram service.</li>
+<li><strong>Connectionless</strong>.</li>
+<li><strong>Best-effort delivery</strong>. Packets may be lost, delivered out of order, duplicated, or delayed.</li>
+<li>UDP packets are free packets once they are out, meaning they don't necessarily follow the same route and have no information about other packets in the stream.</li>
 </ul>
 </li>
 </ul>
-<p>The <strong>DF (Don't Fragment)</strong> flag in the original packet can prevent fragmentation. If DF=1 and fragmentation is needed, the packet is dropped.</p>
-<p><strong>Reassembly</strong>: Performed only at the final destination host, using the Identification and Fragment Offset fields. Lost fragments are not recovered by IP; this is the responsibility of higher layers (like TCP).</p>
-<hr />
-<h2 id="5-ipv4-addressing">5. IPv4 Addressing</h2>
 <ul>
-<li><strong>Structure</strong>: A 32-bit logical address, typically written in dotted-decimal notation (e.g., <code>192.168.1.1</code>). Each decimal number represents 8 bits (an octet).</li>
-</ul>
-<ul>
-<li><strong>Parts</strong>: An IP address is divided into a Network ID and a Host ID.</li>
-</ul>
-<p><strong>Classful Addressing (Legacy, but provides context for default masks)</strong>:</p>
-<ul>
-<li><strong>Class A</strong>:<ul>
-<li>Starts with <code>0</code> (binary). Range: <code>1.x.x.x</code> to <code>126.x.x.x</code>. (<code>0.x.x.x</code> and <code>127.x.x.x</code> are special).</li>
-<li>Default Mask: <code>255.0.0.0</code> (<code>/8</code>).</li>
-<li>Network ID: First 8 bits. Host ID: Last 24 bits.</li>
-<li>Few networks, many hosts per network.</li>
+<li><strong>Advantages</strong>:<ul>
+<li><strong>Lightweight</strong>, low overhead.</li>
+<li><strong>Speed</strong>: Provides faster delivery compared to protocols with more overhead.</li>
+<li><strong>Finer control</strong> over what data is sent and when.</li>
+<li><strong>No delay for connection establishment</strong>.</li>
+<li><strong>No connection state</strong>: Does not allocate buffers, parameters, or sequence numbers for the connection itself.</li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><strong>Class B</strong>:<ul>
-<li>Starts with <code>10</code> (binary). Range: <code>128.0.x.x</code> to <code>191.255.x.x</code>.</li>
-<li>Default Mask: <code>255.255.0.0</code> (<code>/16</code>).</li>
-<li>Network ID: First 16 bits. Host ID: Last 16 bits.</li>
-<li>Moderate number of networks and hosts.</li>
+<li><strong>Use Cases/Applications</strong>: Applications where some packet loss or reordering is acceptable, or handled by the application layer.<ul>
+<li>Streaming media (video calls, video/music streaming).</li>
+<li>DNS (Domain Name Service).</li>
+<li>Network Time Protocol (NTP).</li>
 </ul>
 </li>
 </ul>
-<ul>
-<li><strong>Class C</strong>:<ul>
-<li>Starts with <code>110</code> (binary). Range: <code>192.0.0.x</code> to <code>223.255.255.x</code>.</li>
-<li>Default Mask: <code>255.255.255.0</code> (<code>/24</code>).</li>
-<li>Network ID: First 24 bits. Host ID: Last 8 bits.</li>
-<li>Many networks, few hosts per network.</li>
-</ul>
-</li>
-</ul>
-<p>(Class D - Multicast, Class E - Experimental: Not typically focused on for basic addressing).</p>
-<h2 id="reserved-addresses-within-a-networksubnet">Reserved Addresses within a Network/Subnet</h2>
-<ul>
-<li><strong>Network Address</strong>: Host ID portion is all zeros (e.g., <code>192.168.1.0</code> for network <code>192.168.1.0/24</code>). Identifies the network itself. <strong>Cannot be assigned to a host.</strong></li>
-<li><strong>Broadcast Address</strong>: Host ID portion is all ones (e.g., <code>192.168.1.255</code> for network <code>192.168.1.0/24</code>). Sends a packet to all hosts on that specific network. <strong>Cannot be assigned to a host.</strong></li>
-<li><strong>Number of Usable Hosts</strong>: For $h$ host bits, $2^h - 2$ usable host addresses.</li>
-</ul>
-<hr />
-<h2 id="6-subnetting">6. Subnetting</h2>
-<p><strong>Purpose</strong>: Divides a single large network (e.g., a Class A, B, or C network) into multiple smaller, interconnected networks called <strong>subnets</strong>.</p>
-<ul>
-<li>Improves organization and security</li>
-<li>Reduces network traffic by localizing broadcasts</li>
-</ul>
-<p><strong>Subnet Mask</strong>: A 32-bit value that distinguishes the network/subnet portion of an IP address from the host portion.</p>
-<ul>
-<li>Bits set to <code>1</code> in the mask correspond to the network/subnet portion.</li>
-<li>Bits set to <code>0</code> in the mask correspond to the host portion.</li>
-</ul>
-<p><strong>How it Works</strong>: "Borrows" bits from the original host portion to create a <strong>Subnet ID</strong> field.</p>
-<p><strong>IP Address Structure with Subnetting</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Original Network ID] [Subnet ID] [Host ID]
+<h3 id="udp-header-structure">UDP Header Structure</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>UDP Header (8 bytes total)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>┌──────────────────┬──────────────────┐
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   Source Port    │ Destination Port │  (16 bits each)
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├──────────────────┼──────────────────┤
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│      Length      │     Checksum     │  (16 bits each)
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>└──────────────────┴──────────────────┘
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│                Data                 │
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>└─────────────────────────────────────┘
 </span></code></pre></div>
 <ul>
-<li>The subnet mask will have more <code>1</code>s than the default mask for that class.</li>
-</ul>
-<p><strong>Example (Class C)</strong>:</p>
-<ul>
-<li>Network: <code>200.10.20.0</code> (default mask <code>255.255.255.0</code> or <code>/24</code>)</li>
-</ul>
-<hr />
-<h2 id="7-ip-forwarding">7. IP Forwarding</h2>
-<ul>
-<li><strong>Routers</strong>: Devices that operate at the Network Layer. They connect different networks and make decisions about where to send packets.</li>
-</ul>
-<ul>
-<li><strong>Forwarding Table (often called Routing Table in practice)</strong>: Each router maintains a table that maps destination network prefixes to:<ul>
-<li><strong>Next Hop</strong>: The IP address of the next router to send the packet to.</li>
-<li><strong>Interface</strong>: The outgoing network interface on the current router to use to send the packet.</li>
+<li><strong>UDP Header</strong>:<ul>
+<li><strong>Small packet header</strong>, typically 8 bytes long.</li>
+<li>Contains fields for Source Port, Destination Port, Length, and Checksum.</li>
+<li>The IP address information is handled at the Network (IP) layer, not in the UDP header.</li>
 </ul>
 </li>
 </ul>
-<p>If the destination network is directly connected, the Next Hop might be empty or indicate direct delivery, and the Interface points to that local network.</p>
-<p><strong>Forwarding Process (Simplified)</strong>:</p>
-<ol>
-<li>Router receives an IP packet.</li>
-<li>Router extracts the destination IP address from the packet header.</li>
-<li>Router consults its forwarding table.</li>
-<li><strong>Longest Prefix Match</strong>: The router finds the entry in the table whose network prefix matches the longest portion of the destination IP address. This is the most specific route.<ul>
-<li><strong>Example</strong>: If table has <code>192.168.0.0/16</code> and <code>192.168.1.0/24</code>, a packet to <code>192.168.1.50</code> will match <code>192.168.1.0/24</code> (more specific).</li>
-</ul>
-</li>
-<li>Once a match is found, the router sends the packet to the Next Hop address via the specified Interface.</li>
-<li>If TTL is decremented, the header checksum is recomputed.</li>
-</ol>
-<p><strong>Default Route (<code>0.0.0.0/0</code> or <code>0.0.0.0</code> with mask <code>0.0.0.0</code>)</strong>:</p>
+<h3 id="udp-checksum-mechanism">UDP Checksum Mechanism</h3>
 <ul>
-<li>A special entry in the forwarding table.</li>
-<li>Used if no other more specific match is found for the destination IP address.</li>
-<li>Typically points to an upstream router that has more extensive network knowledge (e.g., an ISP router). Essential for reaching the broader internet.</li>
-</ul>
-<hr />
-<h2 id="8-dhcp-dynamic-host-configuration-protocol">8. DHCP (Dynamic Host Configuration Protocol)</h2>
-<p><strong>Purpose</strong>: Allows hosts to automatically obtain an IP address and other network configuration parameters when they join a network, instead of requiring manual configuration.</p>
-<p><strong>Client-Server Model</strong>: DHCP client (the host) requests configuration from a DHCP server.</p>
-<p><strong>DORA Process (4 main steps)</strong>:</p>
-<ol>
-<li><strong>Discover</strong>:<ul>
-<li>Client broadcasts a <code>DHCPDISCOVER</code> message on the local network.</li>
-<li>Source IP: <code>0.0.0.0</code> (since it doesn't have one yet).</li>
-<li>Destination IP: <code>255.255.255.255</code> (broadcast).</li>
+<li><strong>Checksum</strong>:<ul>
+<li>Aids in <strong>error detection</strong> within the UDP packet.</li>
+<li>It is <strong>optional in IPv4</strong> but <strong>mandatory in IPv6</strong>.</li>
+<li>Calculated by adding 16-bit words of the data (including a pseudo-header derived from the IP header) using one's complement arithmetic, carrying bits over to the least significant bit, and then flipping the bits of the final sum.</li>
+<li>It can detect any one-bit errors but not all two-bit errors. Two-bit errors where the bit flips cancel each other out during addition cannot be detected.</li>
+<li>It checks for errors in the packet header and data.</li>
 </ul>
 </li>
-<li><strong>Offer</strong>:<ul>
-<li>DHCP server(s) receiving the discover message may reply with a <code>DHCPOFFER</code> message.</li>
-<li>This message contains a proposed IP address and other parameters (e.g., lease duration).</li>
-<li>Usually sent as a broadcast (or unicast if server knows client's MAC from discover).</li>
 </ul>
-</li>
-<li><strong>Request</strong>:<ul>
-<li>Client chooses one offer (e.g., the first one it receives) and broadcasts a <code>DHCPREQUEST</code> message.</li>
-<li>This message indicates the chosen server and the requested IP address.</li>
-<li>This implicitly tells other offering servers that their offers were not accepted.</li>
-</ul>
-</li>
-<li><strong>Acknowledge (ACK)</strong>:<ul>
-<li>The selected DHCP server responds with a <code>DHCPACK</code> message.</li>
-<li>This confirms the IP address lease and provides the final configuration parameters.</li>
-<li>The client can now use the assigned IP address.</li>
-</ul>
-</li>
-</ol>
-<p><strong>Information Provided by DHCP Server (besides IP address)</strong>:</p>
+<h4 id="checksum-calculation-example">Checksum Calculation Example</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Example Data: 0x4500 + 0x003C + 0x1C46 = 0x7C82
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>One&#39;s Complement: ~0x7C82 = 0x837D
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Final Checksum: 0x837D
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Error Detection Capability:
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>✓ Single bit errors: Always detected
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>✗ Some double bit errors: May not be detected if they cancel out
+</span></code></pre></div>
+<h3 id="udp-limitations">UDP Limitations</h3>
 <ul>
-<li>Subnet Mask</li>
-<li>Default Gateway (Router) IP Address</li>
-<li>DNS Server IP Address(es)</li>
-<li>Lease Duration: How long the client can use the IP address before needing to renew.</li>
-<li>DHCP Relay Agent: If client and server are on different subnets, a router can be configured as a DHCP relay agent to forward DHCP messages between them.</li>
+<li><strong>Problems with UDP</strong>:<ul>
+<li>Due to potentially taking different routes, packets can have <strong>varying round-trip times</strong> and there is <strong>no guarantee of packet ordering</strong>.</li>
+<li>These problems mean the <strong>application layer</strong> is often responsible for handling packet ordering and recovery if needed.</li>
 </ul>
-<hr />
-<h2 id="key-reminder-for-open-book">Key Reminder for Open Book:</h2>
+</li>
+</ul>
+<h3 id="udp-communication-flow">UDP Communication Flow</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Client                    Server
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  │                         │
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  │──── UDP Packet 1 ──────→│  (No connection setup)
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  │──── UDP Packet 2 ──────→│  (Independent packets)
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  │──── UDP Packet 3 ──────→│  (May arrive out of order)
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  │                         │
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  │←──── Response ─────────│  (Optional, application-dependent)
+</span></code></pre></div>
+<h2 id="5-transmission-control-protocol-tcp">5. Transmission Control Protocol (TCP)</h2>
+<h3 id="tcp-properties-guarantees">TCP Properties &amp; Guarantees</h3>
 <ul>
-<li>Understand the concepts and how they interrelate.</li>
-<li>Be able to apply them to scenarios (like fragmentation calculations, subnetting design).</li>
-<li>Quickly locate relevant header field descriptions.</li>
+<li><strong>Role/Properties/Guarantees</strong>:<ul>
+<li>Provides a <strong>reliable</strong> end-to-end service.</li>
+<li><strong>Connection-oriented</strong>: A logical connection is established and maintained between sender and receiver before data transfer begins and until terminated.</li>
+<li><strong>Full-duplex</strong>: Data can be transmitted in both directions simultaneously.</li>
+<li><strong>Point-to-point communication</strong>: Only two parties are connected at a time.</li>
+<li><strong>Stream interface</strong>: Presents a reliable frame stream to the network layer.</li>
+<li><strong>Graceful connection shutdown</strong>.</li>
+<li><strong>Guarantees</strong>: Guaranteed delivery, in-order delivery, unique delivery (no duplicates).</li>
 </ul>
+</li>
+</ul>
+<ul>
+<li><strong>Advantages</strong>: Reliability, suitability for applications requiring accurate data transfer like file transfer and email.</li>
+<li><strong>Applications</strong>: Most widely used protocol, likely implemented by almost any application using the internet. Examples include FTP, SSH, Telnet, SMTP, HTTP/HTTPS, file transfer, email.</li>
+</ul>
+<h3 id="tcp-header-structure">TCP Header Structure</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>TCP Header (20+ bytes)
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>┌────────────────┬────────────────┬─────────────────┬─────────────────┐
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>│  Source Port   │ Destination Port│  Sequence Number (32 bits)      │
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>├────────────────┼────────────────┼─────────────────┼─────────────────┤
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>│     Acknowledgement Number (32 bits)           │Data│Res│  Flags  │
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>├─────────────────────────────────────────────────┤Off │   │U A P R S F│
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>│           Window Size          │   Checksum     │set │   │R C S S Y I│
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>├────────────────────────────────┼────────────────┤    │   │G K H T N N│
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>│        Urgent Pointer          │   Options...   │    │   │         │
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>└────────────────────────────────┴────────────────┴────┴───┴─────────┘
+</span></code></pre></div>
+<ul>
+<li><strong>TCP Header</strong>:<ul>
+<li>Requires more information than UDP.</li>
+<li>Typically <strong>20 bytes long</strong>, plus optional fields and padding.</li>
+<li>Contains fields for Source Port, Destination Port, Sequence Number, Acknowledgement Number, Data offset, Reserved, Flags (URG, ACK, PSH, RST, SYN, FIN), Window, Checksum, Urgent Pointer, Options, Padding.</li>
+</ul>
+</li>
+</ul>
+<h3 id="tcp-flags-and-their-functions">TCP Flags and Their Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Name</th>
+<th>Purpose</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SYN</td>
+<td>Synchronize</td>
+<td>Establish connection</td>
+<td>Connection initiation</td>
+</tr>
+<tr>
+<td>ACK</td>
+<td>Acknowledge</td>
+<td>Confirm receipt</td>
+<td>Data acknowledgment</td>
+</tr>
+<tr>
+<td>FIN</td>
+<td>Finish</td>
+<td>Terminate connection</td>
+<td>Connection closure</td>
+</tr>
+<tr>
+<td>RST</td>
+<td>Reset</td>
+<td>Abort connection</td>
+<td>Error/rejection</td>
+</tr>
+<tr>
+<td>PSH</td>
+<td>Push</td>
+<td>Immediate delivery</td>
+<td>Priority data</td>
+</tr>
+<tr>
+<td>URG</td>
+<td>Urgent</td>
+<td>Urgent data pointer</td>
+<td>Emergency data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tcp-segmentation">TCP Segmentation</h3>
+<ul>
+<li><strong>Segments</strong>:<ul>
+<li>TCP divides application data into <strong>segments</strong> for transmission. This is necessary as application messages may be larger than the Maximum Segment Size (MSS).</li>
+<li>A segment is sent when it is full (MSS reached), times out, or is pushed by the application.</li>
+<li>MSS is typically up to about 1460 bytes.</li>
+</ul>
+</li>
+</ul>
+<h4 id="segmentation-example">Segmentation Example</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Application Data (5000 bytes)
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>┌─────────────────────────────────────────────────────────┐
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>│                    Large Message                        │
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>└─────────────────────────────────────────────────────────┘
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>                            ↓ TCP Segmentation
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>┌────────────┬────────────┬────────────┬────────────┐
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>│ Segment 1  │ Segment 2  │ Segment 3  │ Segment 4  │
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>│ (1460 bytes│ (1460 bytes│ (1460 bytes│ (620 bytes)│
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>└────────────┴────────────┴────────────┴────────────┘
+</span></code></pre></div>
+<h3 id="tcp-sequence-and-acknowledgment-numbers">TCP Sequence and Acknowledgment Numbers</h3>
+<ul>
+<li><strong>Sequence Numbers</strong>:<ul>
+<li>Used for <strong>ordering segments</strong> to allow for reassembly at the receiver in the correct order.</li>
+<li>Necessary because TCP segments may arrive out of order when traveling through the network.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Acknowledgement Numbers</strong>:<ul>
+<li>Used to <strong>confirm received bytes</strong> or sequence numbers to the sender.</li>
+<li>The receiver sends an acknowledgement number indicating the sequence number of the next byte it expects to receive.</li>
+</ul>
+</li>
+</ul>
+<h4 id="sequence-number-example">Sequence Number Example</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Sender                           Receiver
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  │                               │
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  │─── Seq=1000, Len=100 ───────→│ (Bytes 1000-1099)
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  │                               │
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>  │←────── ACK=1100 ─────────────│ (Expecting byte 1100)
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  │                               │
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>  │─── Seq=1100, Len=200 ───────→│ (Bytes 1100-1299)
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>  │                               │
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>  │←────── ACK=1300 ─────────────│ (Expecting byte 1300)
+</span></code></pre></div>
+<h3 id="tcp-connection-management">TCP Connection Management</h3>
+<h4 id="3-way-handshake">3-way Handshake</h4>
+<ul>
+<li><strong>3-way Handshake</strong>:<ul>
+<li>Process used to <strong>establish a TCP connection</strong>.</li>
+<li>Involves three packets: Sender sends a <strong>SYN</strong> segment (SYN flag set), Receiver replies with a <strong>SYN-ACK</strong> segment (SYN and ACK flags set), Sender acknowledges with an <strong>ACK</strong> segment (ACK flag set).</li>
+<li>Purpose: To synchronize sequence numbers and ensure both parties are aware that the connection is established and two-way communication is possible.</li>
+<li>If the initial SYN or the SYN-ACK is lost, the sender will timeout and can retry the connection.</li>
+</ul>
+</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Client                    Server
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  │                         │
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  │────── SYN ─────────────→│  Step 1: Connection request
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>  │                         │
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  │←───── SYN-ACK ─────────│  Step 2: Acknowledgment + request
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  │                         │
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  │────── ACK ─────────────→│  Step 3: Final acknowledgment
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>  │                         │
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  │      CONNECTED          │  Connection established
+</span></code></pre></div>
+<ul>
+<li><strong>Reset (RST) flag</strong>: Can be sent if the receiver is not working, not expecting a connection, or too busy to accept the SYN packet.</li>
+<li><strong>FIN flag</strong>: Used to <strong>terminate a TCP connection</strong>. Indicates the last packet from the sender.</li>
+</ul>
+<h4 id="connection-termination">Connection Termination</h4>
+<ul>
+<li><strong>Graceful Connection Shutdown</strong>:<ul>
+<li>TCP guarantees a graceful connection shutdown.</li>
+<li>This is implemented using a sequence of FIN and ACK flags, allowing both sides to finish sending data before the connection is fully closed. A typical sequence involves one side sending FIN, the other acknowledging with FIN-ACK, and then the first side sending ACK. There are variations.</li>
+<li>This system could fail under conditions such as connection disruption (e.g., due to interference or cable being pulled out), which would cause a timeout.</li>
+</ul>
+</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Client                    Server
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  │                         │
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  │────── FIN ─────────────→│  Step 1: Client wants to close
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  │                         │
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>  │←───── ACK ─────────────│  Step 2: Server acknowledges
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>  │                         │
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>  │←───── FIN ─────────────│  Step 3: Server wants to close
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>  │                         │
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>  │────── ACK ─────────────→│  Step 4: Client acknowledges
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>  │                         │
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>  │      CLOSED             │  Connection terminated
+</span></code></pre></div>
+<h3 id="tcp-reliability-mechanisms">TCP Reliability Mechanisms</h3>
+<ul>
+<li><strong>Retransmission</strong>:<ul>
+<li>Retransmission is regularly used in TCP.</li>
+<li>It occurs if a segment is lost or arrives out of order.</li>
+<li>The sender typically sets a timer after sending a segment. If an acknowledgement is not received within the timeout period, the segment is retransmitted.</li>
+<li>The <strong>Stop-and-Wait ARQ</strong> protocol is a simple example where the sender sends one packet and waits for an ACK before sending the next.</li>
+</ul>
+</li>
+</ul>
+<h4 id="retransmission-example">Retransmission Example</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Sender                     Receiver
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  │                         │
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  │─── Segment 1 ──────────→│  ✓ Received
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  │                         │
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  │←────── ACK ─────────────│
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>  │                         │
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>  │─── Segment 2 ──────────→│  ✗ Lost in network
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>  │                         │
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>  │        TIMEOUT          │
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>  │                         │
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>  │─── Segment 2 ──────────→│  ✓ Retransmitted &amp; received
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>  │                         │
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>  │←────── ACK ─────────────│
+</span></code></pre></div>
+<h2 id="6-practical-application-scenarios">6. Practical Application Scenarios</h2>
+<h3 id="when-to-use-udp-vs-tcp">When to Use UDP vs TCP</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Protocol Choice</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Video Streaming</td>
+<td>UDP</td>
+<td>Speed over reliability; lost frames acceptable</td>
+</tr>
+<tr>
+<td>Web Browsing</td>
+<td>TCP</td>
+<td>Complete data transfer required</td>
+</tr>
+<tr>
+<td>Online Gaming</td>
+<td>UDP</td>
+<td>Low latency critical; some packet loss tolerable</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>TCP</td>
+<td>Message integrity essential</td>
+</tr>
+<tr>
+<td>DNS Queries</td>
+<td>UDP</td>
+<td>Simple request-response; retry if needed</td>
+</tr>
+<tr>
+<td>File Transfer</td>
+<td>TCP</td>
+<td>Data integrity and completeness required</td>
+</tr>
+</tbody>
+</table>
+<h3 id="performance-trade-offs">Performance Trade-offs</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Performance Comparison
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>                TCP                     UDP
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Reliability:    ████████████           ██
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Speed:          ███████                ████████████
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>Overhead:       ████████████           ██
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>Complexity:     ████████████           ███
+</span></code></pre></div>
+<h2 id="7-key-calculations-and-examples">7. Key Calculations and Examples</h2>
+<h3 id="checksum-calculation-concept-example">Checksum Calculation (Concept Example)</h3>
+<p>For UDP/TCP checksum verification:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Given data words: 0x4500, 0x003C, 0x1C46, 0x4000, 0x4011
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Step 1: Sum all 16-bit words
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>0x4500 + 0x003C + 0x1C46 + 0x4000 + 0x4011 = 0x01B593
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>Step 2: Add carry bits
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>0x01B5 + 0x93 = 0x0248
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>Step 3: One&#39;s complement
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>~0x0248 = 0xFDB7
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>Checksum = 0xFDB7
+</span></code></pre></div>
+<h3 id="sequence-number-tracking">Sequence Number Tracking</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Initial Sequence Number (ISN): 1000
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Data sent: &quot;Hello World&quot; (11 bytes)
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>Segment 1: Seq=1000, Data=&quot;Hello&quot;, Len=5
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>Segment 2: Seq=1005, Data=&quot; World&quot;, Len=6
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>Expected ACK after Segment 1: 1005
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>Expected ACK after Segment 2: 1011
+</span></code></pre></div>
+<p>This comprehensive visualization and organization helps understand the relationships between transport layer concepts while maintaining all original knowledge points with enhanced clarity and practical examples.</p>
 
 
 
@@ -3578,7 +4177,7 @@ In essence, the Data Link Layer handles hop-to-hop delivery, while the Network L
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../w5/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 5.0 Wireless Network">
+          <a href="../w5/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 5.0 Network Layer">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3588,20 +4187,20 @@ In essence, the Data Link Layer handles hop-to-hop delivery, while the Network L
                 上一页
               </span>
               <div class="md-ellipsis">
-                5.0 Wireless Network
+                5.0 Network Layer
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../mern/html/html_syntax/" class="md-footer__link md-footer__link--next" aria-label="下一页: 1.0 HTML Basic Syntax">
+          <a href="../w7/" class="md-footer__link md-footer__link--next" aria-label="下一页: 7.0 Presentation Layers">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                1.0 HTML Basic Syntax
+                7.0 Presentation Layers
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3641,6 +4240,12 @@ In essence, the Data Link Layer handles hop-to-hop delivery, while the Network L
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
       
     
   </body>

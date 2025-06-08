@@ -49,8 +49,8 @@ nav:
         - cs/network/w7.md
         - cs/network/w8.md
         - cs/network/w9.md
-        # - cs/network/w10.md
-        # - cs/network/w11.md
+        - cs/network/w10.md
+        - cs/network/w11.md
 
     - MERN:
       - HTML:
@@ -97,7 +97,7 @@ nav:
       - handbook/csplan.md
       
   - Cybersecurity:
-    - cyber/cs/networkattack.md
+    - cyber/networkattack.md
 
 theme:
   name: material
@@ -159,6 +159,8 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - pymdownx.arithmatex:
+      generic: true
   - tables
   - toc
   - mdx_truly_sane_lists:
@@ -194,5 +196,8 @@ plugins:
 #     property: G-XXXXXX
 extra_css:
   - stylesheets/extra.css
-# extra_javascript:
-#   - javascripts/extra.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js
+  - javascripts/katex.js

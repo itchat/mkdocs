@@ -1,0 +1,4219 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Your attitude, not your aptitude, will determine your altitude.">
+      
+      
+        <meta name="author" content="ronin">
+      
+      
+        <link rel="canonical" href="https://execution.icu/cs/network/w9/">
+      
+      
+        <link rel="prev" href="../w8/">
+      
+      
+        <link rel="next" href="../w10/">
+      
+      
+      <link rel="icon" href="../../../assets/icon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>9.0 Internet Measurement - Ronin's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#90-internet-measurement" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Ronin&#39;s Notes" class="md-header__button md-logo" aria-label="Ronin's Notes" data-md-component="logo">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ronin's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              9.0 Internet Measurement
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../arts/wukong/" class="md-tabs__link">
+          
+  
+  
+  Arts
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tools/gfw/" class="md-tabs__link">
+          
+  
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../python/flask/1.0/" class="md-tabs__link">
+          
+  
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../handbook/telegram/" class="md-tabs__link">
+          
+  
+  
+  Handbooks
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cyber/networkattack/" class="md-tabs__link">
+          
+  
+  
+  Cybersecurity
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Ronin&#39;s Notes" class="md-nav__button md-logo" aria-label="Ronin's Notes" data-md-component="logo">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    Ronin's Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Arts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Arts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Wukong
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Wukong
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../arts/wukong/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    西游
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/gfw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Great Firewall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/ffmpeg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FFMPEG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/wine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    macOS Virtual Machine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/searxng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dify + Searxng Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Computer Science
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Flask
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Flask
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/flask/1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/concept/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Book Exam
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/2024.s1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024.S1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/t1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 T1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/t2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 T2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0 Loop
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.0 Class
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.0 Inheritance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.0 More, Packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8.0 Exceptions, Interfaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9.0 Enums, Generic, SOLID
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10.0 Thread, Lambda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Networks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Networks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_1" id="__nav_4_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    3002
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            3002
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 OSI and TCP/IP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Physical Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Data Link Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0 Wireless Networking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.0 Network Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.0 Transport Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.0 Presentation Layers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8.0 Client and Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    9.0 Internet Measurement
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    9.0 Internet Measurement
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-concept-relationships-and-comparative-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concept Relationships and Comparative Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concept Relationships and Comparative Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurement-paradigms-comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement Paradigms Comparison Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-abstraction-levels-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Abstraction Levels Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-motivation-and-importance-of-internet-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Motivation and Importance of Internet Measurement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Motivation and Importance of Internet Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-motivations-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Motivations Framework
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-challenges-in-internet-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Challenges in Internet Measurement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Challenges in Internet Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-categories-and-interconnections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenge Categories and Interconnections
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-layers-of-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Layers of Measurement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Layers of Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-stack-measurement-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Stack Measurement Matrix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-network-structure-graph-theory-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Network Structure (Graph Theory Metrics)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Network Structure (Graph Theory Metrics)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-theory-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Theory Foundations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-metrics-comparison-and-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Metrics Comparison and Calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-clustering-coefficient-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked Example: Clustering Coefficient Calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-characteristics-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Characteristics Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-internet-topology-measurement-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Internet Topology Measurement (Levels)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Internet Topology Measurement (Levels)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topology-abstraction-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topology Abstraction Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-comparison-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level Comparison Matrix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-types-of-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Types of Measurement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Types of Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurement-approach-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement Approach Taxonomy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snmp-simple-network-management-protocol-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      SNMP (Simple Network Management Protocol) Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-flow-and-traffic-matrix-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Flow and Traffic Matrix Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Flow and Traffic Matrix Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flow-analysis-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Analysis Framework
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-definition-and-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Definition and Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-vs-snmp-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow vs SNMP Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-record-structure-and-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Record Structure and Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traffic-matrix-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traffic Matrix Construction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-aggregation-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Aggregation Strategy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-preparation-key-calculation-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exam Preparation: Key Calculation Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exam Preparation: Key Calculation Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-graph-theory-metrics-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Graph Theory Metrics Calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-flow-analysis-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Flow Analysis Scenario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10.0 Exam Samples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11.0 Past Exam Questions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    MERN
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            MERN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_1" id="__nav_4_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/html/html_syntax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 HTML Basic Syntax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    3403
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            3403
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024 Exam
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0 Bootstrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.0 Core JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l5_ex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.1 Exam QAs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.0 Client Javascript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l6_ex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.1 Exam QAs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.0 Agile and Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8.0 Communicating With A Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9.0 Flask and Server-Side Rendering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10.0 Client Side Rendering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11.0 Databases and ORM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12.0 Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13.0 Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    14.0 RESTful API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    15.0 Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_1" id="__nav_4_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    C System Programming
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            C System Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/2.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.1 Basic Syntax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/2.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.2 Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/2.3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.3 Linux Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/2.4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.4 MyCal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/3.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.1 Data Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/3.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.2 Computer Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/3.3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.3 Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/4.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.1 Computer Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/4.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.2 I/O
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/4.3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.3 I/O Prac
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/5.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.1 Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/5.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.2 Multiple Blocked States
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Handbooks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Handbooks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Telegram
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Telegram
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../handbook/telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Telegram Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Computer Science Plan
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science Plan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../handbook/csplan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CS Study Plan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cybersecurity
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Cybersecurity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cyber/networkattack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network Attacks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-concept-relationships-and-comparative-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concept Relationships and Comparative Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concept Relationships and Comparative Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurement-paradigms-comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement Paradigms Comparison Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-abstraction-levels-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Abstraction Levels Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-motivation-and-importance-of-internet-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Motivation and Importance of Internet Measurement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Motivation and Importance of Internet Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-motivations-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Motivations Framework
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-challenges-in-internet-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Challenges in Internet Measurement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Challenges in Internet Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-categories-and-interconnections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenge Categories and Interconnections
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-layers-of-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Layers of Measurement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Layers of Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-stack-measurement-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Stack Measurement Matrix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-network-structure-graph-theory-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Network Structure (Graph Theory Metrics)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Network Structure (Graph Theory Metrics)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-theory-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Theory Foundations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-metrics-comparison-and-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Metrics Comparison and Calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-clustering-coefficient-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked Example: Clustering Coefficient Calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-characteristics-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Characteristics Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-internet-topology-measurement-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Internet Topology Measurement (Levels)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Internet Topology Measurement (Levels)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topology-abstraction-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topology Abstraction Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-comparison-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level Comparison Matrix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-types-of-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Types of Measurement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Types of Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurement-approach-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement Approach Taxonomy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snmp-simple-network-management-protocol-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      SNMP (Simple Network Management Protocol) Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-flow-and-traffic-matrix-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Flow and Traffic Matrix Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Flow and Traffic Matrix Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flow-analysis-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Analysis Framework
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-definition-and-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Definition and Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-vs-snmp-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow vs SNMP Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-record-structure-and-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Record Structure and Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traffic-matrix-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traffic Matrix Construction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-aggregation-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Aggregation Strategy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-preparation-key-calculation-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exam Preparation: Key Calculation Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exam Preparation: Key Calculation Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-graph-theory-metrics-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Graph Theory Metrics Calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-flow-analysis-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Flow Analysis Scenario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="90-internet-measurement">9.0 Internet Measurement</h1>
+<p>This section covers the principles and techniques for measuring and understanding the Internet and other computer networks, focusing on core concepts and their implications rather than specific tool implementations or detailed techniques like sampling.</p>
+<h2 id="key-concept-relationships-and-comparative-analysis">Key Concept Relationships and Comparative Analysis</h2>
+<h3 id="measurement-paradigms-comparison-table">Measurement Paradigms Comparison Table</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Passive Measurement</th>
+<th>Active Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Source</strong></td>
+<td>Existing network traffic</td>
+<td>Artificially generated packets</td>
+</tr>
+<tr>
+<td><strong>Network Impact</strong></td>
+<td>Zero additional load</td>
+<td>Adds measurement traffic</td>
+</tr>
+<tr>
+<td><strong>Use Case</strong></td>
+<td>Production traffic analysis</td>
+<td>Specific property testing</td>
+</tr>
+<tr>
+<td><strong>Information Type</strong></td>
+<td>Real user behavior</td>
+<td>Controlled test conditions</td>
+</tr>
+<tr>
+<td><strong>Examples</strong></td>
+<td>SNMP polling, flow monitoring</td>
+<td>Ping, traceroute, bandwidth tests</td>
+</tr>
+<tr>
+<td><strong>Accuracy</strong></td>
+<td>High for actual usage</td>
+<td>High for specific metrics</td>
+</tr>
+<tr>
+<td><strong>Privacy Concerns</strong></td>
+<td>Higher (real user data)</td>
+<td>Lower (test data)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="network-abstraction-levels-hierarchy">Network Abstraction Levels Hierarchy</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────┐
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│         AS Level (Organizations)         │  ← Policy, Economics
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├─────────────────────────────────────────┤
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│      Logical/Router Level (Routing)     │  ← Protocol, Performance  
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├─────────────────────────────────────────┤
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│       Physical Level (Infrastructure)   │  ← Hardware, Geography
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>└─────────────────────────────────────────┘
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        ↑ Increasing Abstraction ↑
+</span></code></pre></div>
+<p><strong>Common Characteristics Across Levels:</strong>
+* All levels face <strong>measurement challenges</strong> (privacy, data scarcity, heterogeneity)
+* All require <strong>graph theory metrics</strong> for analysis
+* All contribute to <strong>overall network understanding</strong></p>
+<p><strong>Key Differences:</strong>
+* <strong>Granularity:</strong> Physical (cables) → Router (hops) → AS (organizations)
+* <strong>Analysis Focus:</strong> Infrastructure → Performance → Policy
+* <strong>Measurement Complexity:</strong> Hardware monitoring → Protocol analysis → Economic modeling</p>
+<h2 id="1-motivation-and-importance-of-internet-measurement">1. Motivation and Importance of Internet Measurement</h2>
+<h3 id="core-motivations-framework">Core Motivations Framework</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Internet Measurement Motivations
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── Technical Improvements
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   ├── Understanding network behavior
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   ├── Identifying and solving problems
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│   └── Performance optimization
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├── Operational Benefits  
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│   ├── Better network operations
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│   ├── Pricing and billing accuracy
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│   └── Security monitoring
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>└── Research &amp; Innovation
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    ├── Scientific discovery
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    ├── Model creation for experiments
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    └── Identifying new phenomena
+</span></code></pre></div>
+<p><strong>Societal Impact Dimensions:</strong>
+* <strong>Technical:</strong> Performance, resilience, security analysis
+* <strong>Economic:</strong> Pricing models, traffic discrimination
+* <strong>Political:</strong> State censorship, regulation compliance
+* <strong>Social:</strong> Social media impact, information spread patterns</p>
+<h2 id="2-challenges-in-internet-measurement">2. Challenges in Internet Measurement</h2>
+<h3 id="challenge-categories-and-interconnections">Challenge Categories and Interconnections</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Design Challenges ←────────┐
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── Not designed for measurement     │
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├── Side-effect exploitation         │  Fundamental
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>└── &quot;Artful piling of hacks&quot;        │  Limitations
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>                                    │
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Data Challenges ←──────────────────┘
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>├── Lack of ground truth
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>├── Data scarcity and sensitivity
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>└── Privacy and ethical concerns
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>Network Challenges
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>├── Heterogeneity (devices, technologies, IoT)
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>├── Limited result generalizability  
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>└── Temporal variability (failures, disasters)
+</span></code></pre></div>
+<p><strong>Challenge Interdependencies:</strong>
+* <strong>Design → Data:</strong> Poor measurability design leads to data quality issues
+* <strong>Data → Network:</strong> Limited data availability compounds heterogeneity problems<br />
+<em> </em><em>Network → Design:</em>* Dynamic changes require adaptive measurement approaches</p>
+<h2 id="3-layers-of-measurement">3. Layers of Measurement</h2>
+<h3 id="network-stack-measurement-matrix">Network Stack Measurement Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Focus Area</th>
+<th>Measurement Targets</th>
+<th>Performance Metrics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Higher (Layer 8+)</strong></td>
+<td>Social/Context</td>
+<td>News propagation, social networks</td>
+<td>Spread rate, influence metrics</td>
+</tr>
+<tr>
+<td><strong>Transport (Layer 4)</strong></td>
+<td>Protocol Performance</td>
+<td>TCP/UDP behavior, congestion</td>
+<td>Throughput, reliability</td>
+</tr>
+<tr>
+<td><strong>Network (Layer 3)</strong></td>
+<td>Routing &amp; Topology</td>
+<td>Path discovery, failure analysis</td>
+<td>Latency, packet loss</td>
+</tr>
+<tr>
+<td><strong>Physical (Layer 1-2)</strong></td>
+<td>Infrastructure</td>
+<td>Cables, device connectivity</td>
+<td>Bandwidth, RTT, availability</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cross-Layer Dependencies:</strong>
+* <strong>Application performance</strong> requires analysis across <strong>all layers</strong> to identify bottlenecks
+* <strong>Physical connectivity</strong> heavily influences <strong>routing, bandwidth, delay, and RTT</strong>
+* <strong>Layers 4-5 downwards</strong> primarily focus on <strong>performance-related metrics</strong></p>
+<h2 id="4-network-structure-graph-theory-metrics">4. Network Structure (Graph Theory Metrics)</h2>
+<h3 id="graph-theory-foundations">Graph Theory Foundations</h3>
+<p>A network can be viewed as a <strong>graph</strong>, consisting of <strong>nodes</strong> (devices) and <strong>edges</strong> (connections). Graph theory concepts can be applied to understand network structure.</p>
+<h3 id="key-metrics-comparison-and-calculation">Key Metrics Comparison and Calculation</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Formula</th>
+<th>Range</th>
+<th>Interpretation</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Degree Distribution P(k)</strong></td>
+<td>P(k) = Nk / N</td>
+<td>[0, 1]</td>
+<td>Probability of k connections</td>
+<td>Network resilience analysis</td>
+</tr>
+<tr>
+<td><strong>Distance (Shortest Path)</strong></td>
+<td>Count of edges in shortest path</td>
+<td>[1, ∞]</td>
+<td>Communication efficiency</td>
+<td>Latency prediction</td>
+</tr>
+<tr>
+<td><strong>Diameter</strong></td>
+<td>max(distance(i, j)) for all pairs</td>
+<td>[1, ∞]</td>
+<td>Worst-case path length</td>
+<td>Network span analysis</td>
+</tr>
+<tr>
+<td><strong>Average Path Length</strong></td>
+<td>Σdistance(i, j) / total_pairs</td>
+<td>[1, diameter]</td>
+<td>Typical communication cost</td>
+<td>Overall efficiency</td>
+</tr>
+<tr>
+<td><strong>Clustering Coefficient</strong></td>
+<td>Ci = 2Ei / (ki(ki-1))</td>
+<td>[0, 1]</td>
+<td>Local interconnectedness</td>
+<td>Local efficiency</td>
+</tr>
+</tbody>
+</table>
+<h3 id="worked-example-clustering-coefficient-calculation">Worked Example: Clustering Coefficient Calculation</h3>
+<p><strong>Given Network:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Node A connects to: B, C, D
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Node B connects to: A, C
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Node C connects to: A, B, D  
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Node D connects to: A, C
+</span></code></pre></div>
+<p><strong>For Node A:</strong>
+* Degree (kA) = 3 (connects to B, C, D)
+* Neighbors: B, C, D
+* Edges between neighbors (EA): B-C, C-D = 2 edges
+* CA = 2EA / (kA(kA-1)) = 2(2) / (3×2) = 4/6 = 0.67</p>
+<p><strong>Interpretation:</strong> Node A's neighbors are 67% interconnected, indicating good local connectivity.</p>
+<h3 id="network-characteristics-patterns">Network Characteristics Patterns</h3>
+<p><strong>Typical Large Network Properties:</strong>
+* <strong>Degree Distribution:</strong> Many nodes have low degree, few have very high degree (scale-free)
+* <strong>Path Properties:</strong> Short average path lengths despite large network size (small-world)
+* <strong>Clustering:</strong> Higher than random networks due to local community structures</p>
+<h2 id="5-internet-topology-measurement-levels">5. Internet Topology Measurement (Levels)</h2>
+<h3 id="topology-abstraction-levels">Topology Abstraction Levels</h3>
+<p>Topology measurement aims to <strong>model the Internet accurately</strong> and observe trends in interconnectivity across different conceptual levels:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Internet Topology Hierarchy
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>AS Level (Autonomous Systems)
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>├── Focus: Inter-organizational connections
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>├── Granularity: ISPs, corporations, universities
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>├── Applications: Policy analysis, economic modeling
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>└── Dependencies: Relies on router-level information
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        ↕ Information Flow ↕
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>Router/Logical Level  
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>├── Focus: Information flow paths
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>├── Granularity: Individual routers and links
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>├── Applications: Performance optimization, routing
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>└── Dependencies: Relies on physical connectivity
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        ↕ Information Flow ↕
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>Physical Level
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>├── Focus: Actual infrastructure  
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>├── Granularity: Cables, devices, geographic locations
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>├── Applications: Reliability analysis, capacity planning
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>└── Dependencies: Hardware monitoring and geographic data
+</span></code></pre></div>
+<h3 id="level-comparison-matrix">Level Comparison Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Physical Level</th>
+<th>Router Level</th>
+<th>AS Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entities</strong></td>
+<td>Cables, devices</td>
+<td>Routers, logical links</td>
+<td>Organizations, ISPs</td>
+</tr>
+<tr>
+<td><strong>Analysis Focus</strong></td>
+<td>Infrastructure reliability</td>
+<td>Protocol performance</td>
+<td>Economic relationships</td>
+</tr>
+<tr>
+<td><strong>Failure Impact</strong></td>
+<td>Component outages</td>
+<td>Routing disruptions</td>
+<td>Policy changes</td>
+</tr>
+<tr>
+<td><strong>Measurement Tools</strong></td>
+<td>Hardware monitoring</td>
+<td>Protocol analysis</td>
+<td>BGP data, agreements</td>
+</tr>
+<tr>
+<td><strong>Timescale</strong></td>
+<td>Hardware lifecycles</td>
+<td>Protocol updates</td>
+<td>Business relationships</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Principle:</strong> As you move up the layers (Physical → AS), you <strong>rely on information from lower layers</strong> and become <strong>less concerned with their specific details</strong>.</p>
+<h2 id="6-types-of-measurement">6. Types of Measurement</h2>
+<h3 id="measurement-approach-taxonomy">Measurement Approach Taxonomy</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Network Measurement Approaches
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Passive Measurement                    Active Measurement
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>├── Method: Observe existing traffic   ├── Method: Generate test traffic
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>├── Impact: Zero network load         ├── Impact: Adds measurement overhead  
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>├── Data: Real user behavior          ├── Data: Controlled test conditions
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>└── Applications:                     └── Applications:
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    ├── Traffic analysis                  ├── Performance testing
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    ├── Usage patterns                    ├── Topology discovery  
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    ├── Billing verification              ├── Capacity planning
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    └── Security monitoring               └── SLA verification
+</span></code></pre></div>
+<h3 id="snmp-simple-network-management-protocol-analysis">SNMP (Simple Network Management Protocol) Analysis</h3>
+<p><strong>SNMP Framework:</strong>
+* <strong>Purpose:</strong> Network management services for data collection and configuration
+* <strong>Structure:</strong> Management Information Base (MIB) defines data organization
+* <strong>Operation:</strong> Router polling for counter data (bytes, packets)
+* <strong>Applications:</strong> Billing, anomaly detection, trend analysis</p>
+<p><strong>SNMP Capabilities vs Limitations:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Description</th>
+<th>Limitation</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Counter Collection</strong></td>
+<td>Byte/packet counts per interface</td>
+<td><strong>Aggregate Data Only</strong></td>
+<td>Cannot identify traffic types</td>
+</tr>
+<tr>
+<td><strong>Periodic Polling</strong></td>
+<td>Regular data collection (e.g., 5 min)</td>
+<td><strong>Limited Granularity</strong></td>
+<td>May miss short-term events</td>
+</tr>
+<tr>
+<td><strong>Anomaly Detection</strong></td>
+<td>Identify unusual traffic patterns</td>
+<td><strong>No Traffic Details</strong></td>
+<td>Cannot determine attack types</td>
+</tr>
+<tr>
+<td><strong>Trend Analysis</strong></td>
+<td>Long-term usage patterns</td>
+<td><strong>No Source/Destination</strong></td>
+<td>Limited security analysis</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MRTG (Multi Router Traffic Grapher):</strong>
+* Visualizes SNMP data as time series plots
+* Effective for identifying bandwidth anomalies and trends
+* Can indicate security issues (e.g., DDoS attacks) through traffic spikes</p>
+<h2 id="7-flow-and-traffic-matrix-concepts">7. Flow and Traffic Matrix Concepts</h2>
+<h3 id="flow-analysis-framework">Flow Analysis Framework</h3>
+<p>To understand network behavior comprehensively, we need to analyze <strong>traffic flow</strong> patterns beyond simple SNMP counters.</p>
+<h3 id="flow-definition-and-characteristics">Flow Definition and Characteristics</h3>
+<p><strong>Flow:</strong> A <strong>unidirectional stream of packets</strong> between source and destination with specific identifying characteristics:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Flow Identification Parameters:
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>├── Network Layer (Layer 3)
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>│   ├── Source IP Address
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>│   ├── Destination IP Address  
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>│   └── Protocol Type (TCP/UDP/ICMP)
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>├── Transport Layer (Layer 4)
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>│   ├── Source Port Number
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>│   └── Destination Port Number
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>└── Interface Information
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    └── Input Interface ID
+</span></code></pre></div>
+<h3 id="flow-vs-snmp-comparison">Flow vs SNMP Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>SNMP Counters</th>
+<th>Flow Records</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Granularity</strong></td>
+<td>Interface-level aggregates</td>
+<td>Per-connection details</td>
+</tr>
+<tr>
+<td><strong>Traffic Visibility</strong></td>
+<td>Total bytes/packets</td>
+<td>Application-specific flows</td>
+</tr>
+<tr>
+<td><strong>Analysis Capability</strong></td>
+<td>Bandwidth trends</td>
+<td>Application breakdown</td>
+</tr>
+<tr>
+<td><strong>Protocol Support</strong></td>
+<td>Interface-agnostic</td>
+<td>Protocol-aware</td>
+</tr>
+<tr>
+<td><strong>Security Analysis</strong></td>
+<td>Basic anomaly detection</td>
+<td>Detailed attack analysis</td>
+</tr>
+</tbody>
+</table>
+<h3 id="flow-record-structure-and-applications">Flow Record Structure and Applications</h3>
+<p><strong>Flow Record Components:</strong>
+* <strong>Identification:</strong> Source/destination IPs, ports, protocol
+* <strong>Counters:</strong> Byte and packet counts per flow
+* <strong>Protocol Data:</strong> TCP flags, ToS bits
+* <strong>Timing:</strong> First and last packet timestamps
+* <strong>Interface:</strong> Ingress interface information</p>
+<p><strong>Protocol-Specific Considerations:</strong>
+* <strong>TCP Flows:</strong> Connection-oriented, easier to track (clear start/end)
+* <strong>UDP Flows:</strong> Connectionless, may take different routes, harder to track</p>
+<h3 id="traffic-matrix-construction">Traffic Matrix Construction</h3>
+<p><strong>Traffic Matrix:</strong> Represents <strong>data transmission volumes between every pair of network nodes (subnets)</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Traffic Matrix Example (simplified):
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        Destination Subnets
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        A    B    C    D
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>Source A [0   15   8    3 ]  Gbps
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>Subnets B [12   0   22   7 ]
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        C [5    18   0   11]  
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        D [9    4    6    0 ]
+</span></code></pre></div>
+<p><strong>Applications:</strong>
+* <strong>Application Breakdown:</strong> Identify traffic by service (web traffic via TCP port 80)
+* <strong>Flow Counting:</strong> Monitor active connections per application
+* <strong>Capacity Planning:</strong> Understand inter-subnet communication patterns
+* <strong>Security Analysis:</strong> Detect unusual communication patterns</p>
+<h3 id="flow-aggregation-strategy">Flow Aggregation Strategy</h3>
+<p><strong>Purpose:</strong> Reduce data volume while preserving analytical value</p>
+<p><strong>Benefits:</strong>
+* <strong>Data Reduction:</strong> Minimize export data volume<br />
+<em> </em><em>Memory Efficiency:</em><em> Lower router memory requirements
+* </em><em>Reliability:</em><em> Avoid packet loss during traffic spikes
+* </em><em>Processing:</em>* Router-side aggregation before analysis</p>
+<p><strong>Challenge:</strong> Building accurate traffic matrices remains a <strong>non-trivial problem</strong> requiring sophisticated aggregation and estimation techniques.</p>
+<hr />
+<h2 id="exam-preparation-key-calculation-examples">Exam Preparation: Key Calculation Examples</h2>
+<h3 id="example-1-graph-theory-metrics-calculation">Example 1: Graph Theory Metrics Calculation</h3>
+<p><strong>Scenario:</strong> Small network with 5 nodes (A, B, C, D, E)</p>
+<p><strong>Connections:</strong>
+* A connects to: B, C
+* B connects to: A, C, D<br />
+* C connects to: A, B, D, E
+* D connects to: B, C, E
+* E connects to: C, D</p>
+<p><strong>Calculate:</strong></p>
+<ol>
+<li>
+<p><strong>Degree Distribution P(k):</strong>
+   - Degree 2: A (1 node) → P(2) = 1/5 = 0.2
+   - Degree 3: B, D, E (3 nodes) → P(3) = 3/5 = 0.6<br />
+   - Degree 4: C (1 node) → P(4) = 1/5 = 0.2</p>
+</li>
+<li>
+<p><strong>Clustering Coefficient for Node C:</strong>
+   - Neighbors: A, B, D, E (degree = 4)
+   - Edges between neighbors: A-B, B-D, D-E = 3
+   - CC = 2(3) / (4×3) = 6/12 = 0.5</p>
+</li>
+<li>
+<p><strong>Network Diameter:</strong>
+   - Find all shortest paths, identify maximum
+   - A to E: A→C→E (distance = 2)
+   - All pairs have distance ≤ 2
+   - Diameter = 2</p>
+</li>
+</ol>
+<h3 id="example-2-flow-analysis-scenario">Example 2: Flow Analysis Scenario</h3>
+<p><strong>Given:</strong> Router observes traffic for 1 hour with following flow data:</p>
+<table>
+<thead>
+<tr>
+<th>Flow</th>
+<th>Src IP</th>
+<th>Dst IP</th>
+<th>Protocol</th>
+<th>Src Port</th>
+<th>Dst Port</th>
+<th>Bytes</th>
+<th>Packets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10.1.1.5</td>
+<td>192.168.1.10</td>
+<td>TCP</td>
+<td>12345</td>
+<td>80</td>
+<td>150MB</td>
+<td>120, 000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10.1.1.8</td>
+<td>192.168.1.10</td>
+<td>TCP</td>
+<td>23456</td>
+<td>80</td>
+<td>75MB</td>
+<td>60, 000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>10.1.1.5</td>
+<td>192.168.1.20</td>
+<td>UDP</td>
+<td>34567</td>
+<td>53</td>
+<td>2MB</td>
+<td>1, 500</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analysis Questions:</strong>
+1. <strong>Application Breakdown:</strong> How much web traffic (port 80)?
+   - Web traffic = Flow 1 + Flow 2 = 150MB + 75MB = 225MB</p>
+<ol>
+<li>
+<p><strong>Flow Counting:</strong> How many active web connections?
+   - TCP port 80 connections = 2 flows</p>
+</li>
+<li>
+<p><strong>Traffic Matrix (subnet level):</strong>
+   - 10.1.1.0/24 → 192.168.1.0/24: 227MB total
+   - DNS queries: 2MB (UDP port 53)</p>
+</li>
+</ol>
+<p><strong>Key Insight:</strong> Flow analysis provides detailed application visibility that SNMP counters cannot deliver.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../w8/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 8.0 Client and Server">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                8.0 Client and Server
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../w10/" class="md-footer__link md-footer__link--next" aria-label="下一页: 10.0 Exam Samples">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                10.0 Exam Samples
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+    
+  </body>
+</html>

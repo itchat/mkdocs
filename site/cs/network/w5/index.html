@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://execution.icu/cs/network/w5/">
       
       
-        <link rel="prev" href="../../java/basics/w10/">
+        <link rel="prev" href="../w4/">
       
       
         <link rel="next" href="../w6/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>5.0 Wireless Network - Ronin's Notes</title>
+        <title>5.0 Network Layer - Ronin's Notes</title>
       
     
     
@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#50-wireless-network" class="md-skip">
+        <a href="#50-network-layer" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5.0 Wireless Network
+              5.0 Network Layer
             
           </span>
         </div>
@@ -359,7 +361,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../cyber/cs/networkattack.md" class="md-tabs__link">
+        <a href="../../../cyber/networkattack/" class="md-tabs__link">
           
   
   
@@ -1325,12 +1327,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w1.md" class="md-nav__link">
+      <a href="../w1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    1.0 OSI and TCP/IP
     
   </span>
   
@@ -1348,12 +1350,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w2.md" class="md-nav__link">
+      <a href="../w2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    2.0 Physical Layer
     
   </span>
   
@@ -1371,12 +1373,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w3.md" class="md-nav__link">
+      <a href="../w3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    3.0 Data Link Layer
     
   </span>
   
@@ -1394,12 +1396,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w4.md" class="md-nav__link">
+      <a href="../w4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    4.0 Wireless Networking
     
   </span>
   
@@ -1431,7 +1433,7 @@
   
   
   <span class="md-ellipsis">
-    5.0 Wireless Network
+    5.0 Network Layer
     
   </span>
   
@@ -1444,7 +1446,7 @@
   
   
   <span class="md-ellipsis">
-    5.0 Wireless Network
+    5.0 Network Layer
     
   </span>
   
@@ -1467,109 +1469,118 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scenario-1-campus-wi-fi-design-considerations" class="md-nav__link">
+  <a href="#layer-comparison-and-relationships" class="md-nav__link">
     <span class="md-ellipsis">
-      Scenario 1: Campus Wi-Fi Design Considerations
+      Layer Comparison and Relationships
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scenario-2-small-office-network-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario 2: Small Office Network Setup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scenario-3-public-hotspot-performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario 3: Public Hotspot Performance
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-fundamental-wireless-challenges" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Fundamental Wireless Challenges
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-wireless-lan-wlan-ieee-80211-wi-fi" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Wireless LAN (WLAN) - IEEE 802.11 (Wi-Fi)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Wireless LAN (WLAN) - IEEE 802.11 (Wi-Fi)">
+    <nav class="md-nav" aria-label="Layer Comparison and Relationships">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-introduction-goals" class="md-nav__link">
+  <a href="#service-characteristics-comparison" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1. Introduction &amp; Goals
+      Service Characteristics Comparison
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-ism-band-industrial-scientific-and-medical" class="md-nav__link">
+  <a href="#address-structure-and-classes" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2. ISM Band (Industrial, Scientific, and Medical)
+      Address Structure and Classes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-ieee-80211-evolution-key-standards-improvements" class="md-nav__link">
+  <a href="#special-addresses" class="md-nav__link">
     <span class="md-ellipsis">
-      2.3. IEEE 802.11 Evolution (Key Standards &amp; Improvements)
+      Special Addresses
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#24-ieee-80211-architecture-components" class="md-nav__link">
+  <a href="#subnetting-example-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      2.4. IEEE 802.11 Architecture Components
+      Subnetting Example Calculation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#25-medium-access-control-mac-csmaca" class="md-nav__link">
+  <a href="#subnet-mask-formats" class="md-nav__link">
     <span class="md-ellipsis">
-      2.5. Medium Access Control (MAC) - CSMA/CA
+      Subnet Mask Formats
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#26-ieee-80211-services" class="md-nav__link">
+  <a href="#ipv4-header-field-analysis" class="md-nav__link">
     <span class="md-ellipsis">
-      2.6. IEEE 802.11 Services
+      IPv4 Header Field Analysis
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#27-wlan-issues-considerations" class="md-nav__link">
+  <a href="#key-header-fields-comparison" class="md-nav__link">
     <span class="md-ellipsis">
-      2.7. WLAN Issues &amp; Considerations
+      Key Header Fields Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fragmentation-control-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fragmentation Control Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fragmentation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fragmentation Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fragmentation-vs-reassembly-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fragmentation vs. Reassembly Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forwarding-vs-routing-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forwarding vs. Routing Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-forwarding-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Forwarding Table
     </span>
   </a>
   
@@ -1581,11 +1592,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-personal-area-network-pan-bluetooth" class="md-nav__link">
+  <a href="#concept-integration-and-relationships" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Personal Area Network (PAN) - Bluetooth
+      Concept Integration and Relationships
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Concept Integration and Relationships">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-layer-process-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Layer Process Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-calculation-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Calculation Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1610,7 +1645,7 @@
   
   
   <span class="md-ellipsis">
-    Network Layer Practice Questions
+    6.0 Transport Layer
     
   </span>
   
@@ -1628,12 +1663,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w7.md" class="md-nav__link">
+      <a href="../w7/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    7.0 Presentation Layers
     
   </span>
   
@@ -1651,12 +1686,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w8.md" class="md-nav__link">
+      <a href="../w8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    8.0 Client and Server
     
   </span>
   
@@ -1674,12 +1709,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w9.md" class="md-nav__link">
+      <a href="../w9/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    9.0 Internet Measurement
     
   </span>
   
@@ -1697,12 +1732,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w10.md" class="md-nav__link">
+      <a href="../w10/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    10.0 Exam Samples
     
   </span>
   
@@ -1720,12 +1755,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../w11.md" class="md-nav__link">
+      <a href="../w11/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    11.0 Past Exam Questions
     
   </span>
   
@@ -2981,12 +3016,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cyber/cs/networkattack.md" class="md-nav__link">
+      <a href="../../../cyber/networkattack/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    None
+    Network Attacks
     
   </span>
   
@@ -3031,109 +3066,118 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scenario-1-campus-wi-fi-design-considerations" class="md-nav__link">
+  <a href="#layer-comparison-and-relationships" class="md-nav__link">
     <span class="md-ellipsis">
-      Scenario 1: Campus Wi-Fi Design Considerations
+      Layer Comparison and Relationships
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scenario-2-small-office-network-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario 2: Small Office Network Setup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scenario-3-public-hotspot-performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario 3: Public Hotspot Performance
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-fundamental-wireless-challenges" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Fundamental Wireless Challenges
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-wireless-lan-wlan-ieee-80211-wi-fi" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Wireless LAN (WLAN) - IEEE 802.11 (Wi-Fi)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Wireless LAN (WLAN) - IEEE 802.11 (Wi-Fi)">
+    <nav class="md-nav" aria-label="Layer Comparison and Relationships">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-introduction-goals" class="md-nav__link">
+  <a href="#service-characteristics-comparison" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1. Introduction &amp; Goals
+      Service Characteristics Comparison
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-ism-band-industrial-scientific-and-medical" class="md-nav__link">
+  <a href="#address-structure-and-classes" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2. ISM Band (Industrial, Scientific, and Medical)
+      Address Structure and Classes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-ieee-80211-evolution-key-standards-improvements" class="md-nav__link">
+  <a href="#special-addresses" class="md-nav__link">
     <span class="md-ellipsis">
-      2.3. IEEE 802.11 Evolution (Key Standards &amp; Improvements)
+      Special Addresses
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#24-ieee-80211-architecture-components" class="md-nav__link">
+  <a href="#subnetting-example-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      2.4. IEEE 802.11 Architecture Components
+      Subnetting Example Calculation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#25-medium-access-control-mac-csmaca" class="md-nav__link">
+  <a href="#subnet-mask-formats" class="md-nav__link">
     <span class="md-ellipsis">
-      2.5. Medium Access Control (MAC) - CSMA/CA
+      Subnet Mask Formats
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#26-ieee-80211-services" class="md-nav__link">
+  <a href="#ipv4-header-field-analysis" class="md-nav__link">
     <span class="md-ellipsis">
-      2.6. IEEE 802.11 Services
+      IPv4 Header Field Analysis
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#27-wlan-issues-considerations" class="md-nav__link">
+  <a href="#key-header-fields-comparison" class="md-nav__link">
     <span class="md-ellipsis">
-      2.7. WLAN Issues &amp; Considerations
+      Key Header Fields Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fragmentation-control-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fragmentation Control Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fragmentation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fragmentation Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fragmentation-vs-reassembly-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fragmentation vs. Reassembly Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forwarding-vs-routing-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forwarding vs. Routing Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-forwarding-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Forwarding Table
     </span>
   </a>
   
@@ -3145,11 +3189,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-personal-area-network-pan-bluetooth" class="md-nav__link">
+  <a href="#concept-integration-and-relationships" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Personal Area Network (PAN) - Bluetooth
+      Concept Integration and Relationships
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Concept Integration and Relationships">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-layer-process-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Layer Process Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-calculation-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Calculation Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3169,327 +3237,627 @@
 
 
 
-<h1 id="50-wireless-network">5.0 Wireless Network</h1>
-<h2 id="scenario-1-campus-wi-fi-design-considerations">Scenario 1: Campus Wi-Fi Design Considerations</h2>
-<blockquote>
-<p>You are tasked with providing Wi-Fi access across a university campus. Users will be moving between lecture halls, libraries, and common areas. They expect a seamless connection experience.</p>
-</blockquote>
-<p><strong>(a) Which type of IEEE 802.11 architecture (BSS or ESS) would be most appropriate for this scenario? Justify your answer.</strong></p>
-<ul>
-<li><strong>Answer:</strong> An <strong>Extended Service Set (ESS)</strong> would be most appropriate.</li>
-<li><strong>Knowledge Points:</strong><ul>
-<li><strong>ESS (Extended Service Set):</strong> An ESS is a set of interconnected Basic Service Sets (BSSs) that share a common SSID (network name). This allows users to roam between different BSSs (e.g., different buildings or areas covered by different Access Points) while maintaining a continuous network connection.</li>
-<li><strong>BSS (Basic Service Set):</strong> A BSS is a set of stations that communicate with each other, typically through a single Access Point (in infrastructure mode) or directly (in ad-hoc mode). An ESS is formed by connecting multiple BSSs.</li>
-<li><strong>Mobility/Roaming:</strong> ESS is designed to facilitate the movement of stations from one BSS to another, extending the range of mobility beyond a single BSS.</li>
-</ul>
-</li>
-</ul>
-<p><strong>(b) Briefly explain the role of a Distribution System (DS) in your chosen architecture.</strong></p>
-<ul>
-<li><strong>Answer:</strong> The Distribution System (DS) acts as the backbone connecting the Access Points (APs) within the ESS. It enables communication between different BSSs and can connect the wireless network to a wired infrastructure.</li>
-<li><strong>Knowledge Points:</strong>  <ul>
-<li><strong>Distribution System (DS):</strong> The DS is the mechanism that allows APs to communicate with each other and with the wired network. It forwards traffic between BSSs and to destinations outside the ESS.</li>
-<li><strong>Connectivity:</strong> The DS can be a wired or wireless network that links APs.</li>
-</ul>
-</li>
-</ul>
-<p><strong>(c) A student reports that their connection drops when moving from the library (covered by AP1) to the cafeteria (covered by AP2), even though both are part of the campus "UniFi" network. What IEEE 802.11 distribution service might not be functioning correctly between AP1 and AP2?</strong></p>
-<ul>
-<li><strong>Answer:</strong> The <strong>distribution service</strong> or the <strong>re-association service</strong> might not be functioning correctly. The distribution service is responsible for forwarding traffic from one BSS to another. The re-association service allows a station to move its association from one AP to another.</li>
-<li><strong>Knowledge Points:</strong><ul>
-<li><strong>Distribution Service:</strong> Determines where to send packets, including to another AP.</li>
-<li><strong>Association/Re-association Services:</strong> These services manage a station's connection to an AP. Association establishes the initial connection, while re-association allows a station to switch its connection from one AP to another within an ESS, which is crucial for roaming. If re-association fails or is not handled smoothly by the distribution system, the connection can drop.</li>
-</ul>
-</li>
-</ul>
-<h2 id="scenario-2-small-office-network-setup">Scenario 2: Small Office Network Setup</h2>
-<blockquote>
-<p>A small startup with 5 employees in a single open-plan office needs a simple wireless network primarily for internet access and shared printing. They want to avoid complex configurations.</p>
-</blockquote>
-<p><strong>(a) Would an Independent BSS (IBSS) or an Infrastructure BSS be more suitable for this office? Justify your choice.</strong></p>
-<ul>
-<li><strong>Answer:</strong> An <strong>Infrastructure BSS</strong> would be more suitable. While an IBSS (ad-hoc mode) allows direct station-to-station communication without an AP, an Infrastructure BSS with an Access Point provides a more stable connection to a wired LAN (for internet access) and better centralized management for resources like a shared printer.</li>
-<li><strong>Knowledge Points:</strong><ul>
-<li><strong>Infrastructure BSS:</strong> Includes an Access Point (AP) that connects mobile stations to a wired LAN and provides relay functionality. It offers central control and packet buffering.</li>
-<li><strong>Independent BSS (IBSS) / Ad-hoc mode:</strong> Stations communicate directly with one another without an AP. This is typically for short-lived networks and doesn't inherently provide easy access to a wired network or internet.</li>
-<li><strong>Access Point (AP):</strong> Provides connectivity to other stations and to a wired network.</li>
-</ul>
-</li>
-</ul>
-<p><strong>(b) The office experiences occasional interference, and they've noticed that large file transfers sometimes get interrupted. The IEEE 802.11 standard mentions fragmenting frames into smaller pieces in noisy environments. Explain the benefit of this.</strong></p>
-<ul>
-<li><strong>Answer:</strong> In a noisy wireless environment, data frames are more susceptible to errors. If a large frame gets corrupted, the entire frame needs to be retransmitted. By fragmenting data into smaller frames, if one small fragment gets corrupted, only that smaller fragment needs to be retransmitted. This makes retransmissions more efficient and reduces the overall time lost due to errors, improving reliability.</li>
-<li><strong>Knowledge Points:</strong><ul>
-<li><strong>Noisy Wireless Environment:</strong> Wireless signals are prone to interference, attenuation, and other issues that can cause errors in transmission.</li>
-<li><strong>Frame Fragmentation:</strong> Breaking down larger data units into smaller frames for transmission.</li>
-<li><strong>Retransmission Efficiency:</strong> If an error occurs in a small fragment, only that fragment needs to be retransmitted, saving bandwidth and time compared to retransmitting a large, unfragmented frame.</li>
-</ul>
-</li>
-</ul>
-<h2 id="scenario-3-public-hotspot-performance">Scenario 3: Public Hotspot Performance</h2>
-<blockquote>
-<p>A coffee shop offers free Wi-Fi (IEEE 802.11g, nominal speed 54 Mbps) to its customers. During peak hours, with many users connected, browsing becomes very slow, and video streaming is impossible.</p>
-</blockquote>
-<p><strong>(a) The coffee shop owner read that 802.11g has a nominal speed of 54 Mbps. Briefly explain why the actual experienced bandwidth is often much lower, especially with many users.</strong></p>
-<ul>
-<li><strong>Answer:</strong> The nominal speed (e.g., 54 Mbps for 802.11g) is a theoretical maximum. Actual bandwidth is often half of the nominal (or less) due to factors like interference, signal fading, protocol overhead (e.g., CSMA/CA mechanisms), and the fact that the available bandwidth is shared among all connected users. With many users, each user gets a smaller slice of the total available bandwidth.</li>
-<li><strong>Knowledge Points:</strong><ul>
-<li><strong>Nominal vs. Actual Bandwidth:</strong> The advertised speed is often a theoretical maximum link rate. Real-world throughput is reduced by various factors.</li>
-<li><strong>Shared Medium:</strong> Wi-Fi operates on a shared wireless medium. All devices connected to an AP share its capacity.</li>
-<li><strong>Interference and Fading:</strong> Wireless signals are susceptible to interference from other devices and environmental factors, which can degrade performance.</li>
-<li><strong>Protocol Overhead:</strong> Control frames and mechanisms like CSMA/CA consume some of the available bandwidth.</li>
-</ul>
-</li>
-</ul>
-<p><strong>(b) To improve performance, the owner is considering upgrading to a newer Wi-Fi standard like Wi-Fi 6 (IEEE 802.11ax). List two distinct technological advancements in newer Wi-Fi standards (like Wi-Fi 6 compared to older ones like 802.11g) that contribute to higher data rates or better performance in dense environments.</strong></p>
-<ul>
-<li><strong>Answer:</strong><ol>
-<li><strong>More Advanced Modulation Schemes:</strong> Newer standards like Wi-Fi 6 use higher-order modulation techniques (e.g., 1024-QAM) compared to older standards (e.g., 64-QAM in 802.11g). Higher-order modulation allows more data bits to be encoded into each signal symbol, increasing the data rate.</li>
-<li><strong>OFDMA (Orthogonal Frequency Division Multiple Access):</strong> Wi-Fi 6 introduces OFDMA, which allows the channel to be subdivided into smaller resource units. This means an AP can communicate with multiple devices simultaneously by allocating different subcarriers to different devices within the same transmission window, which is particularly beneficial in dense environments with many users. (Older standards like 802.11g used OFDM but not OFDMA for multiple users in this way).</li>
-</ol>
-</li>
-<li><strong>Knowledge Points:</strong><ul>
-<li><strong>Modulation Techniques (e.g., QAM):</strong> Refers to how data is encoded onto the radio waves. Higher-order QAM (Quadrature Amplitude Modulation) packs more bits per symbol, leading to higher data rates, assuming good signal quality.</li>
-<li><strong>OFDMA (Orthogonal Frequency Division Multiple Access):</strong> A key feature in Wi-Fi 6 (802.11ax). It improves efficiency and reduces latency in environments with many connected devices by allowing simultaneous transmission to/from multiple users by dividing the channel bandwidth into smaller sub-channels (resource units). This contrasts with OFDM used in older standards where the entire channel was typically used by one user at a time for data transmission.</li>
-<li><strong>Channel Width:</strong> Newer standards often support wider channel widths (e.g., 80 MHz, 160 MHz in Wi-Fi 5 and 6) compared to older standards (e.g., 20 MHz in 802.11g), allowing for higher throughput.</li>
-<li><strong>MIMO (Multiple Input, Multiple Output) / Spatial Streams:</strong> While 802.11n introduced MIMO, newer standards have enhanced it (e.g., MU-MIMO in Wi-Fi 5 and 6). MIMO uses multiple antennas to send and receive multiple data streams simultaneously, increasing capacity and data rates. MU-MIMO (Multi-User MIMO) allows an AP to transmit to multiple client devices simultaneously using different spatial streams.</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="1-fundamental-wireless-challenges">1. Fundamental Wireless Challenges</h2>
-<ul>
-<li><strong>Signal Interference/Loss:</strong></li>
-<li><strong>Attenuation:</strong> Signal strength decreases over distance and when passing through obstacles (e.g., walls, rain, dust).</li>
-<li><strong>Reflection:</strong> Signals bounce off surfaces (e.g., buildings, water bodies). Can cause multipath propagation.</li>
-<li><strong>Diffraction:</strong> Signals bend around obstacles (e.g., hills, buildings).</li>
-<li><strong>Interference:</strong> Signals from other devices operating in the same frequency band (e.g., microwaves, Bluetooth, other Wi-Fi networks).</li>
-<li><strong>Physical Constraints:</strong> Antenna limitations, zoning restrictions for transmission power.</li>
-<li><strong>Power Consumption:</strong> Especially critical for mobile and IoT devices. Wireless transmission is power-intensive.</li>
-<li><strong>Security:</strong> Broadcast nature makes wireless signals easier to intercept than wired.</li>
-<li><strong>Mobility:</strong> Maintaining connections as devices move.</li>
-</ul>
-<h2 id="2-wireless-lan-wlan-ieee-80211-wi-fi">2. Wireless LAN (WLAN) - IEEE 802.11 (Wi-Fi)</h2>
-<h3 id="21-introduction-goals">2.1. Introduction &amp; Goals</h3>
-<ul>
-<li><strong>IEEE 802.11:</strong> A family of specifications for WLANs. Commonly known as Wi-Fi.</li>
-<li><strong>Goals of WLAN:</strong></li>
-<li>Ease of use (setup, connection, roaming).</li>
-<li>Power efficiency.</li>
-<li>Cost-effectiveness.</li>
-<li>License-free operation (typically in ISM bands).</li>
-<li>Robustness to noise.</li>
-<li>Global usability.</li>
-<li>Security.</li>
-</ul>
-<h3 id="22-ism-band-industrial-scientific-and-medical">2.2. ISM Band (Industrial, Scientific, and Medical)</h3>
-<ul>
-<li>Frequency bands designated for unlicensed wireless communication.</li>
-<li>Common Wi-Fi bands:</li>
-<li><strong>2.4 GHz:</strong> Wider coverage, more prone to interference (microwaves, Bluetooth).</li>
-<li><strong>5 GHz:</strong> Less interference, shorter range, more bandwidth available.</li>
-<li>Newer standards also utilize <strong>6 GHz</strong> (Wi-Fi 6E).</li>
-<li><strong>Advantage:</strong> No need to pay for spectrum licenses.</li>
-<li><strong>Disadvantage:</strong> Potential for high interference due to shared use.</li>
-</ul>
-<h3 id="23-ieee-80211-evolution-key-standards-improvements">2.3. IEEE 802.11 Evolution (Key Standards &amp; Improvements)</h3>
+<h1 id="50-network-layer">5.0 Network Layer</h1>
+<p>The Network Layer is a fundamental concept in computer networks, residing above the Data Link Layer and below the Transport Layer in the OSI model.</p>
+<h2 id="layer-comparison-and-relationships">Layer Comparison and Relationships</h2>
 <table>
 <thead>
 <tr>
-<th>Standard</th>
-<th>Year</th>
-<th>Freq. (GHz)</th>
-<th>Max Data Rate (Typical)</th>
-<th>Key Features/Notes</th>
-<th>Wi-Fi Gen.</th>
+<th>Layer</th>
+<th>Primary Focus</th>
+<th>Scope</th>
+<th>Key Protocols</th>
+<th>Addressing</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>802.11 (legacy)</td>
-<td>1997</td>
-<td>2.4</td>
-<td>2 Mbps</td>
-<td>Original standard</td>
-<td>-</td>
+<td>Data Link Layer</td>
+<td>Frame transmission across <strong>single link</strong></td>
+<td>Local (point-to-point)</td>
+<td>Ethernet, PPP</td>
+<td>MAC addresses</td>
 </tr>
 <tr>
-<td><strong>802.11b</strong></td>
-<td>1999</td>
-<td>2.4</td>
-<td>11 Mbps</td>
-<td>Widely adopted, DSSS/CCK modulation</td>
-<td>Wi-Fi 1</td>
+<td><strong>Network Layer</strong></td>
+<td>Packet delivery across <strong>multiple networks</strong></td>
+<td>End-to-end</td>
+<td><strong>IP, ICMP</strong></td>
+<td><strong>IP addresses</strong></td>
 </tr>
 <tr>
-<td><strong>802.11a</strong></td>
-<td>1999</td>
-<td>5</td>
-<td>54 Mbps</td>
-<td>OFDM, less interference but shorter range than 802.11b</td>
-<td>Wi-Fi 2</td>
+<td>Transport Layer</td>
+<td>Reliable/unreliable data transfer</td>
+<td>End-to-end</td>
+<td>TCP, UDP</td>
+<td>Port numbers</td>
+</tr>
+</tbody>
+</table>
+<p><strong>1. Role and Responsibilities</strong>
+*   The primary role of the Network Layer is to <strong>get packets from a source host to a destination host</strong>. This is a crucial distinction from the Data Link Layer, which is typically concerned with transmitting frames across a <strong>single link</strong>.
+*   It is the <strong>lowest OSI layer that has to deal with end-to-end transmission</strong> across interconnected networks. Layers above it, like the Transport Layer, also deal with end-to-end communication.
+*   The Network Layer must cater for packets traveling across <strong>multiple networks</strong>, which may be <strong>different in technology, number, type, and topology</strong> (e.g., combining Ethernet, Token Ring, fiber optics, satellite networks).
+*   Key design objectives for an effective Network Layer include being <strong>independent of processor/communication technology</strong>, <strong>independent of the number, type, and topology of the subnets</strong>, and providing a <strong>uniform addressing scheme for all hosts in the network</strong>.</p>
+<p><strong>2. Internet Protocol (IP)</strong>
+*   <strong>IP</strong> is the <strong>main network layer protocol</strong>. It is most widely used, typically <strong>paired with TCP</strong> (Transport Control Protocol).
+*   IP runs on <strong>all hosts and routers</strong> in the network.
+*   It is responsible for handling the <strong>addressing and forwarding mechanisms</strong>.
+*   IP relays data across network boundaries and delivers packets from one host to another using IP addresses.</p>
+<p><strong>3. IP Service Model (Focus on IPv4)</strong></p>
+<h3 id="service-characteristics-comparison">Service Characteristics Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>IPv4 Characteristics</th>
+<th>Implications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Connection Type</strong></td>
+<td>Connectionless (datagram-based)</td>
+<td>No connection establishment required</td>
 </tr>
 <tr>
-<td><strong>802.11g</strong></td>
-<td>2003</td>
-<td>2.4</td>
-<td>54 Mbps</td>
-<td>OFDM, backward compatible with 802.11b</td>
-<td>Wi-Fi 3</td>
+<td><strong>Delivery Guarantee</strong></td>
+<td>Best-effort (unreliable)</td>
+<td>Packets may be lost, duplicated, delayed</td>
 </tr>
 <tr>
-<td><strong>802.11n</strong></td>
-<td>2009</td>
-<td>2.4 / 5</td>
-<td>150-600 Mbps</td>
-<td>MIMO, channel bonding (40MHz), frame aggregation</td>
-<td>Wi-Fi 4</td>
+<td><strong>Ordering</strong></td>
+<td>No guarantee</td>
+<td>Packets may arrive out of order</td>
 </tr>
 <tr>
-<td><strong>802.11ac</strong></td>
-<td>2014</td>
-<td>5</td>
-<td>433 Mbps - 6.93 Gbps</td>
-<td>Wider channels (80, 160MHz), MU-MIMO (downlink), 256-QAM</td>
-<td>Wi-Fi 5</td>
-</tr>
-<tr>
-<td><strong>802.11ax</strong></td>
-<td>2019</td>
-<td>2.4 / 5 / 6</td>
-<td>600 Mbps - 9.6 Gbps</td>
-<td>OFDMA, MU-MIMO (uplink &amp; downlink), 1024-QAM, BSS Coloring, Target Wake Time (TWT)</td>
-<td>Wi-Fi 6/6E</td>
+<td><strong>Error Recovery</strong></td>
+<td>None at IP level</td>
+<td>Higher layers (TCP) handle reliability</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><strong>Key Improvement Drivers:</strong></li>
-<li><strong>Modulation Schemes:</strong> Higher-order modulation (e.g., QPSK -&gt; 64-QAM -&gt; 256-QAM -&gt; 1024-QAM) allows more bits per symbol, increasing data rate.</li>
-<li><strong>MIMO (Multiple Input, Multiple Output):</strong> Uses multiple antennas to send/receive multiple data streams simultaneously (spatial streams).</li>
-<li><strong>MU-MIMO (Multi-User MIMO):</strong> Allows an AP to communicate with multiple clients simultaneously.</li>
-<li><strong>OFDMA (Orthogonal Frequency Division Multiple Access):</strong> (in Wi-Fi 6) Divides a channel into smaller resource units (RUs) to serve multiple users simultaneously, improving efficiency in dense environments.</li>
-<li><strong>Channel Bonding/Wider Channels:</strong> Combining multiple channels to increase bandwidth.</li>
-<li><strong>Note:</strong> Actual throughput is often 30-50% of the maximum data rate due to overhead, interference, and shared medium.</li>
+<li>The service model provided by IP (specifically IPv4) is <strong>connectionless (datagram-based)</strong>. This means a connection is not established beforehand; packets (datagrams) are simply sent out with destination information.</li>
+<li>It provides <strong>best-effort delivery</strong>, meaning it is an <strong>unreliable service</strong>.</li>
+<li>Due to this unreliable nature, packets may be <strong>lost, delivered out of order, duplicated, or delayed</strong> for a long time.</li>
+<li>Despite being unreliable, this <strong>best-effort service is still useful</strong> in many scenarios.</li>
 </ul>
-<h3 id="24-ieee-80211-architecture-components">2.4. IEEE 802.11 Architecture Components</h3>
+<p><strong>4. IPv4 Addressing</strong></p>
+<h3 id="address-structure-and-classes">Address Structure and Classes</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>First Bits</th>
+<th>Network Bits</th>
+<th>Host Bits</th>
+<th>Address Range</th>
+<th>Max Networks</th>
+<th>Max Hosts per Network</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>0</td>
+<td>8</td>
+<td>24</td>
+<td>1.0.0.0 - 126.255.255.255</td>
+<td>126</td>
+<td>16, 777, 214</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>10</td>
+<td>16</td>
+<td>16</td>
+<td>128.0.0.0 - 191.255.255.255</td>
+<td>16, 384</td>
+<td>65, 534</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>110</td>
+<td>24</td>
+<td>8</td>
+<td>192.0.0.0 - 223.255.255.255</td>
+<td>2, 097, 152</td>
+<td>254</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>Station (STA):</strong> Any device with an 802.11 interface (e.g., laptop, smartphone, IoT device).</li>
-<li><strong>Access Point (AP):</strong> A station that provides access to the Distribution System and mediates traffic between STAs. Acts as a bridge to a wired network.</li>
-<li><strong>Basic Service Set (BSS):</strong> A set of STAs that can communicate with each other.</li>
-<li><strong>Independent BSS (IBSS) / Ad-hoc Mode:</strong><ul>
-<li>STAs communicate directly (peer-to-peer).</li>
-<li>No AP involved.</li>
-<li>Typically for temporary, small-scale networks.</li>
-<li>No connection to a wired network by default.</li>
+<li>IP provides a <strong>uniform addressing scheme</strong> for all hosts, acting as a way of naming nodes.</li>
+<li>IPv4 addresses are <strong>32 bits (4 bytes)</strong> long. They are commonly written in <strong>dotted decimal notation</strong>, where each byte is represented as a decimal number between 0 and 255, separated by dots (e.g., 192.168.1.1).</li>
+<li>IPv4 addresses have a <strong>basic hierarchical structure</strong>, consisting of a <strong>network part</strong> and a <strong>host part</strong>. This is analogous to a postal address structure like country, city, street, and house number.</li>
+<li><strong>IPv4 Address Classes (A, B, C)</strong> were historically used, where the class and the default split between network and host parts were determined by the first few bits of the address.<ul>
+<li>Class A: First bit is 0. Network part is the first 8 bits. Host part is the remaining 24 bits.</li>
+<li>Class B: First two bits are 10. Network part is the first 16 bits. Host part is the remaining 16 bits.</li>
+<li>Class C: First three bits are 110. Network part is the first 24 bits. Host part is the remaining 8 bits.</li>
 </ul>
 </li>
-<li><strong>Infrastructure BSS:</strong><ul>
-<li>STAs communicate via an AP.</li>
-<li>The AP connects the BSS to a Distribution System (often a wired LAN).</li>
-<li>Most common mode for home and enterprise WLANs.</li>
-<li>The AP controls and coordinates communication within the BSS.</li>
 </ul>
-</li>
-<li><strong>Service Set Identifier (SSID):</strong> The name of a wireless network. STAs must use the correct SSID to join a BSS.</li>
-<li><strong>Extended Service Set (ESS):</strong></li>
-<li>A set of two or more BSSs interconnected by a Distribution System (DS).</li>
-<li>APs in an ESS communicate with each other via the DS.</li>
-<li>Allows for larger coverage areas and roaming: STAs can move from one BSS to another within the same ESS while maintaining their network connection.</li>
-<li>All BSSs in an ESS share the same SSID.</li>
-<li><strong>Distribution System (DS):</strong></li>
-<li>The logical component used to interconnect BSSs to form an ESS.</li>
-<li>Can be a wired LAN (e.g., Ethernet) or a wireless network.</li>
-<li>Enables frame forwarding between BSSs and between BSSs and external networks.</li>
-<li>Handles STA mobility between APs.</li>
-</ul>
-<h3 id="25-medium-access-control-mac-csmaca">2.5. Medium Access Control (MAC) - CSMA/CA</h3>
+<h3 id="special-addresses">Special Addresses</h3>
+<table>
+<thead>
+<tr>
+<th>Address Type</th>
+<th>Description</th>
+<th>Example (Class C)</th>
+<th>Usable for Hosts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Network Address</strong></td>
+<td>All host bits = 0</td>
+<td>192.168.1.0</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Broadcast Address</strong></td>
+<td>All host bits = 1</td>
+<td>192.168.1.255</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Host Addresses</strong></td>
+<td>Mixed host bits</td>
+<td>192.168.1.1 - 192.168.1.254</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance):</strong> Protocol used by 802.11 devices to share the wireless medium.</li>
-<li><strong>"Listen Before Talk":</strong> Stations sense the medium (carrier sense) to check if it's idle before transmitting.</li>
-<li><strong>Collision Avoidance (CA):</strong> Since collision detection (like in Ethernet's CSMA/CD) is difficult in wireless due to the hidden node problem and near-far problem, 802.11 uses mechanisms to <em>avoid</em> collisions.</li>
-<li><strong>Key CSMA/CA Mechanisms:</strong></li>
-<li><strong>Interframe Spaces (IFS):</strong> Mandated quiet periods between transmissions. Different IFS types (SIFS, DIFS, EIFS) prioritize access.<ul>
-<li><strong>DIFS (DCF Interframe Space):</strong> Used by STAs to wait before attempting to access the channel after it becomes idle.</li>
-<li><strong>SIFS (Short Interframe Space):</strong> Used for immediate response frames like ACKs, CTS. Shorter than DIFS, giving priority.</li>
+<li>Within any network or subnet, there are <strong>special addresses</strong>: the <strong>network address</strong> (all host bits are 0) and the <strong>broadcast address</strong> (all host bits are 1).</li>
+<li>These two special addresses <strong>reduce the number of usable host addresses</strong> in a network or subnet. If a network/subnet has H bits for the host part, the number of usable host addresses is <strong>2<sup>H</sup> - 2</strong>.</li>
+<li>An IP address assigned to a device connected to the internet must be <strong>unique</strong> on the internet. They can be assigned dynamically (e.g., when connecting to a network like UniFi).</li>
 </ul>
-</li>
-<li><strong>Random Backoff:</strong> If the medium is busy or after a successful transmission, STAs wait for a DIFS and then select a random backoff time within a Contention Window (CW). The STA with the smallest backoff timer transmits first. CW size increases with collisions (Exponential Backoff).</li>
-<li><strong>RTS/CTS (Request to Send / Clear to Send) - Optional:</strong><ul>
-<li>Helps mitigate the <strong>hidden node problem</strong> (where two STAs can hear the AP but not each other).</li>
-<li>STA A sends RTS to AP.</li>
-<li>AP broadcasts CTS.</li>
-<li>Other STAs hearing RTS or CTS defer transmission (set their NAV).</li>
-<li>STA A then sends data.</li>
-<li>Useful for larger data frames where collision cost is high.</li>
-</ul>
-</li>
-<li><strong>ACK (Acknowledgement):</strong> After receiving a data frame, the receiver sends an ACK back to the sender to confirm successful reception. If no ACK is received, the sender assumes a collision or error and retransmits.</li>
-<li><strong>NAV (Network Allocation Vector):</strong> A timer maintained by each STA. When a STA hears an RTS or CTS frame, it sets its NAV for the duration specified in that frame, indicating how long the medium will be busy. STAs defer transmission until their NAV is zero.</li>
-</ul>
-<h3 id="26-ieee-80211-services">2.6. IEEE 802.11 Services</h3>
-<p>Services provided by the 802.11 MAC layer:</p>
+<p><strong>5. Subnetting (CIDR Basics)</strong></p>
+<h3 id="subnetting-example-calculation">Subnetting Example Calculation</h3>
+<p><strong>Scenario</strong>: An ISP has been allocated 192.168.1.0/24 and needs to create 4 subnets.</p>
+<table>
+<thead>
+<tr>
+<th>Subnet</th>
+<th>Network Address</th>
+<th>Subnet Mask</th>
+<th>CIDR</th>
+<th>Usable Range</th>
+<th>Broadcast</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>192.168.1.0</td>
+<td>255.255.255.192</td>
+<td>/26</td>
+<td>192.168.1.1 - 192.168.1.62</td>
+<td>192.168.1.63</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>192.168.1.64</td>
+<td>255.255.255.192</td>
+<td>/26</td>
+<td>192.168.1.65 - 192.168.1.126</td>
+<td>192.168.1.127</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>192.168.1.128</td>
+<td>255.255.255.192</td>
+<td>/26</td>
+<td>192.168.1.129 - 192.168.1.190</td>
+<td>192.168.1.191</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>192.168.1.192</td>
+<td>255.255.255.192</td>
+<td>/26</td>
+<td>192.168.1.193 - 192.168.1.254</td>
+<td>192.168.1.255</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Calculation Process</strong>:
+* Original network: 192.168.1.0/24 (8 host bits)
+* For 4 subnets: Need 2 additional bits (2² = 4)
+* New subnet mask: /26 (24 + 2 = 26 network bits)
+* Host bits per subnet: 6 bits (32 - 26 = 6)
+* Hosts per subnet: 2⁶ - 2 = 62 usable addresses</p>
+<h3 id="subnet-mask-formats">Subnet Mask Formats</h3>
+<table>
+<thead>
+<tr>
+<th>CIDR Notation</th>
+<th>Dotted Decimal</th>
+<th>Binary (last octet)</th>
+<th>Host Bits</th>
+<th>Max Hosts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/24</td>
+<td>255.255.255.0</td>
+<td>00000000</td>
+<td>8</td>
+<td>254</td>
+</tr>
+<tr>
+<td>/25</td>
+<td>255.255.255.128</td>
+<td>10000000</td>
+<td>7</td>
+<td>126</td>
+</tr>
+<tr>
+<td>/26</td>
+<td>255.255.255.192</td>
+<td>11000000</td>
+<td>6</td>
+<td>62</td>
+</tr>
+<tr>
+<td>/27</td>
+<td>255.255.255.224</td>
+<td>11100000</td>
+<td>5</td>
+<td>30</td>
+</tr>
+<tr>
+<td>/28</td>
+<td>255.255.255.240</td>
+<td>11110000</td>
+<td>4</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>Station Services (provided by STAs, including APs):</strong></li>
-<li><strong>Authentication:</strong> Verifying the identity of a STA before allowing network access. (Original 802.11 used Open System or Shared Key. Modern systems use 802.1X/EAP).</li>
-<li><strong>Deauthentication:</strong> Terminating an authenticated relationship.</li>
-<li><strong>Privacy:</strong> Encrypting data to prevent eavesdropping. (Original WEP was flawed. WPA, WPA2, WPA3 offer stronger encryption).</li>
-<li><strong>MSDU Delivery (MAC Service Data Unit):</strong> Reliable delivery of data frames.</li>
-<li><strong>Distribution System Services (DSS) (provided by the DS via APs):</strong></li>
-<li><strong>Association:</strong> Establishing a logical connection between a STA and an AP. STA becomes part of the AP's BSS.</li>
-<li><strong>Reassociation:</strong> Allowing a STA to move its association from one AP to another within an ESS (supports roaming).</li>
-<li><strong>Disassociation:</strong> Terminating an association.</li>
-<li><strong>Distribution:</strong> Delivering frames within the DS (e.g., from one AP to another, or from an AP to the wired network).</li>
-<li><strong>Integration:</strong> Connecting the 802.11 WLAN to non-802.11 networks (e.g., wired Ethernet) via a portal. Involves frame format translation.</li>
+<li><strong>Subnetting</strong> is a technique used to <strong>divide a larger network into smaller, distinct subnetworks</strong>. This is useful, for example, for an Internet Service Provider (ISP) to manage address space efficiently and distribute addresses to different customers or regions.</li>
+<li>Subnetting is implemented using a <strong>subnet mask</strong>. The subnet mask is a 32-bit number, often written in dotted decimal notation or using slash notation (CIDR - Classless Interdomain Routing).</li>
+<li>In the binary representation of a subnet mask, the bits that are part of the network/subnet address are set to <strong>1</strong>, and the bits that are part of the host address are set to <strong>0</strong>. The <strong>ones always fill from the left</strong> (most significant bit) to the right.</li>
+<li>The slash notation (e.g.,      <code>/24</code>,      <code>/25</code>) indicates the <strong>number of bits set to 1</strong> in the subnet mask.</li>
+<li>To determine if a destination IP address is on the same subnet as the sending host, the host performs a <strong>bitwise AND operation</strong> between its own subnet mask and the destination IP address. If the result equals the subnet number of the sending host, the destination is on the same subnet.</li>
 </ul>
-<h3 id="27-wlan-issues-considerations">2.7. WLAN Issues &amp; Considerations</h3>
+<p><strong>6. IPv4 Header</strong></p>
+<h3 id="ipv4-header-field-analysis">IPv4 Header Field Analysis</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> 0                   1                   2                   3
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>|Version|  IHL  |Type of Service|          Total Length         |
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>|         Identification        |Flags|      Fragment Offset    |
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>|  Time to Live |    Protocol   |         Header Checksum       |
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>|                       Source Address                          |
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>|                    Destination Address                        |
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>|                    Options                    |    Padding    |
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</span></code></pre></div>
+<h3 id="key-header-fields-comparison">Key Header Fields Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Size (bits)</th>
+<th>Purpose</th>
+<th>Key Values</th>
+<th>Impact of Errors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Version</strong></td>
+<td>4</td>
+<td>IP version identifier</td>
+<td>4 (IPv4)</td>
+<td>Wrong protocol processing</td>
+</tr>
+<tr>
+<td><strong>Header Length</strong></td>
+<td>4</td>
+<td>Header size in 32-bit words</td>
+<td>5-15 (20-60 bytes)</td>
+<td>Parsing errors</td>
+</tr>
+<tr>
+<td><strong>Total Length</strong></td>
+<td>16</td>
+<td>Entire packet size</td>
+<td>20-65535 bytes</td>
+<td>Truncation/buffer issues</td>
+</tr>
+<tr>
+<td><strong>TTL</strong></td>
+<td>8</td>
+<td>Hop limit</td>
+<td>1-255</td>
+<td>Routing loops prevention</td>
+</tr>
+<tr>
+<td><strong>Protocol</strong></td>
+<td>8</td>
+<td>Upper layer protocol</td>
+<td>1(ICMP), 6(TCP), 17(UDP)</td>
+<td>Wrong demultiplexing</td>
+</tr>
+<tr>
+<td><strong>Header Checksum</strong></td>
+<td>16</td>
+<td>Error detection</td>
+<td>Calculated value</td>
+<td>Corruption detection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fragmentation-control-fields">Fragmentation Control Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Purpose</th>
+<th>Values</th>
+<th>Fragment Handling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identification</strong></td>
+<td>Group fragments</td>
+<td>0-65535</td>
+<td>Same ID for all fragments of original packet</td>
+</tr>
+<tr>
+<td><strong>DF Flag</strong></td>
+<td>Don't Fragment</td>
+<td>0/1</td>
+<td>If 1, packet must not be fragmented</td>
+</tr>
+<tr>
+<td><strong>MF Flag</strong></td>
+<td>More Fragments</td>
+<td>0/1</td>
+<td>1 for all fragments except last</td>
+</tr>
+<tr>
+<td><strong>Fragment Offset</strong></td>
+<td>Position in original</td>
+<td>0-8191 (×8 bytes)</td>
+<td>Reassembly order indicator</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>Performance:</strong></li>
-<li><strong>Nominal vs. Actual Throughput:</strong> Actual throughput is significantly lower than theoretical maximums due to overhead, interference, shared medium.</li>
-<li><strong>Interference:</strong> From other Wi-Fi networks, Bluetooth, microwaves, etc.</li>
-<li><strong>Coverage:</strong> Signal strength degrades with distance and obstacles.</li>
-<li><strong>Capacity:</strong> Limited by the AP and the shared medium, especially with many users.</li>
-<li><strong>Security:</strong></li>
-<li><strong>WEP (Wired Equivalent Privacy):</strong> Deprecated due to major security flaws.</li>
-<li><strong>WPA (Wi-Fi Protected Access):</strong> Interim solution, used TKIP.</li>
-<li><strong>WPA2 (Wi-Fi Protected Access II):</strong> Uses AES encryption (CCMP), much stronger. Industry standard for many years.</li>
-<li><strong>WPA3 (Wi-Fi Protected Access III):</strong> Latest standard, offers enhanced security features (e.g., stronger encryption, protection against brute-force attacks, individualized data encryption in open networks).</li>
-<li><strong>Roaming:</strong> The process of a STA moving from one AP's coverage to another within the same ESS without losing connectivity. Requires support from APs and the DS.</li>
-</ul>
-<h2 id="3-personal-area-network-pan-bluetooth">3. Personal Area Network (PAN) - Bluetooth</h2>
-<ul>
-<li><strong>PAN:</strong> Network for connecting devices within a very short range (typically ~10 meters).</li>
-<li><strong>Bluetooth (IEEE 802.15.1):</strong> A leading standard for PANs.</li>
-<li><strong>Goals:</strong> Low cost, low power, cable replacement, ad-hoc connectivity.</li>
-<li><strong>Operation:</strong></li>
-<li>Operates in the 2.4 GHz ISM band.</li>
-<li>Uses <strong>Frequency Hopping Spread Spectrum (FHSS)</strong> to mitigate interference. Hops rapidly between 79 channels.</li>
-<li><strong>Network Topology:</strong></li>
-<li><strong>Piconet:</strong><ul>
-<li>Basic unit. One <strong>Master</strong> device and up to seven active <strong>Slave</strong> devices.</li>
-<li>Master controls the piconet, defining the hopping sequence and timing.</li>
+<li>Every IP packet (datagram) carries an <strong>IPv4 header</strong> appended to the data payload from the upper layer. The header contains information needed to transfer the packet.</li>
+<li>Understanding the fields in the IPv4 header is important. Key fields include:<ul>
+<li><strong>Version</strong>: Indicates the IP version (e.g., 4 for IPv4). (IPv6 exists but is excluded from the exam).</li>
+<li><strong>Header Length</strong>: Specifies the length of the IP header in 32-bit units. A value greater than 5 implies the presence of the optional "Options" field.</li>
+<li><strong>Total Length</strong>: The total length of the IP datagram (header + data).</li>
+<li><strong>Identification</strong>: A value used to identify fragments belonging to the same original datagram.</li>
+<li><strong>Flags</strong>: Contains control bits related to fragmentation, including "Don't Fragment" (DF) and "More Fragments" (MF) flags. The DF flag set to 1 tells routers not to fragment the packet.</li>
+<li><strong>Fragment Offset</strong>: Indicates the position of a fragment relative to the beginning of the original unfragmented datagram. It is measured in units of 8 bytes.</li>
+<li><strong>Time To Live (TTL)</strong>: A value that is decremented by each router (hop) the packet traverses. Its purpose is to <strong>limit the lifetime of a packet</strong> and prevent it from circulating endlessly in the network (e.g., due to routing loops). If TTL reaches zero, the packet is discarded.</li>
+<li><strong>Protocol Identifier</strong>: Indicates the protocol used by the upper layer (e.g., TCP (6), UDP (17), ICMP (1)).</li>
+<li><strong>Header Checksum</strong>: A checksum calculated <strong>only over the IP header</strong>. Its purpose is to <strong>detect errors in the header</strong> and ensure that routing information is correct. If due to error, the source or destination address changes, the packet would be misrouted.</li>
+<li><strong>Source IP Address</strong>: The 32-bit IP address of the sending host.</li>
+<li><strong>Destination IP Address</strong>: The 32-bit IP address of the intended receiving host.</li>
+<li><strong>Options and Padding</strong>: Optional fields that can extend the header.</li>
 </ul>
 </li>
-<li><strong>Scatternet:</strong><ul>
-<li>Two or more piconets interconnected.</li>
-<li>A device can be a master in one piconet and a slave in another, or a slave in multiple piconets.</li>
-<li>Allows for more complex network configurations.</li>
 </ul>
-</li>
-<li><strong>Bluetooth Low Energy (BLE):</strong></li>
-<li>A version of Bluetooth designed for very low power consumption.</li>
-<li>Ideal for IoT devices, wearables, sensors that need long battery life.</li>
-<li>Different physical layer and link layer characteristics than Classic Bluetooth, optimized for short bursts of data.</li>
-<li><strong>Radio Parameters (Classic Bluetooth):</strong></li>
-<li>RF Band: 2.4 GHz ISM</li>
-<li>Modulation: GFSK (Gaussian Frequency Shift Keying)</li>
-<li>Peak Data Rate: 1-3 Mbps (depending on version)</li>
-<li>Hopping Channels: 79</li>
-<li>Hopping Rate: 1600 hops/second</li>
-<li><strong>Bluetooth Channels &amp; Access:</strong></li>
-<li>Time Division Duplex (TDD): Master and slave transmit in alternate time slots.</li>
-<li>Master schedules all traffic.</li>
+<p><strong>7. Fragmentation and Reassembly</strong></p>
+<h3 id="fragmentation-example">Fragmentation Example</h3>
+<p><strong>Original Packet</strong>: 3000 bytes data + 20 bytes header = 3020 bytes total
+<strong>MTU Constraint</strong>: 1500 bytes</p>
+<table>
+<thead>
+<tr>
+<th>Fragment</th>
+<th>Data Size</th>
+<th>Total Size</th>
+<th>Identification</th>
+<th>MF Flag</th>
+<th>Fragment Offset</th>
+<th>Offset (bytes)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>1480 bytes</td>
+<td>1500 bytes</td>
+<td>12345</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>1480 bytes</td>
+<td>1500 bytes</td>
+<td>12345</td>
+<td>1</td>
+<td>185</td>
+<td>1480</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>40 bytes</td>
+<td>60 bytes</td>
+<td>12345</td>
+<td>0</td>
+<td>370</td>
+<td>2960</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Calculation Notes</strong>:
+* Fragment Offset = (Byte Offset) / 8
+* Fragment 1: 0 / 8 = 0
+* Fragment 2: 1480 / 8 = 185
+* Fragment 3: 2960 / 8 = 370</p>
+<h3 id="fragmentation-vs-reassembly-comparison">Fragmentation vs. Reassembly Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Fragmentation</th>
+<th>Reassembly</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Location</strong></td>
+<td>Source host or intermediate routers</td>
+<td>Destination host only</td>
+</tr>
+<tr>
+<td><strong>Trigger</strong></td>
+<td>Packet size &gt; MTU</td>
+<td>Receiving fragments</td>
+</tr>
+<tr>
+<td><strong>Fields Used</strong></td>
+<td>ID, DF, MF, Fragment Offset</td>
+<td>ID, MF, Fragment Offset</td>
+</tr>
+<tr>
+<td><strong>Error Handling</strong></td>
+<td>Drop if DF=1 and size &gt; MTU</td>
+<td>Discard all if one fragment lost</td>
+</tr>
+<tr>
+<td><strong>Performance Impact</strong></td>
+<td>Processing overhead</td>
+<td>Buffer management, timeout</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Messages may need to be <strong>divided into smaller packets (fragments)</strong> before transmission. This happens when a datagram is <strong>larger than the Maximum Transmission Unit (MTU)</strong> of the next network link it needs to traverse.</li>
+<li>Fragmentation typically occurs at the source host or at intermediate routers if necessary.</li>
+<li>The <strong>Identification, Flags (MF), and Fragment Offset</strong> fields in the IP header are used to manage fragmentation.</li>
+<li>The "More Fragments" (MF) flag is set to 1 for all fragments except the last one. The "Fragment Offset" indicates the position of the fragment's data within the original datagram.</li>
+<li>Fragments are <strong>reassembled back into the original datagram at the destination host</strong>. They are put together based on their Identification and Fragment Offset values, even if they arrive out of order.</li>
+<li>IP itself <strong>does not provide recovery for lost fragments</strong>. If a fragment is lost, the entire original datagram cannot be reassembled, and a higher layer protocol (like TCP) would be responsible for requesting retransmission.</li>
+<li>Sources generally <strong>try to avoid fragmentation</strong> due to the overhead involved. Re-fragmentation of an already fragmented packet is possible.</li>
 </ul>
+<p><strong>8. Forwarding (vs Routing)</strong></p>
+<h3 id="forwarding-vs-routing-comparison">Forwarding vs. Routing Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Forwarding</th>
+<th>Routing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scope</strong></td>
+<td>Local router action</td>
+<td>Network-wide process</td>
+</tr>
+<tr>
+<td><strong>Function</strong></td>
+<td>Move packet input → output port</td>
+<td>Calculate/build forwarding tables</td>
+</tr>
+<tr>
+<td><strong>Timeline</strong></td>
+<td>Per-packet basis</td>
+<td>Periodic or topology-change triggered</td>
+</tr>
+<tr>
+<td><strong>Data Structure</strong></td>
+<td>Uses existing forwarding table</td>
+<td>Creates/updates forwarding table</td>
+</tr>
+<tr>
+<td><strong>Location</strong></td>
+<td>Individual router</td>
+<td>Network control plane</td>
+</tr>
+<tr>
+<td><strong>Speed Requirement</strong></td>
+<td>Very fast (hardware-based)</td>
+<td>Can be slower (software-based)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-forwarding-table">Example Forwarding Table</h3>
+<table>
+<thead>
+<tr>
+<th>Destination Network</th>
+<th>Next Hop</th>
+<th>Interface</th>
+<th>Metric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.1.0/24</td>
+<td>Direct</td>
+<td>eth0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>192.168.2.0/24</td>
+<td>10.0.0.1</td>
+<td>eth1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0.0.0.0/0</td>
+<td>10.0.0.254</td>
+<td>eth1</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Forwarding</strong> is the <strong>local action taken by a router</strong> to move a packet from an input interface to an output interface.</li>
+<li>A router determines the appropriate output port by <strong>looking up the destination IP address</strong> of the incoming packet in its forwarding table.</li>
+<li>(While related, the process of <em>creating</em> or <em>calculating</em> these forwarding/routing tables is called Routing, which is an excluded topic).</li>
+</ul>
+<h2 id="concept-integration-and-relationships">Concept Integration and Relationships</h2>
+<h3 id="network-layer-process-flow">Network Layer Process Flow</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Source Host                Router                 Destination Host
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>     |                        |                           |
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>1. Create IP packet      2. Receive packet         6. Receive packet
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   - Add IP header          - Check TTL               - Verify header
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>   - Fragment if needed     - Decrement TTL           - Reassemble fragments
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>     |                      - Check destination        - Extract payload
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2. Send to router          - Lookup forwarding table      |
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>     |                      - Forward to next hop    7. Deliver to upper layer
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>     |                           |                        |
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>     +------ Network Path -------+                        |
+</span></code></pre></div>
+<h3 id="common-calculation-types">Common Calculation Types</h3>
+<p><strong>1. Address Class Identification</strong>
+* Given: 172.16.5.10
+* Binary: 10101100.00010000.00000101.00001010
+* First two bits: 10 → Class B</p>
+<p><strong>2. Subnetting Calculations</strong>
+* Network: 192.168.1.0/24, need 6 subnets
+* Required subnet bits: ceil(log₂(6)) = 3 bits
+* New mask: /27 (24 + 3)
+* Hosts per subnet: 2⁵ - 2 = 30</p>
+<p><strong>3. Fragmentation Calculations</strong>
+* Original: 4000 bytes, MTU: 1500 bytes
+* Fragments needed: ceil(4000/1480) = 3
+* Fragment offsets: 0, 185, 370</p>
+<p>These notes cover the examinable aspects of the Network Layer and IP based on the provided sources and your list of exclusions. Remember to provide clear explanations and justifications for your answers in the exam.</p>
 
 
 
@@ -3525,7 +3893,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../java/basics/w10/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 10.0 Thread, Lambda">
+          <a href="../w4/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 4.0 Wireless Networking">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3535,20 +3903,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                10.0 Thread, Lambda
+                4.0 Wireless Networking
               </div>
             </div>
           </a>
         
         
           
-          <a href="../w6/" class="md-footer__link md-footer__link--next" aria-label="下一页: Network Layer Practice Questions">
+          <a href="../w6/" class="md-footer__link md-footer__link--next" aria-label="下一页: 6.0 Transport Layer">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Network Layer Practice Questions
+                6.0 Transport Layer
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3588,6 +3956,12 @@
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
       
     
   </body>

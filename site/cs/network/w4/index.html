@@ -1,0 +1,4059 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Your attitude, not your aptitude, will determine your altitude.">
+      
+      
+        <meta name="author" content="ronin">
+      
+      
+        <link rel="canonical" href="https://execution.icu/cs/network/w4/">
+      
+      
+        <link rel="prev" href="../w3/">
+      
+      
+        <link rel="next" href="../w5/">
+      
+      
+      <link rel="icon" href="../../../assets/icon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>4.0 Wireless Networking - Ronin's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#40-wireless-networking" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Ronin&#39;s Notes" class="md-header__button md-logo" aria-label="Ronin's Notes" data-md-component="logo">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ronin's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4.0 Wireless Networking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../arts/wukong/" class="md-tabs__link">
+          
+  
+  
+  Arts
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tools/gfw/" class="md-tabs__link">
+          
+  
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../python/flask/1.0/" class="md-tabs__link">
+          
+  
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../handbook/telegram/" class="md-tabs__link">
+          
+  
+  
+  Handbooks
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cyber/networkattack/" class="md-tabs__link">
+          
+  
+  
+  Cybersecurity
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Ronin&#39;s Notes" class="md-nav__button md-logo" aria-label="Ronin's Notes" data-md-component="logo">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    Ronin's Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Arts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Arts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Wukong
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Wukong
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../arts/wukong/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    西游
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/gfw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Great Firewall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/ffmpeg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FFMPEG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/wine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    macOS Virtual Machine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/searxng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dify + Searxng Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Computer Science
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Flask
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Flask
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/flask/1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/concept/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Book Exam
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/2024.s1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024.S1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/t1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 T1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/t2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 T2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0 Loop
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.0 Class
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.0 Inheritance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.0 More, Packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8.0 Exceptions, Interfaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9.0 Enums, Generic, SOLID
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/basics/w10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10.0 Thread, Lambda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Networks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Networks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_1" id="__nav_4_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    3002
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            3002
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 OSI and TCP/IP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 Physical Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 Data Link Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    4.0 Wireless Networking
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0 Wireless Networking
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wireless-networking-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wireless Networking Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wireless Networking Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-challenge-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Challenge Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-rate-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Rate Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ieee-80211-wlan-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE 802.11 (WLAN) Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IEEE 802.11 (WLAN) Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wlan-design-goals-and-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      WLAN Design Goals and Trade-offs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-protocol-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Protocol Evolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wlan-network-types-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      WLAN Network Types Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ieee-80211-architecture-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE 802.11 Architecture Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medium-access-control-mac-key-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium Access Control (MAC) - Key Differences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rtscts-mechanism-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      RTS/CTS Mechanism Visualization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-exponential-backoff-calculation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Exponential Backoff Calculation Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-duplex-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Duplex Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#80211-standards-performance-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      802.11 Standards Performance Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bluetooth-personal-area-network-pan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth / Personal Area Network (PAN)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bluetooth / Personal Area Network (PAN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bluetooth-vs-ieee-80211-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth vs IEEE 802.11 Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bluetooth-network-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth Network Topology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bluetooth-applications-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth Applications and Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-consumption-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Consumption Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wireless-technologies-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wireless Technologies Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wireless Technologies Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frequency-band-utilization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequency Band Utilization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-selection-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Selection Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-exam-calculation-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Exam Calculation Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.0 Network Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.0 Transport Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.0 Presentation Layers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8.0 Client and Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9.0 Internet Measurement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10.0 Exam Samples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11.0 Past Exam Questions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    MERN
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            MERN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_1" id="__nav_4_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/html/html_syntax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 HTML Basic Syntax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    3403
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            3403
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024 Exam
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.0 Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0 HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.0 CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.0 Bootstrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.0 Core JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l5_ex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.1 Exam QAs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.0 Client Javascript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l6_ex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.1 Exam QAs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.0 Agile and Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8.0 Communicating With A Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9.0 Flask and Server-Side Rendering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10.0 Client Side Rendering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11.0 Databases and ORM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12.0 Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13.0 Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    14.0 RESTful API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mern/3403/l15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    15.0 Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_1" id="__nav_4_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    C System Programming
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            C System Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/2.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.1 Basic Syntax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/2.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.2 Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/2.3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.3 Linux Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/2.4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.4 MyCal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/3.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.1 Data Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/3.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.2 Computer Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/3.3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.3 Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/4.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.1 Computer Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/4.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.2 I/O
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/4.3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.3 I/O Prac
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/5.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.1 Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/5.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.2 Multiple Blocked States
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Handbooks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Handbooks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Telegram
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Telegram
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../handbook/telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Telegram Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Computer Science Plan
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science Plan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../handbook/csplan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CS Study Plan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cybersecurity
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Cybersecurity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cyber/networkattack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network Attacks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wireless-networking-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wireless Networking Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wireless Networking Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-challenge-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Challenge Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-rate-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Rate Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ieee-80211-wlan-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE 802.11 (WLAN) Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IEEE 802.11 (WLAN) Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wlan-design-goals-and-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      WLAN Design Goals and Trade-offs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-protocol-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Protocol Evolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wlan-network-types-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      WLAN Network Types Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ieee-80211-architecture-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE 802.11 Architecture Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medium-access-control-mac-key-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium Access Control (MAC) - Key Differences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rtscts-mechanism-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      RTS/CTS Mechanism Visualization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-exponential-backoff-calculation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Exponential Backoff Calculation Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-duplex-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Duplex Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#80211-standards-performance-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      802.11 Standards Performance Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bluetooth-personal-area-network-pan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth / Personal Area Network (PAN)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bluetooth / Personal Area Network (PAN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bluetooth-vs-ieee-80211-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth vs IEEE 802.11 Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bluetooth-network-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth Network Topology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bluetooth-applications-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth Applications and Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-consumption-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Consumption Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wireless-technologies-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wireless Technologies Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wireless Technologies Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frequency-band-utilization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequency Band Utilization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-selection-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Selection Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-exam-calculation-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Exam Calculation Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="40-wireless-networking">4.0 Wireless Networking</h1>
+<h2 id="wireless-networking-challenges">Wireless Networking Challenges</h2>
+<h3 id="core-challenge-categories">Core Challenge Categories</h3>
+<table>
+<thead>
+<tr>
+<th>Challenge Type</th>
+<th>Specific Issues</th>
+<th>Impact on Network Design</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Physical Signal Issues</strong></td>
+<td>Attenuation (rain, water, dust)</td>
+<td>Higher error rates, need for error correction</td>
+</tr>
+<tr>
+<td></td>
+<td>Reflections (water bodies, fog)</td>
+<td>Signal distortion, multipath effects</td>
+</tr>
+<tr>
+<td></td>
+<td>Diffractions (hills, buildings)</td>
+<td>Coverage gaps, dead zones</td>
+</tr>
+<tr>
+<td><strong>Infrastructure Constraints</strong></td>
+<td>Antenna icing</td>
+<td>Service interruption, maintenance requirements</td>
+</tr>
+<tr>
+<td></td>
+<td>Zoning restrictions</td>
+<td>Limited transmission power, reduced coverage</td>
+</tr>
+<tr>
+<td><strong>Device Limitations</strong></td>
+<td>Power consumption (especially IoT)</td>
+<td>Battery life considerations, sleep modes</td>
+</tr>
+<tr>
+<td><strong>Security Vulnerabilities</strong></td>
+<td>Wide signal propagation</td>
+<td>Open to eavesdropping, need for encryption</td>
+</tr>
+</tbody>
+</table>
+<h3 id="error-rate-comparison">Error Rate Comparison</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Wired Networks:    [Low Error Rate]     ████░░░░░░ (10-30%)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Wireless Networks: [Higher Error Rate]  ███████░░░ (70-90%)
+</span></code></pre></div>
+<h2 id="ieee-80211-wlan-architecture">IEEE 802.11 (WLAN) Architecture</h2>
+<h3 id="wlan-design-goals-and-trade-offs">WLAN Design Goals and Trade-offs</h3>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Benefit</th>
+<th>Trade-off/Challenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ease of use</strong></td>
+<td>Simple setup and roaming</td>
+<td>Potential security vulnerabilities</td>
+</tr>
+<tr>
+<td><strong>Power efficiency</strong></td>
+<td>Extended battery life</td>
+<td>May limit transmission power/range</td>
+</tr>
+<tr>
+<td><strong>License-free operation</strong></td>
+<td>No regulatory costs</td>
+<td>Interference from other devices</td>
+</tr>
+<tr>
+<td><strong>Robustness to noise</strong></td>
+<td>Reliable communication</td>
+<td>Complex error correction needed</td>
+</tr>
+<tr>
+<td><strong>Global usability</strong></td>
+<td>Universal deployment</td>
+<td>Different regional regulations</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Protected communications</td>
+<td>Performance overhead</td>
+</tr>
+</tbody>
+</table>
+<h3 id="security-protocol-evolution">Security Protocol Evolution</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>WEP (Weak) → WPA → WPA2 → WPA3 (Current)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>     ↓         ↓      ↓        ↓
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>   Broken   Better  Strong  Strongest
+</span></code></pre></div>
+<p><strong>Note</strong>: All protocols only protect wireless links, not end-to-end communication.</p>
+<h3 id="wlan-network-types-comparison">WLAN Network Types Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Ad Hoc (IBSS)</th>
+<th>Infrastructure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Central Control</strong></td>
+<td>None</td>
+<td>Access Point (AP)</td>
+</tr>
+<tr>
+<td><strong>Connectivity</strong></td>
+<td>Direct peer-to-peer</td>
+<td>All through AP</td>
+</tr>
+<tr>
+<td><strong>Range Limitation</strong></td>
+<td>Nodes must be in direct range</td>
+<td>Extended through AP relay</td>
+</tr>
+<tr>
+<td><strong>Wired Network Access</strong></td>
+<td>No</td>
+<td>Yes (via AP)</td>
+</tr>
+<tr>
+<td><strong>Typical Duration</strong></td>
+<td>Short-lived</td>
+<td>Permanent/Long-term</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Limited (small groups)</td>
+<td>High (multiple APs)</td>
+</tr>
+<tr>
+<td><strong>Relay Capability</strong></td>
+<td>No</td>
+<td>Yes (AP provides buffering)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ieee-80211-architecture-hierarchy">IEEE 802.11 Architecture Hierarchy</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Extended Service Set (ESS)
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── Basic Service Set 1 (BSS1)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│   ├── Access Point 1
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│   ├── Station A
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>│   ├── Station B
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>│   └── Station C
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>├── Basic Service Set 2 (BSS2)
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>│   ├── Access Point 2
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>│   ├── Station D
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>│   └── Station E
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>└── Distribution System (DS)
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    └── Connects all APs
+</span></code></pre></div>
+<p><strong>Example</strong>: University campus network (Unifi) = ESS with multiple BSSs</p>
+<h3 id="service-classification">Service Classification</h3>
+<table>
+<thead>
+<tr>
+<th>Service Category</th>
+<th>Specific Services</th>
+<th>Primary Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Station Services</strong></td>
+<td>Authentication</td>
+<td>Verify device identity</td>
+</tr>
+<tr>
+<td></td>
+<td>De-authentication</td>
+<td>Remove authenticated station</td>
+</tr>
+<tr>
+<td></td>
+<td>Privacy</td>
+<td>Prevent eavesdropping</td>
+</tr>
+<tr>
+<td></td>
+<td>Data delivery</td>
+<td>Transport data packets</td>
+</tr>
+<tr>
+<td><strong>Distribution Services</strong></td>
+<td>Association</td>
+<td>Link station to AP</td>
+</tr>
+<tr>
+<td></td>
+<td>Mobility management</td>
+<td>Handle roaming between APs</td>
+</tr>
+<tr>
+<td></td>
+<td>Integration</td>
+<td>Connect to other network types</td>
+</tr>
+</tbody>
+</table>
+<h3 id="medium-access-control-mac-key-differences">Medium Access Control (MAC) - Key Differences</h3>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Detection Method</th>
+<th>Timing</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ethernet CSMA/CD</strong></td>
+<td>Collision Detection</td>
+<td>AFTER collision occurs</td>
+<td>Wired networks</td>
+</tr>
+<tr>
+<td><strong>Wireless CSMA/CA</strong></td>
+<td>Collision Avoidance</td>
+<td>BEFORE transmission</td>
+<td>Wireless networks</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rtscts-mechanism-visualization">RTS/CTS Mechanism Visualization</h3>
+<p><strong>Scenario</strong>: Station A wants to send data to Station B</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Step 1: Station A broadcasts RTS
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>A ----[RTS]----&gt; B
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  \             /
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>   \           /
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    v         v
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    C         D
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>(hears RTS,  (hears RTS,
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a> defers)      defers)
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Step 2: Station B responds with CTS
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>A &lt;---[CTS]----- B
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  ^             ^
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>   \           /
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    \         /
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    C         D
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>(hears CTS,  (hears CTS,
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a> defers)      defers)
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>Step 3: Data transmission
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>A =====[DATA]===&gt; B
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>(Other stations remain silent)
+</span></code></pre></div>
+<h3 id="binary-exponential-backoff-calculation-example">Binary Exponential Backoff Calculation Example</h3>
+<p><strong>Problem</strong>: Station fails to receive CTS after sending RTS. Calculate backoff time.</p>
+<table>
+<thead>
+<tr>
+<th>Attempt</th>
+<th>Backoff Window</th>
+<th>Random Slots</th>
+<th>Wait Time (if slot = 20μs)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1st</td>
+<td>0 to 2^1-1 = [0, 1]</td>
+<td>Random(0, 1)</td>
+<td>0μs or 20μs</td>
+</tr>
+<tr>
+<td>2nd</td>
+<td>0 to 2^2-1 = [0, 3]</td>
+<td>Random(0, 3)</td>
+<td>0μs, 20μs, 40μs, or 60μs</td>
+</tr>
+<tr>
+<td>3rd</td>
+<td>0 to 2^3-1 = [0, 7]</td>
+<td>Random(0, 7)</td>
+<td>0μs to 140μs</td>
+</tr>
+<tr>
+<td>nth</td>
+<td>0 to 2^n-1</td>
+<td>Random(0, 2^n-1)</td>
+<td>Exponentially increasing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="full-duplex-analysis">Full Duplex Analysis</h3>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Simultaneous TX/RX</th>
+<th>Collision Risk</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Single Channel</strong></td>
+<td>Impossible</td>
+<td>High</td>
+<td>Standard CSMA/CA</td>
+</tr>
+<tr>
+<td><strong>Multiple Channels</strong></td>
+<td>Possible</td>
+<td>Low</td>
+<td>Separate TX/RX channels</td>
+</tr>
+<tr>
+<td><strong>Advanced Techniques</strong></td>
+<td>Limited</td>
+<td>Medium</td>
+<td>Interference cancellation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="80211-standards-performance-comparison">802.11 Standards Performance Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Standard</th>
+<th>Max Bandwidth</th>
+<th>Frequency</th>
+<th>Real-world Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>802.11b</td>
+<td>11 Mbps</td>
+<td>2.4 GHz</td>
+<td>~5-6 Mbps</td>
+</tr>
+<tr>
+<td>802.11g</td>
+<td>54 Mbps</td>
+<td>2.4 GHz</td>
+<td>~25-30 Mbps</td>
+</tr>
+<tr>
+<td>802.11n</td>
+<td>100+ Mbps</td>
+<td>2.4/5 GHz</td>
+<td>~50-70 Mbps</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Performance Degradation Factors</strong>:
+* Interference and fading
+* Distance from AP
+* Number of concurrent users
+* Environmental obstacles</p>
+<h2 id="bluetooth-personal-area-network-pan">Bluetooth / Personal Area Network (PAN)</h2>
+<h3 id="bluetooth-vs-ieee-80211-comparison">Bluetooth vs IEEE 802.11 Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Bluetooth</th>
+<th>IEEE 802.11 (WiFi)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Range</strong></td>
+<td>~10 meters</td>
+<td>100+ meters</td>
+</tr>
+<tr>
+<td><strong>Frequency</strong></td>
+<td>2.45 GHz ISM</td>
+<td>2.4 GHz, 5 GHz ISM</td>
+</tr>
+<tr>
+<td><strong>Primary Use</strong></td>
+<td>Device connectivity</td>
+<td>Internet access</td>
+</tr>
+<tr>
+<td><strong>Power Consumption</strong></td>
+<td>Low (especially BLE)</td>
+<td>Higher</td>
+</tr>
+<tr>
+<td><strong>Network Topology</strong></td>
+<td>Piconet/Scatternet</td>
+<td>BSS/ESS</td>
+</tr>
+<tr>
+<td><strong>Max Devices</strong></td>
+<td>7 active slaves per master</td>
+<td>Hundreds per AP</td>
+</tr>
+<tr>
+<td><strong>Application Focus</strong></td>
+<td>Cable replacement</td>
+<td>Data networking</td>
+</tr>
+<tr>
+<td><strong>Protocol Layers</strong></td>
+<td>Physical, Link, MAC</td>
+<td>MAC, Physical</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bluetooth-network-topology">Bluetooth Network Topology</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Piconet 1                    Piconet 2
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    M1                          M2
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>   /|\                         /|\
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  / | \                       / | \
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a> S1 S2 S3                    S4 S5 S6
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    |                           |
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    +-------- Bridge -----------+
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>            (Scatternet)
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>M = Master device
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>S = Slave device
+</span></code></pre></div>
+<p><strong>Key Constraints</strong>:
+* Each piconet: 1 master + up to 7 active slaves
+* Scatternet: Multiple interconnected piconets
+* Bridge device can be slave in multiple piconets</p>
+<h3 id="bluetooth-applications-and-use-cases">Bluetooth Applications and Use Cases</h3>
+<table>
+<thead>
+<tr>
+<th>Application Category</th>
+<th>Examples</th>
+<th>Power Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data/Voice Access</strong></td>
+<td>Headsets, speakers</td>
+<td>Standard Bluetooth</td>
+</tr>
+<tr>
+<td><strong>Cable Replacement</strong></td>
+<td>Keyboards, mice, printers</td>
+<td>Standard Bluetooth</td>
+</tr>
+<tr>
+<td><strong>IoT Sensors</strong></td>
+<td>Health monitors, beacons</td>
+<td>Bluetooth Low Energy (BLE)</td>
+</tr>
+<tr>
+<td><strong>File Transfer</strong></td>
+<td>Phone to laptop</td>
+<td>Standard Bluetooth</td>
+</tr>
+</tbody>
+</table>
+<h3 id="power-consumption-analysis">Power Consumption Analysis</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Standard Bluetooth: ████████░░ (High power)
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Bluetooth LE (BLE): ██░░░░░░░░ (Very low power)
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Battery Life Impact:
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>IoT Device with Standard BT: Days to weeks
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>IoT Device with BLE:         Months to years
+</span></code></pre></div>
+<h2 id="wireless-technologies-summary">Wireless Technologies Summary</h2>
+<h3 id="frequency-band-utilization">Frequency Band Utilization</h3>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Frequency</th>
+<th>Band Type</th>
+<th>License Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IEEE 802.11b/g/n</td>
+<td>2.4 GHz</td>
+<td>ISM</td>
+<td>No</td>
+</tr>
+<tr>
+<td>IEEE 802.11a/n/ac</td>
+<td>5 GHz</td>
+<td>ISM</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Bluetooth</td>
+<td>2.45 GHz</td>
+<td>ISM</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ISM Band Advantages</strong>: License-free operation, global availability
+<strong>ISM Band Disadvantages</strong>: Interference from other devices (microwaves, etc.)</p>
+<h3 id="technology-selection-matrix">Technology Selection Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Range Needed</th>
+<th>Device Count</th>
+<th>Power Sensitivity</th>
+<th>Recommended Technology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home Internet</td>
+<td>High</td>
+<td>Many</td>
+<td>Low</td>
+<td>IEEE 802.11</td>
+</tr>
+<tr>
+<td>Device Pairing</td>
+<td>Low</td>
+<td>Few</td>
+<td>Medium</td>
+<td>Bluetooth</td>
+</tr>
+<tr>
+<td>IoT Sensors</td>
+<td>Low</td>
+<td>Many</td>
+<td>High</td>
+<td>Bluetooth LE</td>
+</tr>
+<tr>
+<td>Enterprise Network</td>
+<td>High</td>
+<td>Very Many</td>
+<td>Low</td>
+<td>IEEE 802.11 with multiple APs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="common-exam-calculation-types">Common Exam Calculation Types</h3>
+<p><strong>1. Backoff Time Calculation</strong>
+Given: Collision attempt number n, slot time
+Formula: Backoff window = [0, 2^n - 1]
+Wait time = Random_slot × Slot_time</p>
+<p><strong>2. Throughput Estimation</strong>
+Factors: Nominal bandwidth, interference level, distance, concurrent users
+Real throughput ≈ Nominal × Efficiency_factor</p>
+<p><strong>3. Range vs Power Trade-off</strong>
+Higher transmission power = Greater range but higher power consumption
+Lower power (BLE) = Shorter range but extended battery life</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../w3/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 3.0 Data Link Layer">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                3.0 Data Link Layer
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../w5/" class="md-footer__link md-footer__link--next" aria-label="下一页: 5.0 Network Layer">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                5.0 Network Layer
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+    
+  </body>
+</html>
