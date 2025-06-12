@@ -12,8 +12,8 @@ nav:
   - Home: index.md
 
   - Arts:
-    - Wukong:
-      - arts/wukong.md
+    - arts/wukong.md
+    - arts/cook.md
 
   - Tools:
       - tools/gfw.md
