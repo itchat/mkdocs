@@ -9,6 +9,7 @@
 ## Beverages
 
 - 两汤勺的大豆高压锅十分钟 + 榨汁机 750 ML 水能够做两杯豆浆，其他豆子分装即可。
+- Dôme 的 Ginger Herb Tea 配方：香茅干 + 姜干 + 陈皮
 
 ## Chinese Medicine
 
