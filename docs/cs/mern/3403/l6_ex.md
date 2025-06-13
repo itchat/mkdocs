@@ -16,7 +16,7 @@ To provide a way for scripts to dynamically access and update the content, struc
 
 DOM 是 BOM 的其中一个分支，包含浏览器执行环境等特点
 
-<img src="../assets/image-20250529190010615.png" alt="image-20250529190010615" style="zoom:40%; " />
+<img src="assets/image-20250529190010615.png" alt="image-20250529190010615" style="zoom:40%; " />
 
 <img src="../assets/image-20250529195620267.png" alt="image-20250529195620267" style="zoom:50%; " />
 
@@ -45,7 +45,7 @@ cookie是一个包含键值对的字符串，最大4KB文本文件可通过 docu
 
 The program's flow is primarily determined by the occurrence of events, such as user actions or messages from other programs.
 
-<img src="assets/image-20250529203056710.png" alt="image-20250529203056710" style="zoom:50%; " />
+<img src="../assets/image-20250529203056710.png" style="zoom:50%; " />
 
 ---
 
