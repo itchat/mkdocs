@@ -102,8 +102,8 @@ nav:
 theme:
   name: material
   # custom_dir: overrides
-  favicon: assets/icon.svg
-  logo: assets/logo.svg
+  favicon: resources/icon.svg
+  logo: resources/logo.svg
   font: 
     code: JetBrains Mono
 
@@ -180,9 +180,9 @@ plugins:
         remove_comments: true
         remove_empty_space: true
       css_files:
-        - stylesheets/extra.css
+        - resources/extra.css
       js_files:
-        - javascripts/katex.js
+        - resources/katex.js
 
 # search_index_only: false
 
@@ -213,9 +213,9 @@ extra: {}
 #     provider: google
 #     property: G-XXXXXX
 extra_css:
-  - stylesheets/extra.css
+  - resources/extra.css
   - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js
-  - javascripts/katex.js
+  - resources/katex.js
