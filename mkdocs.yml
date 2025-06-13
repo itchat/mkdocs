@@ -109,7 +109,9 @@ theme:
 
   language: zh
   features:
-    # - navigation.instant //affect layout of custom css
+    - navigation.instant # 启用即时导航，提高页面切换速度
+    - navigation.instant.prefetch # 预取链接，进一步提升性能
+    - navigation.instant.progress # 显示加载进度
     - navigation.tracking
     - navigation.tabs
     - navigation.sections
@@ -137,7 +139,6 @@ theme:
 
 
 markdown_extensions:
-
   - admonition
   - attr_list
   - footnotes
@@ -168,12 +169,29 @@ markdown_extensions:
 
 plugins:
   - tags
-  - search
+  - search:
+      separator: '[\s\-\.,;:\(\)\[\]{}\/\\]+' # 改进搜索分词，支持更多分隔符
+      lang: zh
+  - minify: # 启用压缩
+      minify_html: true
+      minify_css: true
+      minify_js: true
+      htmlmin_opts:
+        remove_comments: true
+        remove_empty_space: true
+      css_files:
+        - stylesheets/extra.css
+      js_files:
+        - javascripts/katex.js
 
 # search_index_only: false
 
+# 构建优化
+strict: true # 严格模式，确保所有链接有效
+use_directory_urls: true # 使用目录风格的 URL
 
-# extra:
+# 性能优化
+extra: {}
 #   homepage: https://herointene.github.io
 #   social:
 #     - icon: fontawesome/brands/github
