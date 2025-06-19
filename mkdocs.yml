@@ -20,6 +20,7 @@ nav:
       - tools/ffmpeg.md
       - tools/wine.md
       - tools/searxng.md
+      - tools/agent.md
 
   - Computer Science:
     - Python:
