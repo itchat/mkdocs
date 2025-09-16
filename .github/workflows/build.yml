@@ -1,7 +1,6 @@
 name: Build MkDocs Documentation
 
 on:
-  # 当有文件变更、添加时触发
   push:
     branches: [ main, master ]
     paths:
@@ -20,7 +19,6 @@ on:
       - '.github/workflows/**'
       - 'requirements.txt'
 
-  # 允许手动触发
   workflow_dispatch:
 
 jobs:
@@ -59,43 +57,3 @@ jobs:
         name: mkdocs-site
         path: site/
         retention-days: 30
-        
-  # 可选：部署到 GitHub Pages (仅在主分支推送时)
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    
-    # 设置必要的权限
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-      
-    # 确保只有一个部署任务同时运行
-    concurrency:
-      group: "pages"
-      cancel-in-progress: false
-      
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-      
-    steps:
-    - name: Download build artifacts
-      uses: actions/download-artifact@v3
-      with:
-        name: mkdocs-site
-        path: site/
-        
-    - name: Setup Pages
-      uses: actions/configure-pages@v3
-      
-    - name: Upload to GitHub Pages
-      uses: actions/upload-pages-artifact@v2
-      with:
-        path: site/
-        
-    - name: Deploy to GitHub Pages
-      id: deployment  
-      uses: actions/deploy-pages@v2
