@@ -1,8 +1,0 @@
-@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css');
-
-/* 确保字体加载完成前保持空白，不使用后备字体 */
-@font-face {
-    font-family: 'LXGW WenKai Fallback';
-    src: url('data:font/woff2;base64,') format('woff2');
-    font-display: block;
-}
