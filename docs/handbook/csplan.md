@@ -8,14 +8,14 @@ Hire for slope, not Y-Intercept.*
 | Course                                                       | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [CS106A](https://web.stanford.edu/class/cs106a)              |                                                              |
-| [CS106B](https://web.stanford.edu/class/cs106b)              | YouTube [Lecture](https://youtube.com/playlist?list=PLoCMsyE1cvdWiqgyzwAz_uGLSHsuYZlMXCS107) |
-| [CS107](https://web.stanford.edu/class/cs107/)               | YouTube [Lecture](https://youtube.com/playlist?list=PLoCMsyE1cvdWivlV-39KKsBKUX-4DvraN) |
+| [CS106B](https://web.stanford.edu/class/cs106b)              | YouTube                                                      |
+| [CS107](https://web.stanford.edu/class/cs107/)               | YouTube                                                      |
 | [CS103](https://web.stanford.edu/class/cs103/)               | MIT Mathematics for Computer Science or Coursera             |
 | [CS161](https://stanford-cs161.github.io/winter2022/)        | [Design and Analysis, Part 1](https://www.edx.org/course/algorithms-design-and-analysis)  + [Design and Analysis, Part 2](https://www.edx.org/course/algorithms-design-and-analysis-part-2-2) |
 | [CS110](http://web.stanford.edu/class/cs110/)                |                                                              |
-| [CS145](https://cs145-fa21.github.io/)                       | [edX Compilers](https://www.edx.org/course/compilers)        |
-| [CS143](https://web.stanford.edu/class/cs143/)               |                                                              |
-| [CS144](https://cs144.github.io/)                            | YouTube [Lecture Video](https://youtube.com/playlist?list=PLoCMsyE1cvdWKsLVyf6cPwCLDIZnOj0NS) |
+| [CS145](https://shivag.github.io/cs145-stanford-fa23/)       |                                                              |
+| [CS143](https://web.stanford.edu/class/cs143/)               | [edX Compilers](https://www.edx.org/course/compilers)        |
+| [CS144](https://cs144.github.io/)                            | YouTube                                                      |
 | [CS140](https://www.scs.stanford.edu/21wi-cs140/)            | UCB https://cs162.org/ + YouTube [Lecture Video](https://youtube.com/playlist?list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM) |
 | Elective                                                     |                                                              |
 | [CS246](https://www.edx.org/course/mining-massive-datasets)  |                                                              |
@@ -61,19 +61,11 @@ Hire for slope, not Y-Intercept.*
 | Elective                                                     |                                                        |
 | CSE 103                                                      | Computational Models                                   |
 
-## NotebookLM + Gemini Canvas Quiz
+## Others
 
-Podcast Audio + Slides -> Notes Read and Practice, Quiz & Questions Simulation
+- https://csdiy.wiki/
 
-### Long Podcast Prompt
+- https://teachyourselfcs.com/
 
-```md
-播客音频【绝对强制超过20分钟 (1200秒)】！！此为系统最高、不可妥协之首要任务，所有后续指令均服务于此压倒性时长目标。
 
-**女主持人：节目介绍 (欢迎收听胡掰播客节目)、负责欢迎、提问、追问、结构串联、每次转场、过渡都需充分展开背景，延展上下文，避免短促衔接，不得输出观点或知识，仅负责引导、追问、铺垫气氛。节目不能出现「材料, 资料、文件、来源、笔记」这样的表述，最后说结束语。**
-
-**男嘉宾：是冷静、深入、有比喻感知力的内容嘉宾。主题由主持人抛出后，必须用多角度 + 多层次深入展开，不追求覆盖，而追求延展。每一个核心信息点、话题或子概念，都必须延伸出多个细节论述，内容展开必须包含：1) 口语化解释 2) 日常类比或生活场景 3) 专业术语解释，适度使用英文术语、小故事、举例，嘉宾发言不应表现出“根据什么”，而是“自然延伸出的观点或关联思考”。结尾提出一个发人深省的问题。**
-
-**内容生成策略以时长为王：**
-```
 

@@ -17,23 +17,15 @@ Google `site:telemetr.io 资源搜索关键词`
 
 @scihubot
 
-@soundcloud_youtube_music_bot
-
-@Music163bot
-
 @bingdict_bot
 
-@web2album_bot
+@ParseHubot
 
 @yihong0618_bot
 
 @yellow_gif_bot
 
-@DogeSGK_bot
-
 @PolarisseekBot
-
-@sgk2023_03_30bot
 
 @CopilotOfficialBot
 
@@ -68,19 +60,13 @@ Google `site:telemetr.io 资源搜索关键词`
 
 自由港新闻帮，社会学观察与解构
 
-- [TomBen’s Web Excursions](https://t.me/tombenor)
-
-Social Science Ph.D. - 社会矛盾论文解读，实验数据分享，已停更
-
 - 微信搬运工 - @wxbyg
 - JUST A PEEK - @justapeek
 - 中英文付费期刊分发 - @Qikan2023
-- 法拉盛美籍流浪汉 - @youyaodaofanlexdm
 
 ### Entertainment
 
 - [小红书一瞥](https://t.me/xhsyp)
-- 复制粘贴 - @fuzhizhantie6324
 - 浪人新闻 导演剪辑版 - @RoninShinbun
 
 ### AI

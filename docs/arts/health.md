@@ -1,17 +1,18 @@
 # 生活小记
 
-## Consumption
+## Health
 
-- Far East Import & Export 家门口最近的香料进口超市 + NP 蔬菜瓜果
+### Beverages
 
-- 麦当劳汉堡里的炸鸡排可以三点五刀一份单点，McCrispy® Deluxe 里的最多汁不辣。
+- Black Tea 适合极其油腻的时候喝，大多数时候喝了不舒服
+- 决明子茶 Ginkgo biloba tea 喝了后时常会拉肚子并觉得湿冷
+- Earl Grey 里含有佛手柑精油，适合日常喝，肠胃非常舒服
+- Lemon Ginger 适合冬季日常喝，也可用亚超姜泥搭配 Karibee 蜂蜜调整肠胃
 
-## Beverages
-
-- 两汤勺的大豆高压锅十分钟 + 榨汁机 750 ML 水能够做两杯豆浆，其他豆子分装即可。
+- 补充蛋白质：两汤勺的大豆高压锅十分钟 + 榨汁机 750 ML 水能够做两杯豆浆，其他豆子分装即可。
 - Dôme 的 Ginger Herb Tea 配方：香茅干 + 姜干 + 陈皮
 
-## Chinese Medicine
+### Chinese Medicine
 
 - Central Oriental Foods 中央亞超适合中药采购
 
@@ -24,3 +25,7 @@
 | 山楂     | 10        | 炙甘草   | 6         | 香附     | 10        |
 
 > 中药冷水 850 ML 先泡半小时然后大火煮沸转小火 30 分钟，捞出药渣第一批药液放容器，药渣加一样的水重复煎煮，最终弃除药渣，将液体与第一批药液混合后分两份储存一天内喝完。
+
+### Others
+
+- 麦当劳汉堡里的炸鸡排可以三点五刀一份单点，McCrispy® Deluxe 里的最多汁不辣。

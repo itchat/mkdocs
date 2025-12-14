@@ -13,83 +13,86 @@ nav:
 
   - Arts:
     - arts/wukong.md
-    - arts/cook.md
+    - arts/health.md
 
   - Tools:
       - tools/gfw.md
       - tools/ffmpeg.md
       - tools/wine.md
       - tools/searxng.md
-      - tools/agent.md
+      - tools/tunnel.md
 
   - Computer Science:
+    - AI:
+      - cs/ai/deployment.md
+      
     - Python:
       - Flask:
         - cs/python/flask/1.0.md
-    - Java:
-      - Basics:
-        - cs/java/basics/concept.md
-        - cs/java/basics/2024.s1.md
-        - cs/java/basics/t1.md
-        - cs/java/basics/t2.md
-        - cs/java/basics/w4.md
-        - cs/java/basics/w5.md
-        - cs/java/basics/w6.md
-        - cs/java/basics/w7.md
-        - cs/java/basics/w8.md
-        - cs/java/basics/w9.md
-        - cs/java/basics/w10.md
-    - Networks:
-      - 3002:
-        - cs/network/w1.md
-        - cs/network/w2.md
-        - cs/network/w3.md
-        - cs/network/w4.md
-        - cs/network/w5.md
-        - cs/network/w6.md
-        - cs/network/w7.md
-        - cs/network/w8.md
-        - cs/network/w9.md
-        - cs/network/w10.md
-        - cs/network/w11.md
+    # - Java:
+    #   - Basics:
+    #     - cs/java/basics/concept.md
+    #     - cs/java/basics/2024.s1.md
+    #     - cs/java/basics/t1.md
+    #     - cs/java/basics/t2.md
+    #     - cs/java/basics/w4.md
+    #     - cs/java/basics/w5.md
+    #     - cs/java/basics/w6.md
+    #     - cs/java/basics/w7.md
+    #     - cs/java/basics/w8.md
+    #     - cs/java/basics/w9.md
+    #     - cs/java/basics/w10.md
+    # - Networks:
+    #   - 3002:
+    #     - cs/network/w1.md
+    #     - cs/network/w2.md
+    #     - cs/network/w3.md
+    #     - cs/network/w4.md
+    #     - cs/network/w5.md
+    #     - cs/network/w6.md
+    #     - cs/network/w7.md
+    #     - cs/network/w8.md
+    #     - cs/network/w9.md
+    #     - cs/network/w10.md
+    #     - cs/network/w11.md
 
     - MERN:
       - HTML:
         - cs/mern/html/html_syntax.md
-      - 3403:
-        - cs/mern/3403/2024.md
-        - cs/mern/3403/l1.md
-        - cs/mern/3403/l2.md
-        - cs/mern/3403/l3.md
-        - cs/mern/3403/l4.md
-        - cs/mern/3403/l5.md
-        - cs/mern/3403/l5_ex.md
-        - cs/mern/3403/l6.md
-        - cs/mern/3403/l6_ex.md
-        - cs/mern/3403/l7.md
-        - cs/mern/3403/l8.md
-        - cs/mern/3403/l9.md
-        - cs/mern/3403/l10.md
-        - cs/mern/3403/l11.md
-        - cs/mern/3403/l12.md
-        - cs/mern/3403/l13.md
-        - cs/mern/3403/l14.md
-        - cs/mern/3403/l15.md
+      # - 3403:
+      #   - cs/mern/3403/2024.md
+      #   - cs/mern/3403/l1.md
+      #   - cs/mern/3403/l2.md
+      #   - cs/mern/3403/l3.md
+      #   - cs/mern/3403/l4.md
+      #   - cs/mern/3403/l5.md
+      #   - cs/mern/3403/l5_ex.md
+      #   - cs/mern/3403/l6.md
+      #   - cs/mern/3403/l6_ex.md
+      #   - cs/mern/3403/l7.md
+      #   - cs/mern/3403/l8.md
+      #   - cs/mern/3403/l9.md
+      #   - cs/mern/3403/l10.md
+      #   - cs/mern/3403/l11.md
+      #   - cs/mern/3403/l12.md
+      #   - cs/mern/3403/l13.md
+      #   - cs/mern/3403/l14.md
+      #   - cs/mern/3403/l15.md
 
-    - Operating Systems:
-      - C System Programming:
-        - cs/c/2.1.md
-        - cs/c/2.2.md
-        - cs/c/2.3.md
-        - cs/c/2.4.md
-        - cs/c/3.1.md
-        - cs/c/3.2.md
-        - cs/c/3.3.md
-        - cs/c/4.1.md
-        - cs/c/4.2.md
-        - cs/c/4.3.md
-        - cs/c/5.1.md
-        - cs/c/5.2.md
+    # - Operating Systems:
+    #   - C System Programming:
+    #     - cs/c/2.1.md
+    #     - cs/c/2.2.md
+    #     - cs/c/2.3.md
+    #     - cs/c/2.4.md
+    #     - cs/c/3.1.md
+    #     - cs/c/3.2.md
+    #     - cs/c/3.3.md
+    #     - cs/c/4.1.md
+    #     - cs/c/4.2.md
+    #     - cs/c/4.3.md
+    #     - cs/c/5.1.md
+    #     - cs/c/5.2.md
 
   - Handbooks:
     - Telegram:

@@ -4,9 +4,17 @@ Dify 上配合 Searxng + Webscraper 可快速实现零成本自建并且无速�
 
 ## Quick Start
 
-- 服务器搭建 Dify 后使用 Zerotier 连接其局域网在 Mac 上进行访问
-- Docker 搭建 Searxng 服务端后在 Dify 安装其 Plugin 并配置
+- Docker 搭建 PagerMaid 或 Dify 服务
+- Docker 搭建 Searxng 服务端后在 Dify 安装其 Plugin 并配置，确保与上述服务在同一网络
 - 网络配置修改实现 `ufw` 管控 Docker 端口防火墙能力
+
+### PagerMaid-Pyro
+
+```sh
+wget https://raw.githubusercontent.com/TeamPGM/PagerMaid-Pyro/development/utils/docker.sh -O docker.sh && chmod +x docker.sh && bash docker.sh
+```
+
+更新 `Docker.sh` 中的 `--restart=always` 参数，以及 `--network agent`，最后启动
 
 ### Docker Firewall[^1]
 
@@ -43,11 +51,13 @@ sudo systemctl restart ufw
 
 ### Searxng Setting
 
-```shell
-nano "${PWD}/searxng/settings.yml"
+```sh
+mkdir /searxng
+wget https://raw.githubusercontent.com/searxng/searxng/refs/heads/master/searx/settings.yml
+nano "/etc/searxng/settings.yml"
 ```
 
-记下服务器在 ZeroTier 局域网中的 IP 地址，我的为 `192.168.191.170`，因此为了实现只有局域网中设备可连接此服务：
+记下服务器在 ZeroTier 局域网中的 IP 地址，我的为 `192.168.191.170`
 
 ```shell
 formats:
@@ -87,7 +97,9 @@ docker run \
 
 结束后连上 ZeroTier 服务后如能正常打开直接前往 Dify 安装插件填写 `BASE_URL` 即可，结束安装
 
-## Common Mistakes
+## Others
+
+以下是之前尝试的错误设置：
 
 ```shell
 tail -f /var/log/ufw.log
