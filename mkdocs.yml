@@ -89,10 +89,12 @@ plugins:
       minify_html: true
       minify_css: true
       minify_js: true
+      cache_safe: true # 给自定义 css/js 的 URL 加内容哈希，便于长期缓存
       htmlmin_opts:
         remove_comments: true
         remove_empty_space: true
       css_files:
+        - resources/lxgw-wenkai-lite.css
         - resources/extra.css
       js_files:
         - resources/katex.js
@@ -126,9 +128,9 @@ extra: {}
 #     provider: google
 #     property: G-XXXXXX
 extra_css:
+  # 字体样式表放在本地（font-display: block：字体加载好之前不显示后备字体），字体文件仍走 jsDelivr
+  - resources/lxgw-wenkai-lite.css
   - resources/extra.css
-  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css
 extra_javascript:
-  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js
-  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js
+  # KaTeX 由 resources/katex.js 在有公式的页面按需加载
   - resources/katex.js

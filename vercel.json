@@ -3,5 +3,15 @@
   "framework": null,
   "installCommand": "python3 -m venv .venv && .venv/bin/pip install -r requirements.txt",
   "buildCommand": ".venv/bin/mkdocs build",
-  "outputDirectory": "site"
+  "outputDirectory": "site",
+  "headers": [
+    {
+      "source": "/(assets|resources)/(.*)\\.([0-9a-f]{6,8})\\.min\\.(js|css)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|gif|webp|svg|ico)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }]
+    }
+  ]
 }
