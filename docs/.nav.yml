@@ -1,0 +1,10 @@
+# 顶层导航：这里只决定栏目的顺序和显示名。
+# 新建的顶层文件夹会自动追加到最后（append_unmatched）。
+nav:
+  - Home: index.md
+  - Arts: arts
+  - Tools: tools
+  - Computer Science: cs
+  - Handbooks: handbook
+  - Cybersecurity: cyber
+append_unmatched: true

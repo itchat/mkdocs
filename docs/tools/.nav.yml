@@ -1,0 +1,7 @@
+nav:
+  - gfw.md
+  - ffmpeg.md
+  - wine.md
+  - searxng.md
+  - tunnel.md
+append_unmatched: true   # 新增的文章/子目录自动追加到最后

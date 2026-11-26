@@ -1,0 +1,6 @@
+nav:
+  - Telegram:
+    - telegram.md
+  - Computer Science Plan:
+    - csplan.md
+append_unmatched: true   # 新增的文章/子目录自动追加到最后
